@@ -1,8 +1,8 @@
 interface UniversalDataFormatItems {
-    REF: string,
+    id: string,
     description_short: string,
     description: string,
-    imgage: string,
+    image: string,
     pvp_1: number,
     pvp_2?: number,
     pvp_3?: number,
@@ -13,8 +13,8 @@ interface UniversalDataFormatItems {
     weight?: number,
     dimensions? :{
         width: number,
-        height: number
-    }
+        height: number,
+    },
 }
 
 export {
