@@ -1,0 +1,7 @@
+interface UniversalDataFormatCategories {
+
+}
+
+export {
+    UniversalDataFormatCategories
+}

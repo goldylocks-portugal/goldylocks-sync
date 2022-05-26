@@ -1,0 +1,7 @@
+interface UniversalDataFormatItems {
+
+}
+
+export {
+    UniversalDataFormatItems
+}
