@@ -1,5 +1,5 @@
-import {ConfigOperation} from "./ConfigOperations";
+import {ConfigurationOperation} from "./ConfigurationOperations";
 
 interface Configuration {
-    operations: ConfigOperation[],
+    operations: ConfigurationOperation[],
 }

@@ -3,12 +3,12 @@ interface PluginConfiguration {
     configuration: any;
 }
 
-interface ConfigOperation {
+interface ConfigurationOperation {
     input: PluginConfiguration,
     output: PluginConfiguration,
 }
 
 export {
     PluginConfiguration,
-    ConfigOperation,
+    ConfigurationOperation,
 }
