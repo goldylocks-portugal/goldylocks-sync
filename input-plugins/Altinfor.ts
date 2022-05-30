@@ -1,5 +1,3 @@
-const Altinfor = {
-
-}
+const Altinfor = {}
 
 export {Altinfor}

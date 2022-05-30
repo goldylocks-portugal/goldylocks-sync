@@ -11,20 +11,29 @@ class Core {
         this.configuration = ReadConfiguration(configPath)
     }
 
+    async start() {
+        this.configuration.operations.forEach(async (operation) => {
+            await new Promise(async (resolve, reject) => {
+                await this.processInput(operation.input)
+            })
+        })
+    }
 
-    processOperation(operation: ConfigurationOperation) {
+    async processOperation(operation: ConfigurationOperation) {
 
     }
 
-    processInput(pluginConfiguration: PluginConfiguration): UniversalDataFormat {
+    async processInput(pluginConfiguration: PluginConfiguration): Promise<UniversalDataFormat> {
+        const plugin = await import(`../input-plugins/${pluginConfiguration.plugin}`)
+
         return {
             items: [],
             categories: [],
         }
     }
 
-    processOutput(pluginConfiguration: PluginConfiguration, data: UniversalDataFormat) {
-
+    async processOutput(pluginConfiguration: PluginConfiguration, data: UniversalDataFormat) {
+        const plugin = await import(`../input-plugins/${pluginConfiguration.plugin}`)
     }
 }
 
