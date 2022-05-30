@@ -6,7 +6,7 @@ import {readFileSync} from "fs";
  * @param path
  * @constructor
  */
-const ReadConfiguration = (path: string): Configuration => {
+const ReadConfiguration = (path: string = 'config.json'): Configuration => {
     return JSON.parse(readFileSync(path).toString())
 }
 
