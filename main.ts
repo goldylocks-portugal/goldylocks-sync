@@ -1,4 +1,4 @@
-import {UniversalDataFormat} from "./interfaces/UniversalDataFormat";
+
 
 const config = require('./config.json')
 
