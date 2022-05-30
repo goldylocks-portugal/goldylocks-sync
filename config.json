@@ -1,44 +1,14 @@
-[
-  {
-    "input": {
-      "plugin": "Altinfor",
-      "config": [{
-
-      }]
-    },
-    "output": {
-      "plugin": "WooCommerce",
-      "config": [{
-
-      }]
+{
+  "operations": [
+    {
+      "input": {
+        "plugin": "Altinfor",
+        "configuration": {}
+      },
+      "output": {
+        "plugin": "Goldylocks",
+        "configuration": {}
+      }
     }
-  },
-  {
-    "input": {
-      "plugin": "Goldylocks",
-      "config": [{
-
-      }]
-    },
-    "output": {
-      "plugin": "XD",
-      "config": [{
-
-      }]
-    }
-  },
-  {
-    "input": {
-      "plugin": "WooCommerce",
-      "config": [{
-
-      }]
-    },
-    "output": {
-      "plugin": "Altinfor",
-      "config": [{
-
-      }]
-    }
-  }
-]
+  ]
+}
