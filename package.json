@@ -11,5 +11,8 @@
     "url": "git@git.goldylocks.eu:goldylocks/goldylocks-sync.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.35"
+  }
 }

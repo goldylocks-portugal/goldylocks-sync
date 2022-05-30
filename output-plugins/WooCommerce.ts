@@ -1,0 +1,5 @@
+const WooCommerce = {
+
+}
+
+export {WooCommerce}

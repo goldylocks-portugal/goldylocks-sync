@@ -1,4 +1,4 @@
-# Goldylocks Sync
+# XD Sync
 
 
 

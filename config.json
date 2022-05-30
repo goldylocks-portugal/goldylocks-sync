@@ -1,0 +1,44 @@
+[
+  {
+    "input": {
+      "plugin": "Altinfor",
+      "config": [{
+
+      }]
+    },
+    "output": {
+      "plugin": "WooCommerce",
+      "config": [{
+
+      }]
+    }
+  },
+  {
+    "input": {
+      "plugin": "Goldylocks",
+      "config": [{
+
+      }]
+    },
+    "output": {
+      "plugin": "XD",
+      "config": [{
+
+      }]
+    }
+  },
+  {
+    "input": {
+      "plugin": "WooCommerce",
+      "config": [{
+
+      }]
+    },
+    "output": {
+      "plugin": "Altinfor",
+      "config": [{
+
+      }]
+    }
+  }
+]

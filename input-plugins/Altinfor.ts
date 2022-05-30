@@ -1,0 +1,5 @@
+const Altinfor = {
+
+}
+
+export {Altinfor}
