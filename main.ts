@@ -1,30 +1,26 @@
-
+import {UniversalDataFormat} from "./interfaces/UniversalDataFormat";
 
 const config = require('./config.json')
 
 let inputs = [];
 let outputs = [];
 
-config.forEach(async (currentValue, index, array) => {
+(async () => {
+    for (let i in config) {
+        let inputPlugin = config[i]['input']['plugin'];
+        let outputPlugin = config[i]['output']['plugin'];
+        try {
+            inputs.push(await import(`./input-plugins/${inputPlugin}`))
+            outputs.push(await import(`./output-plugins/${outputPlugin}`))
+        } catch (e) {
+            console.error('Error loading module');
+        }
 
-    console.log('CONFIG')
-    console.log(config)
-
-
-    let inputPlugin = currentValue['input']['plugin'];
-    let outputPlugin = currentValue['output']['plugin'];
-
-    try {
-        console.log('index - ', index)
-        inputs.push(await import(`./input-plugins/${inputPlugin}`))
-        outputs.push(await import(`./output-plugins/${outputPlugin}`))
-    } catch (e) {
-        console.error('Error loading module');
     }
 
-    console.log('INPUTS')
-    console.log(inputs)
-    console.log('OUTPUTS')
-    console.log(outputs)
-    debugger
-});
+
+    const teste = new inputs[0].default({
+        "url": "https://www.altoinfor.pt/layouts_aci/col-central/aminhaconta_html.php?Excel=4&NumCl=",
+        "clientID": "2"
+    })
+})()

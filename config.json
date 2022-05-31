@@ -1,41 +1,14 @@
 [
   {
     "input": {
-      "plugin": "Altinfor",
+      "plugin": "Altoinfor",
       "config": [{
-
+        "url": "https://www.altoinfor.pt/layouts_aci/col-central/aminhaconta_html.php?Excel=4&NumCl=",
+        "clientID": "2"
       }]
     },
     "output": {
       "plugin": "WooCommerce",
-      "config": [{
-
-      }]
-    }
-  },
-  {
-    "input": {
-      "plugin": "Goldylocks",
-      "config": [{
-
-      }]
-    },
-    "output": {
-      "plugin": "XD",
-      "config": [{
-
-      }]
-    }
-  },
-  {
-    "input": {
-      "plugin": "WooCommerce",
-      "config": [{
-
-      }]
-    },
-    "output": {
-      "plugin": "Altinfor",
       "config": [{
 
       }]
