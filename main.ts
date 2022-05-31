@@ -1,26 +1,5 @@
-import {UniversalDataFormat} from "./interfaces/UniversalDataFormat";
+import {Core} from "./plugins/Core";
 
-const config = require('./config.json')
-
-let inputs = [];
-let outputs = [];
-
-(async () => {
-    for (let i in config) {
-        let inputPlugin = config[i]['input']['plugin'];
-        let outputPlugin = config[i]['output']['plugin'];
-        try {
-            inputs.push(await import(`./input-plugins/${inputPlugin}`))
-            outputs.push(await import(`./output-plugins/${outputPlugin}`))
-        } catch (e) {
-            console.error('Error loading module');
-        }
-
-    }
-
-
-    const teste = new inputs[0].default({
-        "url": "https://www.altoinfor.pt/layouts_aci/col-central/aminhaconta_html.php?Excel=4&NumCl=",
-        "clientID": "2"
-    })
-})()
+/* instantiate core plugin */
+const core = new Core('config.json')
+core.start()
