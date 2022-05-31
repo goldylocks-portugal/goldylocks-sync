@@ -35,8 +35,8 @@ class Core {
      * @param pluginConfiguration
      */
     async processInput(pluginConfiguration: PluginConfiguration): Promise<UniversalDataFormat> {
-        const PluginClass = await import(`../input-plugins/${pluginConfiguration.plugin}`)
-        const plugin = new PluginClass(pluginConfiguration.configuration)
+        const Plugin = await import(`./../input-plugins/${pluginConfiguration.plugin}`)
+        const plugin = new Plugin[pluginConfiguration.plugin](pluginConfiguration.configuration)
 
         return await plugin.execute()
     }
@@ -47,8 +47,8 @@ class Core {
      * @param data
      */
     async processOutput(pluginConfiguration: PluginConfiguration, data: UniversalDataFormat) {
-        const PluginClass = await import(`../input-plugins/${pluginConfiguration.plugin}`)
-        const plugin = new PluginClass(pluginConfiguration.configuration, data)
+        const Plugin = await import(`../output-plugins/${pluginConfiguration.plugin}`)
+        const plugin = new Plugin[pluginConfiguration.plugin](pluginConfiguration.configuration)
 
         return await plugin.execute()
     }

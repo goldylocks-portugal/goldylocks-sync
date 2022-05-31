@@ -101,13 +101,13 @@ var Core = /** @class */ (function () {
      */
     Core.prototype.processInput = function (pluginConfiguration) {
         return __awaiter(this, void 0, void 0, function () {
-            var PluginClass, plugin;
+            var Plugin, plugin;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, Promise.resolve().then(function () { return require("../input-plugins/".concat(pluginConfiguration.plugin)); })];
+                    case 0: return [4 /*yield*/, Promise.resolve().then(function () { return require("./../input-plugins/".concat(pluginConfiguration.plugin)); })];
                     case 1:
-                        PluginClass = _a.sent();
-                        plugin = new PluginClass(pluginConfiguration.configuration);
+                        Plugin = _a.sent();
+                        plugin = new Plugin[pluginConfiguration.plugin](pluginConfiguration.configuration);
                         return [4 /*yield*/, plugin.execute()];
                     case 2: return [2 /*return*/, _a.sent()];
                 }
@@ -121,13 +121,13 @@ var Core = /** @class */ (function () {
      */
     Core.prototype.processOutput = function (pluginConfiguration, data) {
         return __awaiter(this, void 0, void 0, function () {
-            var PluginClass, plugin;
+            var Plugin, plugin;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, Promise.resolve().then(function () { return require("../input-plugins/".concat(pluginConfiguration.plugin)); })];
+                    case 0: return [4 /*yield*/, Promise.resolve().then(function () { return require("../output-plugins/".concat(pluginConfiguration.plugin)); })];
                     case 1:
-                        PluginClass = _a.sent();
-                        plugin = new PluginClass(pluginConfiguration.configuration, data);
+                        Plugin = _a.sent();
+                        plugin = new Plugin[pluginConfiguration.plugin](pluginConfiguration.configuration);
                         return [4 /*yield*/, plugin.execute()];
                     case 2: return [2 /*return*/, _a.sent()];
                 }
