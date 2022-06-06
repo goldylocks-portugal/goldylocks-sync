@@ -2,14 +2,15 @@
   "operations": [
     {
       "input": {
-      "plugin": "Altoinfor",
-        "configuration": {}
+        "plugin": "Altoinfor",
+        "configuration": {
+          "url": "https://www.altoinfor.pt/layouts_aci/col-central/aminhaconta_html.php?Excel=4&NumCl=",
+          "clientID": "2"
+        }
       },
       "output": {
         "plugin": "Goldylocks",
         "configuration": {}
-        "url": "https://www.altoinfor.pt/layouts_aci/col-central/aminhaconta_html.php?Excel=4&NumCl=",
-        "clientID": "2"
       }
     }
   ]
