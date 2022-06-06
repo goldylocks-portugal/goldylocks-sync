@@ -18,54 +18,61 @@ class Altoinfor {
         this.url = config.url + config.clientID
     }
 
-    async #download() {
-        let bytesDownloaded = 0;
+    async #download(): Promise<any> {
+        return new Promise(async (resolve, reject) => {
+            let bytesDownloaded = 0;
 
-        console.log('Connecting...')
-        const array = await axios.get(this.url, {
-            responseEncoding: 'utf-8',
-            responseType: 'stream',
-            httpsAgent: new https.Agent({rejectUnauthorized: false}),
-        });
+            process.stdout.write(`${BarColors.cyan('[Altoinfor]')} Connecting... `);
+            const array = await axios.get(this.url, {
+                responseEncoding: 'utf-8',
+                responseType: 'stream',
+                httpsAgent: new https.Agent({rejectUnauthorized: false}),
+            });
 
-        let totalLength = array.headers['content-length'] ? array.headers['content-length'] : 1000;
+            console.log(`${BarColors.cyan('Done')}`);
 
-        const progressBar = new SingleBar({
-            barsize: 25,
-            format: `${BarColors.cyan('[Altoinfor]')} Downloading CSV |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Chunks`
-        }, Presets.shades_classic);
-        progressBar.start(totalLength, 0);
+            let totalLength = array.headers['content-length'] ? array.headers['content-length'] : 1000;
+
+            const progressBar = new SingleBar({
+                barsize: 25,
+                format: `${BarColors.cyan('[Altoinfor]')} Downloading CSV |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Chunks`
+            }, Presets.shades_classic);
+            progressBar.start(totalLength, 0);
 
 
-        const writer = createWriteStream(
-            Path.resolve(__dirname + '/../downloads/', `temp.csv`)
-        )
+            const writer = createWriteStream(
+                Path.resolve(__dirname + '/../downloads/', `temp.csv`)
+            )
 
-        array.data.on('data', (chunk) => {
-            bytesDownloaded += chunk.length
+            try {
+                array.data.on('data', (chunk) => {
+                    bytesDownloaded += chunk.length
 
-            let multiplier = Math.floor(Math.random() * (5 - 1)) + 1;
+                    let multiplier = Math.floor(Math.random() * (6 - 1)) + 1;
 
-            if (totalLength < bytesDownloaded) {
-                totalLength = bytesDownloaded * multiplier;
-                progressBar.setTotal(bytesDownloaded * multiplier)
+                    if (totalLength < bytesDownloaded) {
+                        totalLength = bytesDownloaded * multiplier;
+                        progressBar.setTotal(bytesDownloaded * multiplier)
+                    }
+
+                    progressBar.increment(chunk.length)
+                })
+
+                array.data.on('end', () => {
+
+                    progressBar.setTotal(bytesDownloaded);
+                    progressBar.stop()
+
+                    resolve(true)
+
+                })
+
+                array.data.pipe(writer)
+            } catch (e) {
+                reject(e)
             }
 
-            progressBar.increment(chunk.length)
         })
-
-        array.data.on('end', () => {
-
-            progressBar.setTotal(bytesDownloaded);
-            progressBar.stop()
-
-            console.log(`\nTotal bytes:${bytesDownloaded}`)
-            console.log('\nDownload completed!');
-
-
-        })
-
-        array.data.pipe(writer)
     }
 
     async #csvToJson() {
@@ -80,7 +87,7 @@ class Altoinfor {
     }
 
     /**
-     * jsonToUniversalDataFormatItems - converts an Array in json into UniversalDataFormatItems
+     * jsonToUniversalDataFormatItems - converts an Array in json to UniversalDataFormatItems
      * @param data
      * @private
      */
@@ -89,7 +96,7 @@ class Altoinfor {
 
             const progressBar = new SingleBar({
                 barsize: 25,
-                format: `${BarColors.cyan('[Altoinfor]')} Getting items      |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Chunks`
+                format: `${BarColors.cyan('[Altoinfor]')} Getting items      |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Items`
             }, Presets.shades_classic);
 
             for (let i in data.Sheets) {
@@ -100,15 +107,16 @@ class Altoinfor {
                 let artigos: Array<UniversalDataFormatItems> = [];
 
                 //linhas
+
                 for (let j = 1; j <= range; j++) {
 
-                    //let id_familia: number = await this.#getCategoryIDPerItem(categories, data.Sheets[i], j);
+                    let id_familia: number = await this.#getCategoryIDPerItem(categories, data.Sheets[i], j);
 
                     artigos.push({
-                        id_category: 0,
+                        id_category: id_familia,
                         bar_code: (data.Sheets[i][`U${j}`]) ? data.Sheets[i][`U${j}`].v : '',
                         brand: (data.Sheets[i][`E${j}`]) ? data.Sheets[i][`E${j}`].v : '',
-                        category: (data.Sheets[i][`B${j}`]) ? data.Sheets[i][`B${j}`].v : '',
+                        category: (data.Sheets[i][`D${j}`]) ? data.Sheets[i][`D${j}`].v : '',
                         description: (data.Sheets[i][`F${j}`]) ? data.Sheets[i][`F${j}`].v : '',
                         description_short: (data.Sheets[i][`G${j}`]) ? data.Sheets[i][`G${j}`].v : '',
                         description_long: (data.Sheets[i][`W${j}`]) ? data.Sheets[i][`W${j}`].v : '',
@@ -123,11 +131,52 @@ class Altoinfor {
                     progressBar.increment(1)
                 }
 
+
                 artigos.shift();
                 progressBar.stop();
                 resolve(artigos)
             }
         })
+    }
+
+    /**
+     * getCategoryIDPerItem - This function it will associate a category (id) to an item (id_category).
+     *                        For that, it will go through every category already created and search for the right category
+     * @param categories
+     * @param item
+     * @param index
+     * @private
+     */
+    async #getCategoryIDPerItem(categories: UniversalDataFormatCategories[], item: object, index: number): Promise<number> {
+        return new Promise(async (resolve, reject) => {
+            let temp: UniversalDataFormatCategories = {id: 0, name: "", parent: 0};
+            let teste: Array<UniversalDataFormatCategories> = [];
+            let id: number = 1;
+            let parent: number = 0;
+
+            const tempCategories = await this.#addCategory(teste, parent, id, item, index)
+
+            temp = tempCategories.categories;
+
+            for (let i in categories) {
+                if (categories[i].parent === 0 && categories[i].name === temp[0].name) {
+                    temp[0].id = categories[i].id;
+                    temp[1].parent = categories[i].id;
+                    const child: UniversalDataFormatCategories[] = categories.filter((obj) => {
+                        return obj.parent === temp[1].parent && obj.name === temp[1].name
+                    })
+                    temp[2].parent = child[0].id;
+                    temp[1].id = child[0].id;
+                    const grandChild: UniversalDataFormatCategories[] = categories.filter((obj) => {
+                        return obj.parent === temp[2].parent && obj.name === temp[2].name
+                    })
+                    temp[2].id = grandChild[0].id;
+                    debugger
+                }
+            }
+
+            resolve(temp[2].id)
+        });
     }
 
     /**
@@ -140,7 +189,7 @@ class Altoinfor {
 
             const progressBar = new SingleBar({
                 barsize: 25,
-                format: `${BarColors.cyan('[Altoinfor]')} Getting categories |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Chunks`
+                format: `${BarColors.cyan('[Altoinfor]')} Getting categories |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Categories`
             }, Presets.shades_classic);
 
             for (let i in data.Sheets) {
@@ -192,13 +241,22 @@ class Altoinfor {
                         parent = categories[i].id
                     }
                 }
-                debugger
+
             }
-            debugger
+
             resolve({"compare": compare, "parent": parent});
         });
     }
 
+    /**
+     * addCategory - It will search if the category exists and if not it will merge into the categories list
+     * @param categories
+     * @param parent
+     * @param id
+     * @param data
+     * @param index
+     * @private
+     */
     async #addCategory(categories: UniversalDataFormatCategories[], parent: number, id: number, data: any, index: number): Promise<any> {
         return new Promise(async (resolve, reject) => {
             let temp: UniversalDataFormatCategories = {id: 0, name: "", parent: 0}
@@ -286,14 +344,14 @@ class Altoinfor {
     async execute(): Promise<UniversalDataFormat> {
         return new Promise(async (resolve, reject) => {
             try {
-                //await this.#download();
-                let json = await this.#csvToJson();
-                let categories = await this.#jsonToUniversalDataFormatCategories(json);
-                let items = await this.#jsonToUniversalDataFormatItems(json, categories);
+                await this.#download().then(async () => {
+                    let json = await this.#csvToJson();
+                    let categories = await this.#jsonToUniversalDataFormatCategories(json);
+                    let items = await this.#jsonToUniversalDataFormatItems(json, categories);
 
-                let universalData: UniversalDataFormat = {categories: categories, items: items}
-
-                resolve(universalData)
+                    let universalData: UniversalDataFormat = {categories: categories, items: items}
+                    resolve(universalData)
+                });
             } catch (e) {
                 reject(e)
             }
