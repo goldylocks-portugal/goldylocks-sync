@@ -13,7 +13,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
-var _Altoinfor_instances, _Altoinfor_download, _Altoinfor_csvToJson, _Altoinfor_jsonToUniversalDataFormatItems, _Altoinfor_jsonToUniversalDataFormatCategories, _Altoinfor_compareCategories, _Altoinfor_addCategory, _Altoinfor_sheetLimitRange;
+var _Altoinfor_instances, _Altoinfor_download, _Altoinfor_csvToJson, _Altoinfor_jsonToUniversalDataFormatItems, _Altoinfor_getCategoryIDPerItem, _Altoinfor_jsonToUniversalDataFormatCategories, _Altoinfor_compareCategories, _Altoinfor_addCategory, _Altoinfor_sheetLimitRange;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Altoinfor = void 0;
 const https = require("https");
@@ -33,12 +33,13 @@ class Altoinfor {
         return __awaiter(this, void 0, void 0, function* () {
             return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
                 try {
-                    //await this.#download();
-                    let json = yield __classPrivateFieldGet(this, _Altoinfor_instances, "m", _Altoinfor_csvToJson).call(this);
-                    let categories = yield __classPrivateFieldGet(this, _Altoinfor_instances, "m", _Altoinfor_jsonToUniversalDataFormatCategories).call(this, json);
-                    let items = yield __classPrivateFieldGet(this, _Altoinfor_instances, "m", _Altoinfor_jsonToUniversalDataFormatItems).call(this, json, categories);
-                    let universalData = { categories: categories, items: items };
-                    resolve(universalData);
+                    yield __classPrivateFieldGet(this, _Altoinfor_instances, "m", _Altoinfor_download).call(this).then(() => __awaiter(this, void 0, void 0, function* () {
+                        let json = yield __classPrivateFieldGet(this, _Altoinfor_instances, "m", _Altoinfor_csvToJson).call(this);
+                        let categories = yield __classPrivateFieldGet(this, _Altoinfor_instances, "m", _Altoinfor_jsonToUniversalDataFormatCategories).call(this, json);
+                        let items = yield __classPrivateFieldGet(this, _Altoinfor_instances, "m", _Altoinfor_jsonToUniversalDataFormatItems).call(this, json, categories);
+                        let universalData = { categories: categories, items: items };
+                        resolve(universalData);
+                    }));
                 }
                 catch (e) {
                     reject(e);
@@ -50,36 +51,43 @@ class Altoinfor {
 exports.Altoinfor = Altoinfor;
 _Altoinfor_instances = new WeakSet(), _Altoinfor_download = function _Altoinfor_download() {
     return __awaiter(this, void 0, void 0, function* () {
-        let bytesDownloaded = 0;
-        console.log('Connecting...');
-        const array = yield axios_1.default.get(this.url, {
-            responseEncoding: 'utf-8',
-            responseType: 'stream',
-            httpsAgent: new https.Agent({ rejectUnauthorized: false }),
-        });
-        let totalLength = array.headers['content-length'] ? array.headers['content-length'] : 1000;
-        const progressBar = new cli_progress_1.SingleBar({
-            barsize: 25,
-            format: `${BarColors.cyan('[Altoinfor]')} Downloading CSV |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Chunks`
-        }, cli_progress_1.Presets.shades_classic);
-        progressBar.start(totalLength, 0);
-        const writer = (0, fs_1.createWriteStream)(Path.resolve(__dirname + '/../downloads/', `temp.csv`));
-        array.data.on('data', (chunk) => {
-            bytesDownloaded += chunk.length;
-            let multiplier = Math.floor(Math.random() * (5 - 1)) + 1;
-            if (totalLength < bytesDownloaded) {
-                totalLength = bytesDownloaded * multiplier;
-                progressBar.setTotal(bytesDownloaded * multiplier);
+        return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+            let bytesDownloaded = 0;
+            process.stdout.write(`${BarColors.cyan('[Altoinfor]')} Connecting... `);
+            const array = yield axios_1.default.get(this.url, {
+                responseEncoding: 'utf-8',
+                responseType: 'stream',
+                httpsAgent: new https.Agent({ rejectUnauthorized: false }),
+            });
+            console.log(`${BarColors.cyan('Done')}`);
+            let totalLength = array.headers['content-length'] ? array.headers['content-length'] : 1000;
+            const progressBar = new cli_progress_1.SingleBar({
+                barsize: 25,
+                format: `${BarColors.cyan('[Altoinfor]')} Downloading CSV |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Chunks`
+            }, cli_progress_1.Presets.shades_classic);
+            progressBar.start(totalLength, 0);
+            const writer = (0, fs_1.createWriteStream)(Path.resolve(__dirname + '/../downloads/', `temp.csv`));
+            try {
+                array.data.on('data', (chunk) => {
+                    bytesDownloaded += chunk.length;
+                    let multiplier = Math.floor(Math.random() * (6 - 1)) + 1;
+                    if (totalLength < bytesDownloaded) {
+                        totalLength = bytesDownloaded * multiplier;
+                        progressBar.setTotal(bytesDownloaded * multiplier);
+                    }
+                    progressBar.increment(chunk.length);
+                });
+                array.data.on('end', () => {
+                    progressBar.setTotal(bytesDownloaded);
+                    progressBar.stop();
+                    resolve(true);
+                });
+                array.data.pipe(writer);
             }
-            progressBar.increment(chunk.length);
-        });
-        array.data.on('end', () => {
-            progressBar.setTotal(bytesDownloaded);
-            progressBar.stop();
-            console.log(`\nTotal bytes:${bytesDownloaded}`);
-            console.log('\nDownload completed!');
-        });
-        array.data.pipe(writer);
+            catch (e) {
+                reject(e);
+            }
+        }));
     });
 }, _Altoinfor_csvToJson = function _Altoinfor_csvToJson() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -95,7 +103,7 @@ _Altoinfor_instances = new WeakSet(), _Altoinfor_download = function _Altoinfor_
         return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
             const progressBar = new cli_progress_1.SingleBar({
                 barsize: 25,
-                format: `${BarColors.cyan('[Altoinfor]')} Getting items      |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Chunks`
+                format: `${BarColors.cyan('[Altoinfor]')} Getting items      |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Items`
             }, cli_progress_1.Presets.shades_classic);
             for (let i in data.Sheets) {
                 let range = __classPrivateFieldGet(this, _Altoinfor_instances, "m", _Altoinfor_sheetLimitRange).call(this, data.Sheets[i]);
@@ -103,12 +111,12 @@ _Altoinfor_instances = new WeakSet(), _Altoinfor_download = function _Altoinfor_
                 let artigos = [];
                 //linhas
                 for (let j = 1; j <= range; j++) {
-                    //let id_familia: number = await this.#getCategoryIDPerItem(categories, data.Sheets[i], j);
+                    let id_familia = yield __classPrivateFieldGet(this, _Altoinfor_instances, "m", _Altoinfor_getCategoryIDPerItem).call(this, categories, data.Sheets[i], j);
                     artigos.push({
-                        id_category: 0,
+                        id_category: id_familia,
                         bar_code: (data.Sheets[i][`U${j}`]) ? data.Sheets[i][`U${j}`].v : '',
                         brand: (data.Sheets[i][`E${j}`]) ? data.Sheets[i][`E${j}`].v : '',
-                        category: (data.Sheets[i][`B${j}`]) ? data.Sheets[i][`B${j}`].v : '',
+                        category: (data.Sheets[i][`D${j}`]) ? data.Sheets[i][`D${j}`].v : '',
                         description: (data.Sheets[i][`F${j}`]) ? data.Sheets[i][`F${j}`].v : '',
                         description_short: (data.Sheets[i][`G${j}`]) ? data.Sheets[i][`G${j}`].v : '',
                         description_long: (data.Sheets[i][`W${j}`]) ? data.Sheets[i][`W${j}`].v : '',
@@ -128,12 +136,40 @@ _Altoinfor_instances = new WeakSet(), _Altoinfor_download = function _Altoinfor_
             }
         }));
     });
+}, _Altoinfor_getCategoryIDPerItem = function _Altoinfor_getCategoryIDPerItem(categories, item, index) {
+    return __awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+            let temp = { id: 0, name: "", parent: 0 };
+            let teste = [];
+            let id = 1;
+            let parent = 0;
+            const tempCategories = yield __classPrivateFieldGet(this, _Altoinfor_instances, "m", _Altoinfor_addCategory).call(this, teste, parent, id, item, index);
+            temp = tempCategories.categories;
+            for (let i in categories) {
+                if (categories[i].parent === 0 && categories[i].name === temp[0].name) {
+                    temp[0].id = categories[i].id;
+                    temp[1].parent = categories[i].id;
+                    const child = categories.filter((obj) => {
+                        return obj.parent === temp[1].parent && obj.name === temp[1].name;
+                    });
+                    temp[2].parent = child[0].id;
+                    temp[1].id = child[0].id;
+                    const grandChild = categories.filter((obj) => {
+                        return obj.parent === temp[2].parent && obj.name === temp[2].name;
+                    });
+                    temp[2].id = grandChild[0].id;
+                    debugger;
+                }
+            }
+            resolve(temp[2].id);
+        }));
+    });
 }, _Altoinfor_jsonToUniversalDataFormatCategories = function _Altoinfor_jsonToUniversalDataFormatCategories(data) {
     return __awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
             const progressBar = new cli_progress_1.SingleBar({
                 barsize: 25,
-                format: `${BarColors.cyan('[Altoinfor]')} Getting categories |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Chunks`
+                format: `${BarColors.cyan('[Altoinfor]')} Getting categories |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Categories`
             }, cli_progress_1.Presets.shades_classic);
             for (let i in data.Sheets) {
                 let range = __classPrivateFieldGet(this, _Altoinfor_instances, "m", _Altoinfor_sheetLimitRange).call(this, data.Sheets[i]);
@@ -172,9 +208,7 @@ _Altoinfor_instances = new WeakSet(), _Altoinfor_download = function _Altoinfor_
                         parent = categories[i].id;
                     }
                 }
-                debugger;
             }
-            debugger;
             resolve({ "compare": compare, "parent": parent });
         });
     });
