@@ -2,51 +2,10 @@ import axios from 'axios'
 import {SingleBar, Presets} from 'cli-progress'
 import * as colors from 'ansi-colors'
 import {UniversalDataFormatCategories} from "../interfaces/UniversalDataFormatCategories";
-import {UniversalDataFormatItems} from "../interfaces/UniversalDataFormatItems";
 
 interface IDIndexItem {
     udfID: number,
     goldyID: number
-}
-
-interface GoldylocksDataFormatItems {
-  cod_barras: string,
-  nome: string,
-  familia_pai: string,
-  familia: string,
-  preco_custo: string,
-  desconto_fornecedor: string,
-  custo_final: string,
-  imposto: string,
-  tipo: string,
-  margem1: string,
-  margem2: string,
-  margem3: string,
-  psi1: string,
-  psi2: string,
-  psi3: string,
-  pci1: string,
-  pci2: string,
-  pci3: string,
-  descricao_tecnica: string,
-  estado: string,
-  bloquear_descontos: string,
-  disponivel_webstore: string,
-  movimenta_stock: string,
-  posicao: string,
-  peso: string,
-  comprimento: string,
-  largura: string,
-  altura: string,
-  unidade: string,
-  lembrete: string,
-  segunda_unidade: string,
-  racio_segunda_unidade: string,
-  autorizacao_venda: string,
-  stock_minimo: string,
-  quantidade_automatica_stubs: string,
-  tipo_artigo_composto: string,
-  plano_producao: string,
 }
 
 class Goldylocks {
@@ -95,8 +54,17 @@ class Goldylocks {
 
   async #getArticles(){
     return new Promise(async (resolve, reject) => {
-      //TODO: Use a new endpoint to get article number
-      const res = await axios.get("https://devssl.goldylocks.pt/gl/api/artigos/?l=1000000000000000")
+      let res = await axios.get("https://devssl.goldylocks.pt/gl/api/numeroartigos")
+      let nArtigos
+
+      if(res.data) {
+        nArtigos = res.data
+      }
+      else {
+        reject("Error obtaining number of Goldylocks articles")
+      }
+
+      res = await axios.get(`https://devssl.goldylocks.pt/gl/api/artigos/?l=${nArtigos}`)
 
       if(typeof res.data === "object" && res.data !== null)
         resolve(res.data)
@@ -108,7 +76,6 @@ class Goldylocks {
   async #createFamily(_family){
     return new Promise<void>(async (resolve, reject) => {
       try {
-        console.log(_family)
         const res = await axios.post("https://devssl.goldylocks.pt/gl/api/inserirfamilia/", null, {
           params: {
             p: _family.parent,
@@ -132,49 +99,67 @@ class Goldylocks {
     })
   }
 
-  /*async #convertToGoldylocks(UDF_items) {
-    for(let i in UDF_items) {
-      let GoldylocksItem: GoldylocksDataFormatItems = {
-        altura: UDF_items["dimensions"]["height"] ?? "",
-        autorizacao_venda: "",
-        bloquear_descontos: "",
-        cod_barras: UDF_items["bar_code"] ?? "",
-        comprimento: "",
-        custo_final: "",
-        desconto_fornecedor: "",
-        descricao_tecnica: UDF_items["description_long"] ?? "",
-        disponivel_webstore: "",
-        estado: "",
-        familia: "",
-        familia_pai: "",
-        imposto: "",
-        largura: UDF_items["dimensions"]["width"] ?? "",
-        lembrete: "",
-        margem1: "",
-        margem2: "",
-        margem3: "",
-        movimenta_stock: "",
-        nome: UDF_items["description"] ?? "",
-        pci1: "",
-        pci2: "",
-        pci3: "",
-        peso: "",
-        plano_producao: "",
-        posicao: "",
-        preco_custo: UDF_items["pvp_1"] ?? "",
-        psi1: "",
-        psi2: "",
-        psi3: "",
-        quantidade_automatica_stubs: "",
-        racio_segunda_unidade: "",
-        segunda_unidade: "",
-        stock_minimo: "",
-        tipo: "",
-        tipo_artigo_composto: "",
-        unidade: ""
+  async #createOrEditArticle(_article){
+    return new Promise<void>(async (resolve, reject) => {
+      try {
+        const res = await axios.post("https://devssl.goldylocks.pt/gl/api/guardarartigo/", _article)
+
+        if(res.data == "ok")
+          resolve()
+        else
+          reject("Erro ao guardar artigo")
+      } catch (e) {
+        debugger
+        reject(e)
       }
-    }
-  }*/
+    })
+  }
+
+  #convertToGoldylocks(_item) {
+    let form = new URLSearchParams()
+    form.append("cod_barras", _item.bar_code ?? "")
+    form.append("nome", _item.description ?? "")
+    form.append("familia", _item.id_category ?? "")
+    form.append("preco_custo", _item.pvp_1 ?? "")
+    form.append("desconto_fornecedor", "")
+    form.append("custo_final", "")
+    form.append("imposto", "")
+    form.append("tipo", "")
+    form.append("margem1", "")
+    form.append("margem2", "")
+    form.append("margem3", "")
+    form.append("psi1", "")
+    form.append("psi2", "")
+    form.append("psi3", "")
+    form.append("pci1", "")
+    form.append("pci2", "")
+    form.append("pci3", "")
+    form.append("cotacao_atual", "")
+    form.append("descricao_tecnica", _item.description_long ?? "")
+    form.append("estado", "")
+    form.append("bloquear_descontos", "")
+    form.append("disponivel_webstore", "0") // Required
+    form.append("posicao", "")
+    form.append("peso", _item.weight ?? "")
+    form.append("comprimento", "")
+    form.append("largura", _item.dimensions ? (_item.dimensions.width ?? "") : "")
+    form.append("altura", _item.dimensions ? (_item.dimensions.height ?? "") : "")
+    form.append("unidade", "")
+    form.append("lembrete", "")
+    form.append("stock_minimo", "0") // Required
+    form.append("segunda_unidade", "")
+    form.append("racio_segunda_unidade", "")
+    form.append("autorizacao_venda", "")
+    form.append("movimenta_stock", "1") // Required
+    form.append("id_artigo_anterior", "")
+    form.append("webstore_tempo_entrega", "")
+    form.append("processamento_lotes", "")
+    form.append("tipo_artigo_composto", "")
+    form.append("quantidade_automatica_stubs", "")
+    form.append("plano_producao", "0") // Required
+
+    return form
+  }
 
   async #parseFamilies(){
     const progressBar = new SingleBar({
@@ -243,12 +228,13 @@ class Goldylocks {
       format: `${colors.greenBright("[Goldylocks]")} Parsing articles... ${colors.greenBright("{bar}")} {value}/{total}`
     }, Presets.shades_classic)
 
-    progressBar.start(this.data.categories.length, 0)
+    progressBar.start(this.data.items.length, 0)
 
-    for(let i in this.data.categories){
-      this.data.categories[i].id = this.idIndex.find(e => e.udfID == this.data.categories[i].id).goldyID
+    for(let i in this.data.items){
+      this.data.items[i].id_category = this.idIndex.find(e => e.udfID == this.data.items[i].id_category).goldyID
 
-      //TODO: Criar / Atualizar artigo
+      let goldyArticle = this.#convertToGoldylocks(this.data.items[i])
+      await this.#createOrEditArticle(goldyArticle)
 
       progressBar.increment(1)
     }
@@ -276,8 +262,6 @@ class Goldylocks {
       process.stdout.write(`${colors.greenBright("Done")}\n`)
 
       await this.#parseArticles()
-
-      /*let goldylocks_items = await this.#convertToGoldylocks(this.data)*/
     } catch (e) {
       console.error(`${colors.greenBright("[Goldylocks]")} ${e}`)
     }
