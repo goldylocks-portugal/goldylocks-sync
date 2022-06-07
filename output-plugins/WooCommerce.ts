@@ -21,9 +21,6 @@ class WooCommerce {
     constructor(config: any, data: any) {
         const array = {
             categories: [
-                {id: 1, name: 'Familia', parent: 0},
-                {id: 2, name: 'Linha Produto', parent: 1},
-                {id: 3, name: 'Tipo Produto', parent: 2},
                 {id: 4, name: 'Alimentar', parent: 0},
                 {id: 5, name: 'Bebidas', parent: 4},
                 {id: 6, name: 'Acessorios', parent: 5},
@@ -2020,6 +2017,9 @@ class WooCommerce {
      */
     async #insertCategories(array: UniversalDataFormatCategories[]) {
         return new Promise(async (resolve, reject) => {
+
+            const _wcCategories = await this.getWooCommerceCategories();
+
             const progressBar = new SingleBar({
                 barsize: 25,
                 format: `${BarColors.magenta('[WooCommerce]')} Inserting categories      |${BarColors.magenta('{bar}')}| {percentage}% | {value}/{total} Items`
@@ -2028,20 +2028,56 @@ class WooCommerce {
             progressBar.start(array.length, 0);
 
             for (const element of array) {
+
                 const index = array.indexOf(element);
-                if (array[index].parent === 0) {
+
+                const exist:any = await this.#compara(_wcCategories, array[index])
+
+                if(!exist.compare){
+                    //Create the new category
                     let newID = await this.#insertCategoryIntoWooCommerce(array[index])
+
+                    //Creat an object to be sent into the list of categories to know the original ID
                     const res: categoryIndexArray = {
                         originalID: array[index].id.toString(),
                         woocommerceID: newID.toString(),
                     }
+
+                    //Insert the new category in the list of categories to know the original ID
                     this._allCategories.push(res)
+
+                    progressBar.increment(1)
+                }else{
                     progressBar.increment(1)
                 }
 
             }
 
             progressBar.stop();
+        });
+    };
+
+    async #compara(array, categoria):Promise<object> {
+        return new Promise((resolve, reject) => {
+            let compare: boolean = false;
+            let parent: number = 0;
+
+            for (let element of array) {
+                let i = array.indexOf(element);
+                if (array[i].parent === categoria.parent) {
+                    compare = (array[i].name == categoria.name)
+                    if (compare) {
+                        this._allCategories.push({originalID: categoria.id, woocommerceID: array[i].id})
+                        break
+                    }
+                }
+            }
+
+            if (compare) {
+                resolve({"compare": compare, "parent": parent, "nome": categoria.name});
+            } else {
+                resolve({"compare": compare, "parent": parent, "nome": categoria.name});
+            }
         });
     }
 
@@ -2053,10 +2089,18 @@ class WooCommerce {
      */
     async #insertCategoryIntoWooCommerce(array: UniversalDataFormatCategories): Promise<number> {
         return new Promise(((resolve, reject) => {
+            let parent: string = "0";
+            for(const element of this._allCategories){
+                if(element.originalID === array.parent.toString()){
+                    parent = element.woocommerceID
+                }
+            }
+
             const data = {
                 name: array.name,
-                parent: array.parent
+                parent: parent
             };
+
             this._WooCommerce.post("products/categories", data)
                 .then((response) => {
                     debugger
@@ -2066,6 +2110,18 @@ class WooCommerce {
                     reject(error)
                 });
         }))
+    }
+
+    async getWooCommerceCategories(): Promise<any[]> {
+        return new Promise((resolve, reject) => {
+            this._WooCommerce.get("products/categories")
+                .then((response) => {
+                    resolve(response.data);
+                })
+                .catch((error) => {
+                    reject(error.response.data);
+                });
+        });
     }
 
     /**
@@ -2101,8 +2157,25 @@ class WooCommerce {
 
     async execute() {
         try {
+
             await this.#insertCategories(this._universalDataFormat.categories)
             await this.#insertItems(this._universalDataFormat.items);
+
+            /*for (let i = 0; i < 100; i++) {
+
+                this._WooCommerce.delete("products/categories/"+i, {
+                    force: true
+                })
+                    .then((response) => {
+                        console.log(response.data);
+                        console.log("done")
+                    })
+                    .catch((error) => {
+                        console.log("fail")
+                        console.log(error.response.data);
+                    });
+            }*/
+
         } catch (e) {
             console.log(e)
         }
