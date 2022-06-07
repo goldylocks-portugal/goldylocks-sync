@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+class Goldylocks{
+    execute(){
+
+    }
+}
+
+export {Goldylocks}
+=======
 import axios from 'axios'
 import {SingleBar, Presets} from 'cli-progress'
 import * as colors from 'ansi-colors'
@@ -285,3 +294,4 @@ class Goldylocks {
 }
 
 export {Goldylocks}
+>>>>>>> origin/2-create-goldylocks-output-plugin
