@@ -2013,6 +2013,11 @@ class WooCommerce {
         console.log(`${BarColors.magenta('Done')}`);
     }
 
+    /**
+     * insertCategories - Funtion that will check the categories, if they already exist or not, and then insert isto WooCommerce
+     * @param array
+     * @private
+     */
     async #insertCategories(array: UniversalDataFormatCategories[]) {
         return new Promise(async (resolve, reject) => {
             const progressBar = new SingleBar({
@@ -2025,7 +2030,7 @@ class WooCommerce {
             for (const element of array) {
                 const index = array.indexOf(element);
                 if (array[index].parent === 0) {
-                    let newID = await this.#insertIntoWooCommerce(array[index])
+                    let newID = await this.#insertCategoryIntoWooCommerce(array[index])
                     const res: categoryIndexArray = {
                         originalID: array[index].id.toString(),
                         woocommerceID: newID.toString(),
@@ -2040,7 +2045,13 @@ class WooCommerce {
         });
     }
 
-    async #insertIntoWooCommerce(array: UniversalDataFormatCategories): Promise<number> {
+    /**
+     * insertIntoWooCommerce - Funtion to insert the category into WooCommerce
+     * @param array
+     * @private
+     * @return Promise<number> (category id)
+     */
+    async #insertCategoryIntoWooCommerce(array: UniversalDataFormatCategories): Promise<number> {
         return new Promise(((resolve, reject) => {
             const data = {
                 name: array.name,
@@ -2057,6 +2068,11 @@ class WooCommerce {
         }))
     }
 
+    /**
+     * insertItems - Funtion that will associate the category to the item and then insert isto WooCommerce
+     * @param array
+     * @private
+     */
     async #insertItems(array: UniversalDataFormatItems) {
         return new Promise((resolve, reject) => {
             const data = {
