@@ -30,6 +30,10 @@ class Goldylocks {
     }
   }
 
+  /**
+   * getToken - Obtain a JWT token from the API
+   * @private
+   */
   async #getToken(): Promise<string> {
     return new Promise(async (resolve, reject) => {
       const res = await axios.post("https://devssl.goldylocks.pt/gl/api/obtertoken", this.credentials)
@@ -41,6 +45,10 @@ class Goldylocks {
     })
   }
 
+  /**
+   * getFamilies - Obtains every family in Goldylocks
+   * @private
+   */
   async #getFamilies(){
     return new Promise(async (resolve, reject) => {
       const res = await axios.get("https://devssl.goldylocks.pt/gl/api/familias/")
@@ -52,6 +60,10 @@ class Goldylocks {
     })
   }
 
+  /**
+   * getArticles - Obtains every article in Goldylocks
+   * @private
+   */
   async #getArticles(){
     return new Promise(async (resolve, reject) => {
       let res = await axios.get("https://devssl.goldylocks.pt/gl/api/numeroartigos")
@@ -73,6 +85,11 @@ class Goldylocks {
     })
   }
 
+  /**
+   * createFamily - Creates a new family in Goldylocks and adds it's ID to idIndex
+   * @param _family
+   * @private
+   */
   async #createFamily(_family){
     return new Promise<void>(async (resolve, reject) => {
       try {
@@ -99,6 +116,11 @@ class Goldylocks {
     })
   }
 
+  /**
+   * createFamily - Creates/Edits an article in Goldylocks
+   * @param _article
+   * @private
+   */
   async #createOrEditArticle(_article){
     return new Promise<void>(async (resolve, reject) => {
       try {
@@ -115,6 +137,11 @@ class Goldylocks {
     })
   }
 
+  /**
+   * convertToGoldylocks - Transforms a UDF item into a Goldylocks Article
+   * @param _item
+   * @private
+   */
   #convertToGoldylocks(_item) {
     let form = new URLSearchParams()
     form.append("cod_barras", _item.bar_code ?? "")
@@ -161,6 +188,13 @@ class Goldylocks {
     return form
   }
 
+
+  /**
+   * parseFamilies - Runs through all UDF categories without a parent to see if they exist in Goldy.
+   *                 If a family does not exist, it's created and it's new ID is saved.
+   *                 If it exists, only it's ID is saved
+   * @private
+   */
   async #parseFamilies(){
     const progressBar = new SingleBar({
       barsize: 25,
@@ -199,6 +233,14 @@ class Goldylocks {
     progressBar.stop()
   }
 
+  /**
+   * parseFamilyWithParent - Runs through all UDF categories of a specific parent to see if they exist in Goldy.
+   *                         If a family does not exist, it's created and it's new ID is saved.
+   *                         If it exists, only it's ID is saved
+   * @param _family
+   * @param _progressBar
+   * @private
+   */
   async #parseFamilyWithParent(_family: UniversalDataFormatCategories, _progressBar){
     const familyExistsInGoldy = this.goldyData.families.find(
       e => (e.familia_pai == _family.parent) && (e.descricao == _family.name)
@@ -222,6 +264,12 @@ class Goldylocks {
     }
   }
 
+  /**
+   * parseArticles - Runs through all UDF items and replaces their category IDs
+   *                 with their corresponding IDs from Goldy.
+   *                 Then the item is added (or updated) to Goldy.
+   * @private
+   */
   async #parseArticles(){
     const progressBar = new SingleBar({
       barsize: 25,
