@@ -1,5 +1,0 @@
-const WooCommerce = {
-
-}
-
-export {WooCommerce}
