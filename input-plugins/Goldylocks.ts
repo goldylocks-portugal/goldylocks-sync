@@ -24,6 +24,10 @@ class Goldylocks {
     }
   }
 
+  /**
+   * getToken - Obtain a JWT token from the API
+   * @private
+   */
   async #getToken(): Promise<string> {
     return new Promise(async (resolve, reject) => {
       const res = await axios.post("https://devssl.goldylocks.pt/gl/api/obtertoken", this.credentials)
@@ -35,6 +39,10 @@ class Goldylocks {
     })
   }
 
+  /**
+   * getFamilies - Obtains every family in Goldylocks
+   * @private
+   */
   async #getFamilies(){
     return new Promise(async (resolve, reject) => {
       const res = await axios.get("https://devssl.goldylocks.pt/gl/api/familias/")
@@ -46,6 +54,10 @@ class Goldylocks {
     })
   }
 
+  /**
+   * getArticles - Obtains every article in Goldylocks
+   * @private
+   */
   async #getArticles(){
     return new Promise(async (resolve, reject) => {
       let res = await axios.get("https://devssl.goldylocks.pt/gl/api/numeroartigos")
@@ -67,6 +79,10 @@ class Goldylocks {
     })
   }
 
+  /**
+   * convertFamilies - Converts all Goldy families to UniversalDataFormat
+   * @private
+   */
   #convertFamilies(): Array<UniversalDataFormatCategories>{
     const progressBar = new SingleBar({
       barsize: 25,
@@ -92,6 +108,10 @@ class Goldylocks {
     return udfCategories
   }
 
+  /**
+   * convertArticles - Converts all Goldy articles to UniversalDataFormat
+   * @private
+   */
   #convertArticles(): Array<UniversalDataFormatItems>{
     const progressBar = new SingleBar({
       barsize: 25,
