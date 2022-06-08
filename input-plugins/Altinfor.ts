@@ -1,3 +1,0 @@
-const Altinfor = {}
-
-export {Altinfor}
