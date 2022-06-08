@@ -196,7 +196,7 @@ class Altoinfor {
                 let range = this.#sheetLimitRange(data.Sheets[i])
                 //Removes 1 from range because, the first 2 lines on the CSV are a blank line and the header,
                 // in the previous function we remove the blank one, and now we need to say to the progress bar that we need to remove one more (the header one)
-                progressBar.start(range-1, 0);
+                progressBar.start(range - 1, 0);
 
                 let categories: Array<UniversalDataFormatCategories> = []
 
@@ -347,14 +347,14 @@ class Altoinfor {
         return new Promise(async (resolve, reject) => {
             try {
 
-                // await this.#download().then(async () => {
+                await this.#download().then(async () => {
                     let json = await this.#csvToJson();
                     let categories = await this.#jsonToUniversalDataFormatCategories(json);
                     let items = await this.#jsonToUniversalDataFormatItems(json, categories);
 
                     let universalData: UniversalDataFormat = {categories: categories, items: items}
                     resolve(universalData)
-                // });
+                });
             } catch (e) {
                 reject(e)
             }
