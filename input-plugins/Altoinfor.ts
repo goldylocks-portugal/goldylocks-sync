@@ -171,7 +171,6 @@ class Altoinfor {
                         return obj.parent === temp[2].parent && obj.name === temp[2].name
                     })
                     temp[2].id = grandChild[0].id;
-                    debugger
                 }
             }
 
@@ -195,7 +194,9 @@ class Altoinfor {
             for (let i in data.Sheets) {
 
                 let range = this.#sheetLimitRange(data.Sheets[i])
-                progressBar.start(range, 0);
+                //Removes 1 from range because, the first 2 lines on the CSV are a blank line and the header,
+                // in the previous function we remove the blank one, and now we need to say to the progress bar that we need to remove one more (the header one)
+                progressBar.start(range-1, 0);
 
                 let categories: Array<UniversalDataFormatCategories> = []
 
@@ -204,7 +205,8 @@ class Altoinfor {
                 let parent: number = 0;
 
                 //linhas
-                for (let j = 1; j <= range; j++) {
+                //It starts on 2 because the first 2 lines on the CSV are a blank line and the header
+                for (let j = 2; j <= range; j++) {
                     try {
                         const insertCategories = await this.#addCategory(categories, parent, id, data.Sheets[i], j)
 
@@ -344,14 +346,15 @@ class Altoinfor {
     async execute(): Promise<UniversalDataFormat> {
         return new Promise(async (resolve, reject) => {
             try {
-                await this.#download().then(async () => {
+
+                // await this.#download().then(async () => {
                     let json = await this.#csvToJson();
                     let categories = await this.#jsonToUniversalDataFormatCategories(json);
                     let items = await this.#jsonToUniversalDataFormatItems(json, categories);
 
                     let universalData: UniversalDataFormat = {categories: categories, items: items}
                     resolve(universalData)
-                });
+                // });
             } catch (e) {
                 reject(e)
             }
