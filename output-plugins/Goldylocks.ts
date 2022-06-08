@@ -291,8 +291,6 @@ class Goldylocks {
   }
 
   async execute() {
-    this.data = await import("../dummy_data.json")
-
     try {
       process.stdout.write(`${colors.greenBright("[Goldylocks]")} Obtaining Token... `)
       axios.defaults.headers.common['Authorization'] = await this.#getToken()
