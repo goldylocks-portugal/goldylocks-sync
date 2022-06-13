@@ -124,14 +124,28 @@ class Goldylocks {
   async #createOrEditArticle(_article){
     return new Promise<void>(async (resolve, reject) => {
       try {
-        const res = await axios.post("https://devssl.goldylocks.pt/gl/api/guardarartigo/", _article)
+        let barCode = _article.get("cod_barras")
+
+        if(!parseInt(barCode)) {
+          let newBarCode = 0
+          let barCodeAlreadyExists = false
+
+          do {
+            newBarCode = Math.floor(999999999999 - (Math.random() * 899999999999))
+            barCodeAlreadyExists = this.goldyData.articles.some(e => e.bar_code == newBarCode)
+          } while(barCodeAlreadyExists)
+
+          _article.set("cod_barras", newBarCode)
+        }
+
+        const res = await axios.post("https://devssl.goldylocks.pt/gl/api/guardarartigo/?debug=1", _article)
 
         if(res.data == "ok")
           resolve()
-        else
+        else {
           reject("Erro ao guardar artigo")
+        }
       } catch (e) {
-        debugger
         reject(e)
       }
     })
@@ -309,7 +323,7 @@ class Goldylocks {
 
       await this.#parseArticles()
     } catch (e) {
-      console.error(`${colors.greenBright("[Goldylocks]")} ${e}`)
+      console.error(`${colors.greenBright("\n[Goldylocks]")} ${e}`)
     }
   }
 }
