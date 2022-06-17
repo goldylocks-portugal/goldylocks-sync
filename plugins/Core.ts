@@ -48,7 +48,7 @@ class Core {
      */
     async processOutput(pluginConfiguration: PluginConfiguration, data: UniversalDataFormat) {
         const Plugin = await import(`../output-plugins/${pluginConfiguration.plugin}`)
-        const plugin = new Plugin[pluginConfiguration.plugin](pluginConfiguration.configuration)
+        const plugin = new Plugin[pluginConfiguration.plugin](pluginConfiguration.configuration, data)
 
         return await plugin.execute()
     }
