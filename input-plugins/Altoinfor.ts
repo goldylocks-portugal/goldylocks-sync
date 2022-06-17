@@ -1,7 +1,7 @@
 import {UniversalDataFormatItems} from "../interfaces/UniversalDataFormatItems"
 
 import * as https from 'https';
-import {createWriteStream} from 'fs';
+import {createWriteStream, writeFile} from 'fs';
 import axios from 'axios';
 import * as BarColors from 'ansi-colors'
 import {SingleBar, Presets} from 'cli-progress'
@@ -125,7 +125,7 @@ class Altoinfor {
                         min_sell: (data.Sheets[i][`I${j}`]) ? data.Sheets[i][`I${j}`].v : 0,
                         pvp_1: (data.Sheets[i][`J${j}`]) ? data.Sheets[i][`J${j}`].v : 0,
                         pvp_2: (data.Sheets[i][`N${j}`]) ? data.Sheets[i][`N${j}`].v : 0,
-                        stock: (data.Sheets[i][`O${j}`]) ? data.Sheets[i][`O${j}`].v : '',
+                        stock: (data.Sheets[i][`O${j}`]) ? parseInt(data.Sheets[i][`O${j}`].v.toString().split("--")[1]) : 0,
                         weight: (data.Sheets[i][`R${j}`]) ? data.Sheets[i][`R${j}`].v : 0
                     })
                     progressBar.increment(1)
@@ -354,6 +354,8 @@ class Altoinfor {
 
                     let universalData: UniversalDataFormat = {categories: categories, items: items}
                     resolve(universalData)
+
+
                 });
             } catch (e) {
                 reject(e)
