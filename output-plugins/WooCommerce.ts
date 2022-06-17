@@ -37,7 +37,7 @@ class WooCommerce {
     }
 
     constructor(config: any, data: any) {
-        
+
         process.stdout.write(`${BarColors.magenta('[WooCommerce]')} Connecting... `);
 
         this._WooCommerce = new WooCommerceRestApi({
@@ -189,7 +189,7 @@ class WooCommerce {
             const sucess = multibar.create(categories.length, 0);
             sucess.update(0, {estado: `${BarColors.greenBright('Successfully')}`});
             const failed = multibar.create(categories.length, 0);
-            failed.update(0, {estado: `${BarColors.redBright('Failded')}`});
+            failed.update(0, {estado: `${BarColors.redBright('Failed')}`});
 
             for (const element of categories) {
                 const index = categories.indexOf(element);
@@ -223,7 +223,7 @@ class WooCommerce {
                 }
             }
 
-            writeFile("downloads/error_insert_categories_wc.json", JSON.stringify(_errors), err => {
+            writeFile("debug/WooCommerce/log_categories.json", JSON.stringify(_errors), err => {
                 if (err) {
                     console.error(err)
                 }
@@ -338,7 +338,7 @@ class WooCommerce {
      */
     async #insertItems(array: UniversalDataFormatItems[]) {
         return new Promise(async (resolve, reject) => {
-            let _errors = [];
+            let _logItems = [];
 
             const progressBar = new SingleBar({
                 barsize: 25,
@@ -354,19 +354,36 @@ class WooCommerce {
                     await this.#insertItemIntoWooCommerce(array[i])
                     progressBar.increment(1)
                 } catch (e) {
-                    if (e === "REF inválida ou duplicada.") {
+                    if (e.response.data.message === "REF inválida ou duplicada.") {
+                        try {
+                            await this.#updateItemOnWooCommerce(e.response.data.data.resource_id, array[i]);
+                            const log = {
+                                msg: "Product updated!",
+                                error: e.response.data,
+                                item: array[i]
+                            }
+                            _logItems = _logItems.concat(log);
+                        } catch (errorLog) {
+                            const log = {
+                                msg: errorLog.response.data.message,
+                                error: errorLog.response.data,
+                                item: array[i]
+                            }
+                            _logItems = _logItems.concat(log);
+                        }
                         progressBar.increment(1)
                     } else {
                         const error = {
-                            msg: e,
+                            msg: e.response.data.message,
+                            error: e.response.data,
                             item: array[i]
                         }
-                        _errors = _errors.concat(error);
+                        _logItems = _logItems.concat(error);
                         reject(e)
                     }
                 }
             }
-            writeFile("downloads/error_insert_items_wc.json", JSON.stringify(_errors), err => {
+            writeFile("debug/WooCommerce/log_items.json", JSON.stringify(_logItems), err => {
                 if (err) {
                     console.error(err)
                 }
@@ -405,13 +422,13 @@ class WooCommerce {
                     }
                 ]
             };
-            debugger
+
             this._WooCommerce.post("products", data)
                 .then((response) => {
                     resolve(response)
                 })
                 .catch((error) => {
-                    reject(error.response.data.message);
+                    reject(error);
                 });
         }))
     }
@@ -433,6 +450,37 @@ class WooCommerce {
             }
             resolve(newID);
         })
+    }
+
+    async #updateItemOnWooCommerce(id: number, array: UniversalDataFormatItems): Promise<boolean> {
+        return new Promise((resolve, reject) => {
+            const data = {
+                name: array.description,
+                regular_price: array.pvp_1.toString(),
+                description: array.description_long,
+                short_description: array.description_short,
+                categories: [
+                    {
+                        id: array.id_category
+                    },
+                ],
+                manage_stock: true,
+                stock_quantity: array.stock,
+                stock_status: "instock",
+                images: [
+                    {
+                        src: array.image
+                    }
+                ]
+            };
+            this._WooCommerce.put(`products/${id}`, data)
+                .then((response) => {
+                    resolve(response.data);
+                })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
     }
 
     /**
@@ -593,8 +641,8 @@ class WooCommerce {
 
             console.log(this._pageWcConfig)
 
-            await this.#deleteAllProducts()
-            await this.#deleteAllCategories()
+            /*await this.#deleteAllProducts()
+            await this.#deleteAllCategories()*/
 
         } catch (e) {
             console.log("\n", e);
