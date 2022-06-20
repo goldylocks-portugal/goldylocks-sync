@@ -35,7 +35,7 @@ class Altoinfor {
 
             const progressBar = new SingleBar({
                 barsize: 25,
-                format: `${BarColors.cyan('[Altoinfor]')} Downloading CSV |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Chunks`
+                format: `${BarColors.cyan('[Altoinfor]')} Downloading CSV      |${BarColors.cyan('{bar}')}| | {percentage}% | {value}/{total} Chunks | ETA:{eta}s | {duration}s`
             }, Presets.shades_classic);
             progressBar.start(totalLength, 0);
 
@@ -96,7 +96,7 @@ class Altoinfor {
 
             const progressBar = new SingleBar({
                 barsize: 25,
-                format: `${BarColors.cyan('[Altoinfor]')} Getting items      |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Items`
+                format: `${BarColors.cyan('[Altoinfor]')} Getting items        |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} | ETA:{eta}s | {duration}s`
             }, Presets.shades_classic);
 
             for (let i in data.Sheets) {
@@ -104,16 +104,16 @@ class Altoinfor {
                 let range = this.#sheetLimitRange(data.Sheets[i])
                 progressBar.start(range, 0);
 
-                let artigos: Array<UniversalDataFormatItems> = [];
+                let products: Array<UniversalDataFormatItems> = [];
 
                 //linhas
 
                 for (let j = 1; j <= range; j++) {
 
-                    let id_familia: number = await this.#getCategoryIDPerItem(categories, data.Sheets[i], j);
+                    let family_id: number = await this.#getCategoryIDPerItem(categories, data.Sheets[i], j);
 
-                    artigos.push({
-                        id_category: id_familia,
+                    products.push({
+                        id_category: family_id,
                         bar_code: (data.Sheets[i][`U${j}`]) ? data.Sheets[i][`U${j}`].v : '',
                         brand: (data.Sheets[i][`E${j}`]) ? data.Sheets[i][`E${j}`].v : '',
                         category: (data.Sheets[i][`D${j}`]) ? data.Sheets[i][`D${j}`].v : '',
@@ -131,10 +131,18 @@ class Altoinfor {
                     progressBar.increment(1)
                 }
 
-
-                artigos.shift();
+                products.shift();
                 progressBar.stop();
-                resolve(artigos)
+
+                process.stdout.write(`${BarColors.cyan('[Altoinfor]')} Saving debug file for products... `);
+                writeFile("debug/Altoinfor/products.json", JSON.stringify(products), err => {
+                    if (err) {
+                        console.error(err)
+                    }
+                });
+                console.log(`${BarColors.cyan('Done')}`);
+
+                resolve(products)
             }
         })
     }
@@ -150,11 +158,11 @@ class Altoinfor {
     async #getCategoryIDPerItem(categories: UniversalDataFormatCategories[], item: object, index: number): Promise<number> {
         return new Promise(async (resolve, reject) => {
             let temp: UniversalDataFormatCategories = {id: 0, name: "", parent: 0};
-            let teste: Array<UniversalDataFormatCategories> = [];
+            let categoriesForItems: Array<UniversalDataFormatCategories> = [];
             let id: number = 1;
             let parent: number = 0;
 
-            const tempCategories = await this.#addCategory(teste, parent, id, item, index)
+            const tempCategories = await this.#addCategory(categoriesForItems, parent, id, item, index)
 
             temp = tempCategories.categories;
 
@@ -188,7 +196,7 @@ class Altoinfor {
 
             const progressBar = new SingleBar({
                 barsize: 25,
-                format: `${BarColors.cyan('[Altoinfor]')} Getting categories |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} Categories`
+                format: `${BarColors.cyan('[Altoinfor]')} Getting categories   |${BarColors.cyan('{bar}')}| {percentage}% | {value}/{total} | ETA:{eta}s | {duration}s`
             }, Presets.shades_classic);
 
             for (let i in data.Sheets) {
@@ -199,7 +207,6 @@ class Altoinfor {
                 progressBar.start(range - 1, 0);
 
                 let categories: Array<UniversalDataFormatCategories> = []
-
 
                 let id: number = 1;
                 let parent: number = 0;
@@ -219,6 +226,15 @@ class Altoinfor {
                     }
                 }
                 progressBar.stop();
+
+                process.stdout.write(`${BarColors.cyan('[Altoinfor]')} Saving debug file for categories... `);
+                writeFile("debug/Altoinfor/categories.json", JSON.stringify(categories), err => {
+                    if (err) {
+                        console.error(err)
+                    }
+                });
+                console.log(`${BarColors.cyan('Done')}`);
+
                 resolve(categories)
             }
         })
@@ -243,9 +259,7 @@ class Altoinfor {
                         parent = categories[i].id
                     }
                 }
-
             }
-
             resolve({"compare": compare, "parent": parent});
         });
     }
@@ -263,10 +277,19 @@ class Altoinfor {
         return new Promise(async (resolve, reject) => {
             let temp: UniversalDataFormatCategories = {id: 0, name: "", parent: 0}
             let exists: any = 0;
+            let name: any = '';
+
+            //Family
+            name = ((data[`B${index}`]) ? data[`B${index}`].v : '').split(" ");
+
+            name = name.filter(function (el) {
+                return el;
+            });
+            name = name.join(" ").trim();
 
             temp = {
                 id: id,
-                name: (data[`B${index}`]) ? data[`B${index}`].v : '',
+                name: name,
                 parent: parent
             }
 
@@ -284,9 +307,17 @@ class Altoinfor {
                 parent = exists.parent
             }
 
+            //Sub-Family
+            name = ((data[`C${index}`]) ? data[`C${index}`].v : '').split(" ");
+
+            name = name.filter(function (el) {
+                return el;
+            });
+            name = name.join(" ").trim();
+
             temp = {
                 id: id,
-                name: (data[`C${index}`]) ? data[`C${index}`].v : '',
+                name: name,
                 parent: parent
             }
 
@@ -304,15 +335,33 @@ class Altoinfor {
                 parent = exists.parent
             }
 
+            //Sub-Sub-Family
+            name = ((data[`D${index}`]) ? data[`D${index}`].v : '').split(" ");
+
+            name = name.filter(function (el) {
+                return el;
+            });
+
+            name = name.join(" ").trim();
+
             temp = {
                 id: id,
-                name: (data[`D${index}`]) ? data[`D${index}`].v : '',
+                name: name,
                 parent: parent
             }
 
-            exists = await this.#compareCategories(categories, temp)
+            //exists = await this.#compareCategories(categories, temp)
 
-            if (!exists.compare) {
+            let filterGrandChildren = categories.filter(function (el) {
+                return (el.name === temp.name && temp.parent === el.parent)
+            })
+
+            if (filterGrandChildren.length === 0) {
+                if (temp.name === 'Hp Original') {
+                    console.log('temp', temp)
+                    console.log(filterGrandChildren)
+                    debugger
+                }
                 categories.push({
                     id: id,
                     name: temp.name,
@@ -321,6 +370,7 @@ class Altoinfor {
                 parent = id
                 id++
             } else {
+                exists = await this.#compareCategories(categories, temp)
                 parent = exists.parent
             }
 
@@ -346,17 +396,47 @@ class Altoinfor {
     async execute(): Promise<UniversalDataFormat> {
         return new Promise(async (resolve, reject) => {
             try {
+                // await this.#download().then(async () => {
+                let json = await this.#csvToJson();
+                let categories = await this.#jsonToUniversalDataFormatCategories(json);
+                //let items = await this.#jsonToUniversalDataFormatItems(json, categories);
+                let items: UniversalDataFormatItems[] = [{
+                    "id_category": 3,
+                    'bar_code': '3259920015251',
+                    "brand": "DAMMANN FRÈRES",
+                    "category": "Acessorios",
+                    "description": "Filtro de Chá Descartável para Bule 64un",
+                    "description_short": "Filtro de Chá Descartável para Bule 64un",
+                    "description_long": "Estes filtros universais para chá são adequados para todos os tipos de chá a granel. De sabor neutro, permitem a infusão de chás de folhas ou chás de ervas. Resistente, o papel não se desfaz mesmo depois de muito tempo embebido em água. Ideal para al préaração do infusor em bule, podendo ser utilizado também em xícara alta.",
+                    "id": '6591525',
+                    "image": "http://www.netimagens.com/images/produtos/6591525.jpg",
+                    "min_sell": 1,
+                    "pvp_1": 4.45,
+                    "pvp_2": 0,
+                    "stock": 10,
+                    "weight": 0.06
+                },
+                    {
+                        "id_category": 3,
+                        "bar_code": '3259920015251',
+                        "brand": "DAMMANN FRÈRES",
+                        "category": "Acessorios",
+                        "description": "Filtro de Chá Descartável para Bule 64un",
+                        "description_short": "Filtro de Chá Descartável para Bule 64un",
+                        "description_long": "Estes filtros universais para chá são adequados para todos os tipos de chá a granel. De sabor neutro, permitem a infusão de chás de folhas ou chás de ervas. Resistente, o papel não se desfaz mesmo depois de muito tempo embebido em água. Ideal para al préaração do infusor em bule, podendo ser utilizado também em xícara alta.",
+                        "id": '6591525',
+                        "image": "http://www.netimagens.com/images/produtos/6591525.jpg",
+                        "min_sell": 1,
+                        "pvp_1": 4.45,
+                        "pvp_2": 0,
+                        "stock": 10,
+                        "weight": 0.06
+                    }];
+                let universalData: UniversalDataFormat = {categories: categories, items: items}
+                resolve(universalData)
 
-                await this.#download().then(async () => {
-                    let json = await this.#csvToJson();
-                    let categories = await this.#jsonToUniversalDataFormatCategories(json);
-                    let items = await this.#jsonToUniversalDataFormatItems(json, categories);
 
-                    let universalData: UniversalDataFormat = {categories: categories, items: items}
-                    resolve(universalData)
-
-
-                });
+                // });
             } catch (e) {
                 reject(e)
             }

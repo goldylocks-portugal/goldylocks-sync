@@ -1,0 +1,6362 @@
+[
+  {
+    "id": 1,
+    "name": "Alimentar",
+    "parent": 0
+  },
+  {
+    "id": 2,
+    "name": "Bebidas",
+    "parent": 1
+  },
+  {
+    "id": 3,
+    "name": "Acessorios",
+    "parent": 2
+  },
+  {
+    "id": 4,
+    "name": "Aguas",
+    "parent": 2
+  },
+  {
+    "id": 5,
+    "name": "Cafe Capsulas",
+    "parent": 2
+  },
+  {
+    "id": 6,
+    "name": "Cafe Grao",
+    "parent": 2
+  },
+  {
+    "id": 7,
+    "name": "Cafe Moido",
+    "parent": 2
+  },
+  {
+    "id": 8,
+    "name": "Cafe Pastilhas",
+    "parent": 2
+  },
+  {
+    "id": 9,
+    "name": "Cafe Soluvel",
+    "parent": 2
+  },
+  {
+    "id": 10,
+    "name": "Cha Branco",
+    "parent": 2
+  },
+  {
+    "id": 11,
+    "name": "Cha Capsulas",
+    "parent": 2
+  },
+  {
+    "id": 12,
+    "name": "Cha Carcadet",
+    "parent": 2
+  },
+  {
+    "id": 13,
+    "name": "Cha Coffrets",
+    "parent": 2
+  },
+  {
+    "id": 14,
+    "name": "Cha Criancas",
+    "parent": 2
+  },
+  {
+    "id": 15,
+    "name": "Cha Descafeinado",
+    "parent": 2
+  },
+  {
+    "id": 16,
+    "name": "Cha Escuro",
+    "parent": 2
+  },
+  {
+    "id": 17,
+    "name": "Cha Frio",
+    "parent": 2
+  },
+  {
+    "id": 18,
+    "name": "Cha Oolong",
+    "parent": 2
+  },
+  {
+    "id": 19,
+    "name": "Cha Preto",
+    "parent": 2
+  },
+  {
+    "id": 20,
+    "name": "Cha Rooibos",
+    "parent": 2
+  },
+  {
+    "id": 21,
+    "name": "Cha Tisanas Ervas",
+    "parent": 2
+  },
+  {
+    "id": 22,
+    "name": "Cha Verde",
+    "parent": 2
+  },
+  {
+    "id": 23,
+    "name": "Chocolate",
+    "parent": 2
+  },
+  {
+    "id": 24,
+    "name": "Leite",
+    "parent": 2
+  },
+  {
+    "id": 25,
+    "name": "Licores",
+    "parent": 2
+  },
+  {
+    "id": 26,
+    "name": "Vinho Branco",
+    "parent": 2
+  },
+  {
+    "id": 27,
+    "name": "Vinho Espumante",
+    "parent": 2
+  },
+  {
+    "id": 28,
+    "name": "Vinho Rosé",
+    "parent": 2
+  },
+  {
+    "id": 29,
+    "name": "Vinho Tinto",
+    "parent": 2
+  },
+  {
+    "id": 30,
+    "name": "Descartaveis",
+    "parent": 1
+  },
+  {
+    "id": 31,
+    "name": "Copos Esferovite",
+    "parent": 30
+  },
+  {
+    "id": 32,
+    "name": "Copos Papel",
+    "parent": 30
+  },
+  {
+    "id": 33,
+    "name": "Copos PLA",
+    "parent": 30
+  },
+  {
+    "id": 34,
+    "name": "Copos Plastico",
+    "parent": 30
+  },
+  {
+    "id": 35,
+    "name": "Kit Cafe",
+    "parent": 30
+  },
+  {
+    "id": 36,
+    "name": "Naperons",
+    "parent": 30
+  },
+  {
+    "id": 37,
+    "name": "Palhinhas",
+    "parent": 30
+  },
+  {
+    "id": 38,
+    "name": "Palhinhas Papel",
+    "parent": 30
+  },
+  {
+    "id": 39,
+    "name": "Papel Siliconizado",
+    "parent": 30
+  },
+  {
+    "id": 40,
+    "name": "Papel Vegetal",
+    "parent": 30
+  },
+  {
+    "id": 41,
+    "name": "Paus Espetadas",
+    "parent": 30
+  },
+  {
+    "id": 42,
+    "name": "Pratos Cana Acucar",
+    "parent": 30
+  },
+  {
+    "id": 43,
+    "name": "Pratos Folha Palma",
+    "parent": 30
+  },
+  {
+    "id": 44,
+    "name": "Pratos Papel",
+    "parent": 30
+  },
+  {
+    "id": 45,
+    "name": "Pratos Plastico",
+    "parent": 30
+  },
+  {
+    "id": 46,
+    "name": "Talheres Cartao",
+    "parent": 30
+  },
+  {
+    "id": 47,
+    "name": "Talheres Madeira",
+    "parent": 30
+  },
+  {
+    "id": 48,
+    "name": "Talheres PLA",
+    "parent": 30
+  },
+  {
+    "id": 49,
+    "name": "Talheres Plastico",
+    "parent": 30
+  },
+  {
+    "id": 50,
+    "name": "Tigelas Cana Acucar",
+    "parent": 30
+  },
+  {
+    "id": 51,
+    "name": "Tigelas Folha Palma",
+    "parent": 30
+  },
+  {
+    "id": 52,
+    "name": "Tigelas Plastico",
+    "parent": 30
+  },
+  {
+    "id": 53,
+    "name": "Toalhas Mesa",
+    "parent": 30
+  },
+  {
+    "id": 54,
+    "name": "Desinfetantes",
+    "parent": 1
+  },
+  {
+    "id": 55,
+    "name": "Frutas e Legumes",
+    "parent": 54
+  },
+  {
+    "id": 56,
+    "name": "Embalagem",
+    "parent": 1
+  },
+  {
+    "id": 57,
+    "name": "Caixas Aluminio",
+    "parent": 56
+  },
+  {
+    "id": 58,
+    "name": "Caixas Batata Frita",
+    "parent": 56
+  },
+  {
+    "id": 59,
+    "name": "Caixas Bolos",
+    "parent": 56
+  },
+  {
+    "id": 60,
+    "name": "Caixas Cana Acucar",
+    "parent": 56
+  },
+  {
+    "id": 61,
+    "name": "Caixas Cartao",
+    "parent": 56
+  },
+  {
+    "id": 62,
+    "name": "Caixas Hamburguer",
+    "parent": 56
+  },
+  {
+    "id": 63,
+    "name": "Caixas Hot Dog",
+    "parent": 56
+  },
+  {
+    "id": 64,
+    "name": "Caixas Massas",
+    "parent": 56
+  },
+  {
+    "id": 65,
+    "name": "Caixas Menu",
+    "parent": 56
+  },
+  {
+    "id": 66,
+    "name": "Caixas Pizza",
+    "parent": 56
+  },
+  {
+    "id": 67,
+    "name": "Caixas Plastico",
+    "parent": 56
+  },
+  {
+    "id": 68,
+    "name": "Caixas Sopa",
+    "parent": 56
+  },
+  {
+    "id": 69,
+    "name": "Caixas Sushi",
+    "parent": 56
+  },
+  {
+    "id": 70,
+    "name": "Caixas Vinho",
+    "parent": 56
+  },
+  {
+    "id": 71,
+    "name": "Contentor Termico",
+    "parent": 56
+  },
+  {
+    "id": 72,
+    "name": "Frascos e Garrafas",
+    "parent": 56
+  },
+  {
+    "id": 73,
+    "name": "Molheiras",
+    "parent": 56
+  },
+  {
+    "id": 74,
+    "name": "Papel Anti-Gordura",
+    "parent": 56
+  },
+  {
+    "id": 75,
+    "name": "Papel Charcutaria",
+    "parent": 56
+  },
+  {
+    "id": 76,
+    "name": "Peliculas Aderentes",
+    "parent": 56
+  },
+  {
+    "id": 77,
+    "name": "Rolo Aluminio",
+    "parent": 56
+  },
+  {
+    "id": 78,
+    "name": "Saco Congelacao",
+    "parent": 56
+  },
+  {
+    "id": 79,
+    "name": "Saco Vacuo",
+    "parent": 56
+  },
+  {
+    "id": 80,
+    "name": "Saladeiras Cana A.",
+    "parent": 56
+  },
+  {
+    "id": 81,
+    "name": "Saladeiras Cartao",
+    "parent": 56
+  },
+  {
+    "id": 82,
+    "name": "Saladeiras PLA",
+    "parent": 56
+  },
+  {
+    "id": 83,
+    "name": "Saquetas Talheres",
+    "parent": 56
+  },
+  {
+    "id": 84,
+    "name": "Suporte Papel",
+    "parent": 56
+  },
+  {
+    "id": 85,
+    "name": "Loicas",
+    "parent": 1
+  },
+  {
+    "id": 86,
+    "name": "Acessorios",
+    "parent": 85
+  },
+  {
+    "id": 87,
+    "name": "Acucareiros",
+    "parent": 85
+  },
+  {
+    "id": 88,
+    "name": "Bules",
+    "parent": 85
+  },
+  {
+    "id": 89,
+    "name": "Canecas e Chavenas",
+    "parent": 85
+  },
+  {
+    "id": 90,
+    "name": "Chavenas Art Collect",
+    "parent": 85
+  },
+  {
+    "id": 91,
+    "name": "Copos",
+    "parent": 85
+  },
+  {
+    "id": 92,
+    "name": "Copos Tritan",
+    "parent": 85
+  },
+  {
+    "id": 93,
+    "name": "Jarros",
+    "parent": 85
+  },
+  {
+    "id": 94,
+    "name": "Mercearia",
+    "parent": 1
+  },
+  {
+    "id": 95,
+    "name": "Acucar",
+    "parent": 94
+  },
+  {
+    "id": 96,
+    "name": "Edulcorante",
+    "parent": 94
+  },
+  {
+    "id": 97,
+    "name": "Snack",
+    "parent": 94
+  },
+  {
+    "id": 98,
+    "name": "Pequenos Domesticos",
+    "parent": 1
+  },
+  {
+    "id": 99,
+    "name": "Acessorios",
+    "parent": 98
+  },
+  {
+    "id": 100,
+    "name": "Batedeiras",
+    "parent": 98
+  },
+  {
+    "id": 101,
+    "name": "Cafeteiras",
+    "parent": 98
+  },
+  {
+    "id": 102,
+    "name": "Cappuccinador",
+    "parent": 98
+  },
+  {
+    "id": 103,
+    "name": "Grelhadores",
+    "parent": 98
+  },
+  {
+    "id": 104,
+    "name": "Jarros Eletricos",
+    "parent": 98
+  },
+  {
+    "id": 105,
+    "name": "Liquidificadores",
+    "parent": 98
+  },
+  {
+    "id": 106,
+    "name": "Maq Cafe Capsulas",
+    "parent": 98
+  },
+  {
+    "id": 107,
+    "name": "Maq Cafe Filtro",
+    "parent": 98
+  },
+  {
+    "id": 108,
+    "name": "Maq Cafe Grao",
+    "parent": 98
+  },
+  {
+    "id": 109,
+    "name": "Maq Cafe Pastilhas",
+    "parent": 98
+  },
+  {
+    "id": 110,
+    "name": "Maquinas Agua",
+    "parent": 98
+  },
+  {
+    "id": 111,
+    "name": "Maquinas Sumos",
+    "parent": 98
+  },
+  {
+    "id": 112,
+    "name": "Picadoras",
+    "parent": 98
+  },
+  {
+    "id": 113,
+    "name": "Torradeiras",
+    "parent": 98
+  },
+  {
+    "id": 114,
+    "name": "Varinhas Magicas",
+    "parent": 98
+  },
+  {
+    "id": 115,
+    "name": "Utilitarios",
+    "parent": 1
+  },
+  {
+    "id": 116,
+    "name": "Acessorios",
+    "parent": 115
+  },
+  {
+    "id": 117,
+    "name": "Copa",
+    "parent": 115
+  },
+  {
+    "id": 118,
+    "name": "Copos Termicos",
+    "parent": 115
+  },
+  {
+    "id": 119,
+    "name": "Ementa",
+    "parent": 115
+  },
+  {
+    "id": 120,
+    "name": "Garrafas e Termos",
+    "parent": 115
+  },
+  {
+    "id": 121,
+    "name": "Porta Menu",
+    "parent": 115
+  },
+  {
+    "id": 122,
+    "name": "Porta-Copos",
+    "parent": 115
+  },
+  {
+    "id": 123,
+    "name": "Recipiente Frios",
+    "parent": 115
+  },
+  {
+    "id": 124,
+    "name": "Recipiente Quentes",
+    "parent": 115
+  },
+  {
+    "id": 125,
+    "name": "Sacos Pasteleiro",
+    "parent": 115
+  },
+  {
+    "id": 126,
+    "name": "Suporte Guardanapos",
+    "parent": 115
+  },
+  {
+    "id": 127,
+    "name": "Talheres",
+    "parent": 115
+  },
+  {
+    "id": 128,
+    "name": "Termometros",
+    "parent": 115
+  },
+  {
+    "id": 129,
+    "name": "Transporte",
+    "parent": 115
+  },
+  {
+    "id": 130,
+    "name": "Eletrónica",
+    "parent": 0
+  },
+  {
+    "id": 131,
+    "name": "Cabos e Adaptadores",
+    "parent": 130
+  },
+  {
+    "id": 132,
+    "name": "BNC",
+    "parent": 131
+  },
+  {
+    "id": 133,
+    "name": "Cabo TV",
+    "parent": 131
+  },
+  {
+    "id": 134,
+    "name": "Carregadores",
+    "parent": 131
+  },
+  {
+    "id": 135,
+    "name": "Conectores",
+    "parent": 131
+  },
+  {
+    "id": 136,
+    "name": "Controle Remoto",
+    "parent": 131
+  },
+  {
+    "id": 137,
+    "name": "Extensoes e Tomadas",
+    "parent": 131
+  },
+  {
+    "id": 138,
+    "name": "Ficha e Conector DC",
+    "parent": 131
+  },
+  {
+    "id": 139,
+    "name": "Fichas AC",
+    "parent": 131
+  },
+  {
+    "id": 140,
+    "name": "Kits de Cabos",
+    "parent": 131
+  },
+  {
+    "id": 141,
+    "name": "Manga Retractil",
+    "parent": 131
+  },
+  {
+    "id": 142,
+    "name": "Organizacao Cabos",
+    "parent": 131
+  },
+  {
+    "id": 143,
+    "name": "RCA",
+    "parent": 131
+  },
+  {
+    "id": 144,
+    "name": "Scart",
+    "parent": 131
+  },
+  {
+    "id": 145,
+    "name": "S-VHS",
+    "parent": 131
+  },
+  {
+    "id": 146,
+    "name": "S-Video",
+    "parent": 131
+  },
+  {
+    "id": 147,
+    "name": "Componentes",
+    "parent": 130
+  },
+  {
+    "id": 148,
+    "name": "Automovel",
+    "parent": 147
+  },
+  {
+    "id": 149,
+    "name": "Caixas",
+    "parent": 147
+  },
+  {
+    "id": 150,
+    "name": "Celula Combustivel",
+    "parent": 147
+  },
+  {
+    "id": 151,
+    "name": "Condensadores",
+    "parent": 147
+  },
+  {
+    "id": 152,
+    "name": "Conectores",
+    "parent": 147
+  },
+  {
+    "id": 153,
+    "name": "Fusiveis",
+    "parent": 147
+  },
+  {
+    "id": 154,
+    "name": "Interfaces",
+    "parent": 147
+  },
+  {
+    "id": 155,
+    "name": "Manga Retractil",
+    "parent": 147
+  },
+  {
+    "id": 156,
+    "name": "Placas PCB",
+    "parent": 147
+  },
+  {
+    "id": 157,
+    "name": "Resistencias",
+    "parent": 147
+  },
+  {
+    "id": 158,
+    "name": "Telefone internet",
+    "parent": 147
+  },
+  {
+    "id": 159,
+    "name": "Transmissores",
+    "parent": 147
+  },
+  {
+    "id": 160,
+    "name": "Energia",
+    "parent": 130
+  },
+  {
+    "id": 161,
+    "name": "Carregadores Solares",
+    "parent": 160
+  },
+  {
+    "id": 162,
+    "name": "Pilhas 1.4V",
+    "parent": 160
+  },
+  {
+    "id": 163,
+    "name": "Pilhas 1.5V",
+    "parent": 160
+  },
+  {
+    "id": 164,
+    "name": "Pilhas 12V",
+    "parent": 160
+  },
+  {
+    "id": 165,
+    "name": "Pilhas 3V",
+    "parent": 160
+  },
+  {
+    "id": 166,
+    "name": "Pilhas 4.5V",
+    "parent": 160
+  },
+  {
+    "id": 167,
+    "name": "Pilhas 6.2V",
+    "parent": 160
+  },
+  {
+    "id": 168,
+    "name": "Pilhas 6V",
+    "parent": 160
+  },
+  {
+    "id": 169,
+    "name": "Pilhas 9V",
+    "parent": 160
+  },
+  {
+    "id": 170,
+    "name": "Pilhas AA",
+    "parent": 160
+  },
+  {
+    "id": 171,
+    "name": "Pilhas AAA",
+    "parent": 160
+  },
+  {
+    "id": 172,
+    "name": "Pilhas AAAA",
+    "parent": 160
+  },
+  {
+    "id": 173,
+    "name": "Pilhas C",
+    "parent": 160
+  },
+  {
+    "id": 174,
+    "name": "Pilhas D",
+    "parent": 160
+  },
+  {
+    "id": 175,
+    "name": "Pilhas Recarregaveis",
+    "parent": 160
+  },
+  {
+    "id": 176,
+    "name": "Pilhas Relogios",
+    "parent": 160
+  },
+  {
+    "id": 177,
+    "name": "Iluminacao",
+    "parent": 130
+  },
+  {
+    "id": 178,
+    "name": "Ampliadores com Luz",
+    "parent": 177
+  },
+  {
+    "id": 179,
+    "name": "Bastoes de Luz",
+    "parent": 177
+  },
+  {
+    "id": 180,
+    "name": "Cordas de Luz",
+    "parent": 177
+  },
+  {
+    "id": 181,
+    "name": "Electroluminescentes",
+    "parent": 177
+  },
+  {
+    "id": 182,
+    "name": "Faixas LED",
+    "parent": 177
+  },
+  {
+    "id": 183,
+    "name": "Lampadas",
+    "parent": 177
+  },
+  {
+    "id": 184,
+    "name": "Lampadas Leds",
+    "parent": 177
+  },
+  {
+    "id": 185,
+    "name": "Lanternas",
+    "parent": 177
+  },
+  {
+    "id": 186,
+    "name": "Luz Negra",
+    "parent": 177
+  },
+  {
+    "id": 187,
+    "name": "Luzes Sinalizacao",
+    "parent": 177
+  },
+  {
+    "id": 188,
+    "name": "Modding",
+    "parent": 177
+  },
+  {
+    "id": 189,
+    "name": "Projetores",
+    "parent": 177
+  },
+  {
+    "id": 190,
+    "name": "Ring Lights",
+    "parent": 177
+  },
+  {
+    "id": 191,
+    "name": "Sensores",
+    "parent": 177
+  },
+  {
+    "id": 192,
+    "name": "Tunning",
+    "parent": 177
+  },
+  {
+    "id": 193,
+    "name": "Kits Velleman",
+    "parent": 130
+  },
+  {
+    "id": 194,
+    "name": "Diversos",
+    "parent": 193
+  },
+  {
+    "id": 195,
+    "name": "Relogio de Ponto",
+    "parent": 130
+  },
+  {
+    "id": 196,
+    "name": "Software",
+    "parent": 195
+  },
+  {
+    "id": 197,
+    "name": "Wi-Fi",
+    "parent": 195
+  },
+  {
+    "id": 198,
+    "name": "Seguranca e CCTV",
+    "parent": 130
+  },
+  {
+    "id": 199,
+    "name": "Acessorios CCTV",
+    "parent": 198
+  },
+  {
+    "id": 200,
+    "name": "Camaras",
+    "parent": 198
+  },
+  {
+    "id": 201,
+    "name": "Perifericos AV/TV",
+    "parent": 198
+  },
+  {
+    "id": 202,
+    "name": "Spy Cams",
+    "parent": 198
+  },
+  {
+    "id": 203,
+    "name": "Som e Luz Profissional",
+    "parent": 130
+  },
+  {
+    "id": 204,
+    "name": "Acessorios",
+    "parent": 203
+  },
+  {
+    "id": 205,
+    "name": "Cabos e Adaptadores",
+    "parent": 203
+  },
+  {
+    "id": 206,
+    "name": "Colunas",
+    "parent": 203
+  },
+  {
+    "id": 207,
+    "name": "Estroboscopios",
+    "parent": 203
+  },
+  {
+    "id": 208,
+    "name": "Goosenecks",
+    "parent": 203
+  },
+  {
+    "id": 209,
+    "name": "Karaoke",
+    "parent": 203
+  },
+  {
+    "id": 210,
+    "name": "Laser Portatil",
+    "parent": 203
+  },
+  {
+    "id": 211,
+    "name": "LED",
+    "parent": 203
+  },
+  {
+    "id": 212,
+    "name": "LED DMX",
+    "parent": 203
+  },
+  {
+    "id": 213,
+    "name": "Maquinas de Efeitos",
+    "parent": 203
+  },
+  {
+    "id": 214,
+    "name": "Megafone",
+    "parent": 203
+  },
+  {
+    "id": 215,
+    "name": "Microfones",
+    "parent": 203
+  },
+  {
+    "id": 216,
+    "name": "Suportes",
+    "parent": 203
+  },
+  {
+    "id": 217,
+    "name": "XLR",
+    "parent": 203
+  },
+  {
+    "id": 218,
+    "name": "Embalagem",
+    "parent": 0
+  },
+  {
+    "id": 219,
+    "name": "Acondicionamento",
+    "parent": 218
+  },
+  {
+    "id": 220,
+    "name": "Caixas Cartao",
+    "parent": 219
+  },
+  {
+    "id": 221,
+    "name": "Cartao Canelado",
+    "parent": 219
+  },
+  {
+    "id": 222,
+    "name": "Enchimento",
+    "parent": 219
+  },
+  {
+    "id": 223,
+    "name": "Filme Estiravel",
+    "parent": 219
+  },
+  {
+    "id": 224,
+    "name": "Mangas",
+    "parent": 219
+  },
+  {
+    "id": 225,
+    "name": "Papel Kraft",
+    "parent": 219
+  },
+  {
+    "id": 226,
+    "name": "Embalagens Alimentares",
+    "parent": 218
+  },
+  {
+    "id": 227,
+    "name": "Sacos Papel Pao",
+    "parent": 226
+  },
+  {
+    "id": 228,
+    "name": "Equipamentos",
+    "parent": 218
+  },
+  {
+    "id": 229,
+    "name": "Desenroladores Film",
+    "parent": 228
+  },
+  {
+    "id": 230,
+    "name": "Desenroladores Fitas",
+    "parent": 228
+  },
+  {
+    "id": 231,
+    "name": "Etiquetadoras Manual",
+    "parent": 228
+  },
+  {
+    "id": 232,
+    "name": "Etiquetadoras Textil",
+    "parent": 228
+  },
+  {
+    "id": 233,
+    "name": "Etiquetas e Envelopes",
+    "parent": 218
+  },
+  {
+    "id": 234,
+    "name": "Envelope PackingList",
+    "parent": 233
+  },
+  {
+    "id": 235,
+    "name": "Fitas Adesivas",
+    "parent": 218
+  },
+  {
+    "id": 236,
+    "name": "Branca",
+    "parent": 235
+  },
+  {
+    "id": 237,
+    "name": "Castanha",
+    "parent": 235
+  },
+  {
+    "id": 238,
+    "name": "Cinta de Embalagem",
+    "parent": 235
+  },
+  {
+    "id": 239,
+    "name": "Impressas",
+    "parent": 235
+  },
+  {
+    "id": 240,
+    "name": "Seguranca",
+    "parent": 235
+  },
+  {
+    "id": 241,
+    "name": "Transparente",
+    "parent": 235
+  },
+  {
+    "id": 242,
+    "name": "Fitas Fios e Cordel",
+    "parent": 218
+  },
+  {
+    "id": 243,
+    "name": "Cordel Poliamida",
+    "parent": 242
+  },
+  {
+    "id": 244,
+    "name": "Dual Lock",
+    "parent": 242
+  },
+  {
+    "id": 245,
+    "name": "Fio Algodao",
+    "parent": 242
+  },
+  {
+    "id": 246,
+    "name": "Fio Pesca",
+    "parent": 242
+  },
+  {
+    "id": 247,
+    "name": "Fio Sisal",
+    "parent": 242
+  },
+  {
+    "id": 248,
+    "name": "Fio Strapex",
+    "parent": 242
+  },
+  {
+    "id": 249,
+    "name": "Fio Vela",
+    "parent": 242
+  },
+  {
+    "id": 250,
+    "name": "Fita Cetim",
+    "parent": 242
+  },
+  {
+    "id": 251,
+    "name": "Fita Nastro",
+    "parent": 242
+  },
+  {
+    "id": 252,
+    "name": "Lojas e Comercio",
+    "parent": 218
+  },
+  {
+    "id": 253,
+    "name": "Caixas Plastico",
+    "parent": 252
+  },
+  {
+    "id": 254,
+    "name": "Fitas e Lacos",
+    "parent": 252
+  },
+  {
+    "id": 255,
+    "name": "Sacos Algodao",
+    "parent": 252
+  },
+  {
+    "id": 256,
+    "name": "Sacos Auto Servico",
+    "parent": 252
+  },
+  {
+    "id": 257,
+    "name": "Sacos Celofane",
+    "parent": 252
+  },
+  {
+    "id": 258,
+    "name": "Sacos Cristal",
+    "parent": 252
+  },
+  {
+    "id": 259,
+    "name": "Sacos MiniGrip",
+    "parent": 252
+  },
+  {
+    "id": 260,
+    "name": "Sacos Non-Woven",
+    "parent": 252
+  },
+  {
+    "id": 261,
+    "name": "Sacos Papel",
+    "parent": 252
+  },
+  {
+    "id": 262,
+    "name": "Sacos Papel Asas",
+    "parent": 252
+  },
+  {
+    "id": 263,
+    "name": "Sacos Plastico Asas",
+    "parent": 252
+  },
+  {
+    "id": 264,
+    "name": "Sacos Presentes",
+    "parent": 252
+  },
+  {
+    "id": 265,
+    "name": "Higiene e Beleza",
+    "parent": 0
+  },
+  {
+    "id": 266,
+    "name": "Bebe",
+    "parent": 265
+  },
+  {
+    "id": 267,
+    "name": "Champo",
+    "parent": 266
+  },
+  {
+    "id": 268,
+    "name": "Condicionador",
+    "parent": 266
+  },
+  {
+    "id": 269,
+    "name": "Creme e Locoes",
+    "parent": 266
+  },
+  {
+    "id": 270,
+    "name": "Cabelo",
+    "parent": 265
+  },
+  {
+    "id": 271,
+    "name": "Alisador Cabelo",
+    "parent": 270
+  },
+  {
+    "id": 272,
+    "name": "Amenities",
+    "parent": 270
+  },
+  {
+    "id": 273,
+    "name": "Aparador Cabelo",
+    "parent": 270
+  },
+  {
+    "id": 274,
+    "name": "Champo",
+    "parent": 270
+  },
+  {
+    "id": 275,
+    "name": "Champo Anti-Caspa",
+    "parent": 270
+  },
+  {
+    "id": 276,
+    "name": "Champo Seco",
+    "parent": 270
+  },
+  {
+    "id": 277,
+    "name": "Condicionador",
+    "parent": 270
+  },
+  {
+    "id": 278,
+    "name": "Laca e Espuma",
+    "parent": 270
+  },
+  {
+    "id": 279,
+    "name": "Mascara e Tratamento",
+    "parent": 270
+  },
+  {
+    "id": 280,
+    "name": "Modelador Cabelo",
+    "parent": 270
+  },
+  {
+    "id": 281,
+    "name": "Secador Cabelo",
+    "parent": 270
+  },
+  {
+    "id": 282,
+    "name": "Corpo",
+    "parent": 265
+  },
+  {
+    "id": 283,
+    "name": "Acessorios",
+    "parent": 282
+  },
+  {
+    "id": 284,
+    "name": "Amenities",
+    "parent": 282
+  },
+  {
+    "id": 285,
+    "name": "Coffrets",
+    "parent": 282
+  },
+  {
+    "id": 286,
+    "name": "Cotonetes",
+    "parent": 282
+  },
+  {
+    "id": 287,
+    "name": "Creme e Locoes",
+    "parent": 282
+  },
+  {
+    "id": 288,
+    "name": "Depilacao",
+    "parent": 282
+  },
+  {
+    "id": 289,
+    "name": "Desodorizante Creme",
+    "parent": 282
+  },
+  {
+    "id": 290,
+    "name": "Desodorizante RollOn",
+    "parent": 282
+  },
+  {
+    "id": 291,
+    "name": "Desodorizante Spray",
+    "parent": 282
+  },
+  {
+    "id": 292,
+    "name": "Gel Banho",
+    "parent": 282
+  },
+  {
+    "id": 293,
+    "name": "Gel Banho Recargas",
+    "parent": 282
+  },
+  {
+    "id": 294,
+    "name": "Higiene Intima",
+    "parent": 282
+  },
+  {
+    "id": 295,
+    "name": "Maos e Pes",
+    "parent": 282
+  },
+  {
+    "id": 296,
+    "name": "Necessaires",
+    "parent": 282
+  },
+  {
+    "id": 297,
+    "name": "Sabonete Liquido",
+    "parent": 282
+  },
+  {
+    "id": 298,
+    "name": "Sabonete Recargas",
+    "parent": 282
+  },
+  {
+    "id": 299,
+    "name": "Sabonete Solido",
+    "parent": 282
+  },
+  {
+    "id": 300,
+    "name": "Dispensadores",
+    "parent": 265
+  },
+  {
+    "id": 301,
+    "name": "Frasco Vazio",
+    "parent": 300
+  },
+  {
+    "id": 302,
+    "name": "Papel Higien. Folha",
+    "parent": 300
+  },
+  {
+    "id": 303,
+    "name": "Papel Higien. Jumbo",
+    "parent": 300
+  },
+  {
+    "id": 304,
+    "name": "Ponto Higienico",
+    "parent": 300
+  },
+  {
+    "id": 305,
+    "name": "Saboneteiras",
+    "parent": 300
+  },
+  {
+    "id": 306,
+    "name": "Secador Maos",
+    "parent": 300
+  },
+  {
+    "id": 307,
+    "name": "Suporte Papel",
+    "parent": 300
+  },
+  {
+    "id": 308,
+    "name": "Toalhas Maos Rolo",
+    "parent": 300
+  },
+  {
+    "id": 309,
+    "name": "Toalhas Maos Zig Zag",
+    "parent": 300
+  },
+  {
+    "id": 310,
+    "name": "Higiene Oral",
+    "parent": 265
+  },
+  {
+    "id": 311,
+    "name": "Acessorios",
+    "parent": 310
+  },
+  {
+    "id": 312,
+    "name": "Cuidados Proteses",
+    "parent": 310
+  },
+  {
+    "id": 313,
+    "name": "Elixir Bucal",
+    "parent": 310
+  },
+  {
+    "id": 314,
+    "name": "Escova de Dentes",
+    "parent": 310
+  },
+  {
+    "id": 315,
+    "name": "Pasta de Dentes",
+    "parent": 310
+  },
+  {
+    "id": 316,
+    "name": "Homem",
+    "parent": 265
+  },
+  {
+    "id": 317,
+    "name": "Aftershave",
+    "parent": 316
+  },
+  {
+    "id": 318,
+    "name": "Aparador Barba",
+    "parent": 316
+  },
+  {
+    "id": 319,
+    "name": "Aparador Cabelo",
+    "parent": 316
+  },
+  {
+    "id": 320,
+    "name": "Aparador Facial",
+    "parent": 316
+  },
+  {
+    "id": 321,
+    "name": "Champo",
+    "parent": 316
+  },
+  {
+    "id": 322,
+    "name": "Creme Barbear",
+    "parent": 316
+  },
+  {
+    "id": 323,
+    "name": "Creme e Locoes",
+    "parent": 316
+  },
+  {
+    "id": 324,
+    "name": "Desodorizante RollOn",
+    "parent": 316
+  },
+  {
+    "id": 325,
+    "name": "Desodorizante Stick",
+    "parent": 316
+  },
+  {
+    "id": 326,
+    "name": "Desodorizantes Spray",
+    "parent": 316
+  },
+  {
+    "id": 327,
+    "name": "Espuma Barbear",
+    "parent": 316
+  },
+  {
+    "id": 328,
+    "name": "Gel Banho",
+    "parent": 316
+  },
+  {
+    "id": 329,
+    "name": "Gel Barbear",
+    "parent": 316
+  },
+  {
+    "id": 330,
+    "name": "Laminas Barbear",
+    "parent": 316
+  },
+  {
+    "id": 331,
+    "name": "Perfume",
+    "parent": 316
+  },
+  {
+    "id": 332,
+    "name": "Papel e Consumiveis",
+    "parent": 265
+  },
+  {
+    "id": 333,
+    "name": "Guardanapo Bar 1F",
+    "parent": 332
+  },
+  {
+    "id": 334,
+    "name": "Guardanapo Bar 2F",
+    "parent": 332
+  },
+  {
+    "id": 335,
+    "name": "Guardanapo Mesa 1F",
+    "parent": 332
+  },
+  {
+    "id": 336,
+    "name": "Guardanapo Mesa 2F",
+    "parent": 332
+  },
+  {
+    "id": 337,
+    "name": "Guardanapo Recargas",
+    "parent": 332
+  },
+  {
+    "id": 338,
+    "name": "Guardanapo Textil",
+    "parent": 332
+  },
+  {
+    "id": 339,
+    "name": "Guardanapo Zig Zag",
+    "parent": 332
+  },
+  {
+    "id": 340,
+    "name": "Higienico Domestico",
+    "parent": 332
+  },
+  {
+    "id": 341,
+    "name": "Higienico Folha",
+    "parent": 332
+  },
+  {
+    "id": 342,
+    "name": "Higienico Jumbo",
+    "parent": 332
+  },
+  {
+    "id": 343,
+    "name": "Lencos Bolso",
+    "parent": 332
+  },
+  {
+    "id": 344,
+    "name": "Lencos Caixa",
+    "parent": 332
+  },
+  {
+    "id": 345,
+    "name": "Rolo Aluminio",
+    "parent": 332
+  },
+  {
+    "id": 346,
+    "name": "Rolo Marquesa",
+    "parent": 332
+  },
+  {
+    "id": 347,
+    "name": "Rolo Multiusos",
+    "parent": 332
+  },
+  {
+    "id": 348,
+    "name": "Toalha Mao Rolo Prof",
+    "parent": 332
+  },
+  {
+    "id": 349,
+    "name": "Toalha Mao Zig Zag",
+    "parent": 332
+  },
+  {
+    "id": 350,
+    "name": "Toalhitas",
+    "parent": 332
+  },
+  {
+    "id": 351,
+    "name": "Rosto",
+    "parent": 265
+  },
+  {
+    "id": 352,
+    "name": "Hidratacao",
+    "parent": 351
+  },
+  {
+    "id": 353,
+    "name": "Limpeza",
+    "parent": 351
+  },
+  {
+    "id": 354,
+    "name": "Olhos",
+    "parent": 351
+  },
+  {
+    "id": 355,
+    "name": "Saude",
+    "parent": 265
+  },
+  {
+    "id": 356,
+    "name": "Acessorios",
+    "parent": 355
+  },
+  {
+    "id": 357,
+    "name": "Alcool e Agua Oxig.",
+    "parent": 355
+  },
+  {
+    "id": 358,
+    "name": "Algodao",
+    "parent": 355
+  },
+  {
+    "id": 359,
+    "name": "Compressas Ligaduras",
+    "parent": 355
+  },
+  {
+    "id": 360,
+    "name": "Desinfetante Maos",
+    "parent": 355
+  },
+  {
+    "id": 361,
+    "name": "Geriatria",
+    "parent": 355
+  },
+  {
+    "id": 362,
+    "name": "Mascara Crianca",
+    "parent": 355
+  },
+  {
+    "id": 363,
+    "name": "Mascara Descartavel",
+    "parent": 355
+  },
+  {
+    "id": 364,
+    "name": "Mascara Reutilizavel",
+    "parent": 355
+  },
+  {
+    "id": 365,
+    "name": "Ortopedia",
+    "parent": 355
+  },
+  {
+    "id": 366,
+    "name": "Oximetro",
+    "parent": 355
+  },
+  {
+    "id": 367,
+    "name": "Pensos e Adesivos",
+    "parent": 355
+  },
+  {
+    "id": 368,
+    "name": "Primeiros Socorros",
+    "parent": 355
+  },
+  {
+    "id": 369,
+    "name": "Soro Fisiologico",
+    "parent": 355
+  },
+  {
+    "id": 370,
+    "name": "Termometros",
+    "parent": 355
+  },
+  {
+    "id": 371,
+    "name": "Impressão",
+    "parent": 0
+  },
+  {
+    "id": 372,
+    "name": ".Tinteiros",
+    "parent": 371
+  },
+  {
+    "id": 373,
+    "name": "Brother Compativel",
+    "parent": 372
+  },
+  {
+    "id": 374,
+    "name": "Brother Original",
+    "parent": 372
+  },
+  {
+    "id": 375,
+    "name": "Canon Compativel",
+    "parent": 372
+  },
+  {
+    "id": 376,
+    "name": "Canon Original",
+    "parent": 372
+  },
+  {
+    "id": 377,
+    "name": "Dell Original",
+    "parent": 372
+  },
+  {
+    "id": 378,
+    "name": "Diversos Original",
+    "parent": 372
+  },
+  {
+    "id": 379,
+    "name": "Epson Compativel",
+    "parent": 372
+  },
+  {
+    "id": 380,
+    "name": "Epson Original",
+    "parent": 372
+  },
+  {
+    "id": 381,
+    "name": "Hp Compativel",
+    "parent": 372
+  },
+  {
+    "id": 382,
+    "name": "Hp Original",
+    "parent": 372
+  },
+  {
+    "id": 383,
+    "name": "Lexmark Compativel",
+    "parent": 372
+  },
+  {
+    "id": 384,
+    "name": "Lexmark Original",
+    "parent": 372
+  },
+  {
+    "id": 385,
+    "name": "OCE Original",
+    "parent": 372
+  },
+  {
+    "id": 386,
+    "name": "Olivetti Compativel",
+    "parent": 372
+  },
+  {
+    "id": 387,
+    "name": "Olivetti Original",
+    "parent": 372
+  },
+  {
+    "id": 388,
+    "name": "Philips Compativel",
+    "parent": 372
+  },
+  {
+    "id": 389,
+    "name": "Philips Original",
+    "parent": 372
+  },
+  {
+    "id": 390,
+    "name": "Ricoh Original",
+    "parent": 372
+  },
+  {
+    "id": 391,
+    "name": "Xerox Compativel",
+    "parent": 372
+  },
+  {
+    "id": 392,
+    "name": "Xerox Original",
+    "parent": 372
+  },
+  {
+    "id": 393,
+    "name": ".Toners e Drums",
+    "parent": 371
+  },
+  {
+    "id": 394,
+    "name": "Brother Compativel",
+    "parent": 393
+  },
+  {
+    "id": 395,
+    "name": "Brother Original",
+    "parent": 393
+  },
+  {
+    "id": 396,
+    "name": "Canon Compativel",
+    "parent": 393
+  },
+  {
+    "id": 397,
+    "name": "Canon Original",
+    "parent": 393
+  },
+  {
+    "id": 398,
+    "name": "Dell Compativel",
+    "parent": 393
+  },
+  {
+    "id": 399,
+    "name": "Dell Original",
+    "parent": 393
+  },
+  {
+    "id": 400,
+    "name": "Develop Original",
+    "parent": 393
+  },
+  {
+    "id": 401,
+    "name": "Diversos Compativel",
+    "parent": 393
+  },
+  {
+    "id": 402,
+    "name": "Diversos Original",
+    "parent": 393
+  },
+  {
+    "id": 403,
+    "name": "Epson Compativel",
+    "parent": 393
+  },
+  {
+    "id": 404,
+    "name": "Epson Original",
+    "parent": 393
+  },
+  {
+    "id": 405,
+    "name": "Hp Compativel",
+    "parent": 393
+  },
+  {
+    "id": 406,
+    "name": "Hp Original",
+    "parent": 393
+  },
+  {
+    "id": 407,
+    "name": "HP Original",
+    "parent": 393
+  },
+  {
+    "id": 408,
+    "name": "Ibm Original",
+    "parent": 393
+  },
+  {
+    "id": 409,
+    "name": "KonicaMin Compativel",
+    "parent": 393
+  },
+  {
+    "id": 410,
+    "name": "KonicaMin Original",
+    "parent": 393
+  },
+  {
+    "id": 411,
+    "name": "Kyocera Compativel",
+    "parent": 393
+  },
+  {
+    "id": 412,
+    "name": "Kyocera Original",
+    "parent": 393
+  },
+  {
+    "id": 413,
+    "name": "Lexmark Compativel",
+    "parent": 393
+  },
+  {
+    "id": 414,
+    "name": "Lexmark Original",
+    "parent": 393
+  },
+  {
+    "id": 415,
+    "name": "Nashuatec Original",
+    "parent": 393
+  },
+  {
+    "id": 416,
+    "name": "Nrg Original",
+    "parent": 393
+  },
+  {
+    "id": 417,
+    "name": "NRG Original",
+    "parent": 393
+  },
+  {
+    "id": 418,
+    "name": "Oki Compativel",
+    "parent": 393
+  },
+  {
+    "id": 419,
+    "name": "Oki Original",
+    "parent": 393
+  },
+  {
+    "id": 420,
+    "name": "Olivetti Original",
+    "parent": 393
+  },
+  {
+    "id": 421,
+    "name": "Panasonic Compativel",
+    "parent": 393
+  },
+  {
+    "id": 422,
+    "name": "Panasonic Original",
+    "parent": 393
+  },
+  {
+    "id": 423,
+    "name": "Philips Original",
+    "parent": 393
+  },
+  {
+    "id": 424,
+    "name": "Ricoh Compativel",
+    "parent": 393
+  },
+  {
+    "id": 425,
+    "name": "Ricoh Original",
+    "parent": 393
+  },
+  {
+    "id": 426,
+    "name": "Samsung Compativel",
+    "parent": 393
+  },
+  {
+    "id": 427,
+    "name": "Samsung Original",
+    "parent": 393
+  },
+  {
+    "id": 428,
+    "name": "Sharp Original",
+    "parent": 393
+  },
+  {
+    "id": 429,
+    "name": "Toshiba Original",
+    "parent": 393
+  },
+  {
+    "id": 430,
+    "name": "Xerox Compativel",
+    "parent": 393
+  },
+  {
+    "id": 431,
+    "name": "Xerox Original",
+    "parent": 393
+  },
+  {
+    "id": 432,
+    "name": "Acessorios",
+    "parent": 371
+  },
+  {
+    "id": 433,
+    "name": "3D",
+    "parent": 432
+  },
+  {
+    "id": 434,
+    "name": "Laser",
+    "parent": 432
+  },
+  {
+    "id": 435,
+    "name": "Rotuladoras",
+    "parent": 432
+  },
+  {
+    "id": 436,
+    "name": "Termicas",
+    "parent": 432
+  },
+  {
+    "id": 437,
+    "name": "Zebra",
+    "parent": 432
+  },
+  {
+    "id": 438,
+    "name": "Carimbos",
+    "parent": 371
+  },
+  {
+    "id": 439,
+    "name": "Brother",
+    "parent": 438
+  },
+  {
+    "id": 440,
+    "name": "Xstamper",
+    "parent": 438
+  },
+  {
+    "id": 441,
+    "name": "Etiquetas",
+    "parent": 371
+  },
+  {
+    "id": 442,
+    "name": "Termicas",
+    "parent": 441
+  },
+  {
+    "id": 443,
+    "name": "Filamentos 3D",
+    "parent": 371
+  },
+  {
+    "id": 444,
+    "name": "Madeira",
+    "parent": 443
+  },
+  {
+    "id": 445,
+    "name": "PETG",
+    "parent": 443
+  },
+  {
+    "id": 446,
+    "name": "PLA",
+    "parent": 443
+  },
+  {
+    "id": 447,
+    "name": "Fitas",
+    "parent": 371
+  },
+  {
+    "id": 448,
+    "name": "Brother Compativel",
+    "parent": 447
+  },
+  {
+    "id": 449,
+    "name": "Diversas Compativel",
+    "parent": 447
+  },
+  {
+    "id": 450,
+    "name": "Diversas Original",
+    "parent": 447
+  },
+  {
+    "id": 451,
+    "name": "Epson Compativel",
+    "parent": 447
+  },
+  {
+    "id": 452,
+    "name": "Epson Original",
+    "parent": 447
+  },
+  {
+    "id": 453,
+    "name": "Etiquetadoras",
+    "parent": 447
+  },
+  {
+    "id": 454,
+    "name": "Ink Rollers",
+    "parent": 447
+  },
+  {
+    "id": 455,
+    "name": "Lift-Off",
+    "parent": 447
+  },
+  {
+    "id": 456,
+    "name": "Oki Compativel",
+    "parent": 447
+  },
+  {
+    "id": 457,
+    "name": "Oki Original",
+    "parent": 447
+  },
+  {
+    "id": 458,
+    "name": "Olivetti Original",
+    "parent": 447
+  },
+  {
+    "id": 459,
+    "name": "Rotuladoras Brother",
+    "parent": 447
+  },
+  {
+    "id": 460,
+    "name": "Rotuladoras Dymo",
+    "parent": 447
+  },
+  {
+    "id": 461,
+    "name": "Termicas Datacard",
+    "parent": 447
+  },
+  {
+    "id": 462,
+    "name": "Termicas Zebra",
+    "parent": 447
+  },
+  {
+    "id": 463,
+    "name": "Impressoras",
+    "parent": 371
+  },
+  {
+    "id": 464,
+    "name": "3D",
+    "parent": 463
+  },
+  {
+    "id": 465,
+    "name": "Carimbos",
+    "parent": 463
+  },
+  {
+    "id": 466,
+    "name": "Jato Tinta",
+    "parent": 463
+  },
+  {
+    "id": 467,
+    "name": "Laser Cor",
+    "parent": 463
+  },
+  {
+    "id": 468,
+    "name": "Laser Mono",
+    "parent": 463
+  },
+  {
+    "id": 469,
+    "name": "Portateis",
+    "parent": 463
+  },
+  {
+    "id": 470,
+    "name": "Rotuladoras",
+    "parent": 463
+  },
+  {
+    "id": 471,
+    "name": "Termicas",
+    "parent": 463
+  },
+  {
+    "id": 472,
+    "name": "Multifuncoes",
+    "parent": 371
+  },
+  {
+    "id": 473,
+    "name": "Jato Tinta",
+    "parent": 472
+  },
+  {
+    "id": 474,
+    "name": "Laser Cor",
+    "parent": 472
+  },
+  {
+    "id": 475,
+    "name": "Laser Mono",
+    "parent": 472
+  },
+  {
+    "id": 476,
+    "name": "Tubo Termorretractil",
+    "parent": 371
+  },
+  {
+    "id": 477,
+    "name": "Rotuladoras Brother",
+    "parent": 476
+  },
+  {
+    "id": 478,
+    "name": "Rotuladoras Rhino",
+    "parent": 476
+  },
+  {
+    "id": 479,
+    "name": "Informática",
+    "parent": 0
+  },
+  {
+    "id": 480,
+    "name": "Acessorios",
+    "parent": 479
+  },
+  {
+    "id": 481,
+    "name": "Apoios Ergonomicos",
+    "parent": 480
+  },
+  {
+    "id": 482,
+    "name": "Arquivo CDs",
+    "parent": 480
+  },
+  {
+    "id": 483,
+    "name": "Arquivo Disketes Zip",
+    "parent": 480
+  },
+  {
+    "id": 484,
+    "name": "Bases",
+    "parent": 480
+  },
+  {
+    "id": 485,
+    "name": "Bolsas e Malas",
+    "parent": 480
+  },
+  {
+    "id": 486,
+    "name": "Capa Tablet",
+    "parent": 480
+  },
+  {
+    "id": 487,
+    "name": "Kits e Acessorios",
+    "parent": 480
+  },
+  {
+    "id": 488,
+    "name": "Limpeza",
+    "parent": 480
+  },
+  {
+    "id": 489,
+    "name": "Suportes",
+    "parent": 480
+  },
+  {
+    "id": 490,
+    "name": "Tapetes Rato",
+    "parent": 480
+  },
+  {
+    "id": 491,
+    "name": "Telas de Projecao",
+    "parent": 480
+  },
+  {
+    "id": 492,
+    "name": "APPLE",
+    "parent": 479
+  },
+  {
+    "id": 493,
+    "name": "Cabos e Adaptadores",
+    "parent": 492
+  },
+  {
+    "id": 494,
+    "name": "Capa Iphone",
+    "parent": 492
+  },
+  {
+    "id": 495,
+    "name": "Peliculas Proteccao",
+    "parent": 492
+  },
+  {
+    "id": 496,
+    "name": "Armazenamento",
+    "parent": 479
+  },
+  {
+    "id": 497,
+    "name": "Cartoes Memoria",
+    "parent": 496
+  },
+  {
+    "id": 498,
+    "name": "CDs",
+    "parent": 496
+  },
+  {
+    "id": 499,
+    "name": "Discos Externos",
+    "parent": 496
+  },
+  {
+    "id": 500,
+    "name": "Disquetes",
+    "parent": 496
+  },
+  {
+    "id": 501,
+    "name": "DVDs",
+    "parent": 496
+  },
+  {
+    "id": 502,
+    "name": "Pen Drives USB",
+    "parent": 496
+  },
+  {
+    "id": 503,
+    "name": "Tapes LTO Ultrium",
+    "parent": 496
+  },
+  {
+    "id": 504,
+    "name": "Cabos e Adaptadores",
+    "parent": 479
+  },
+  {
+    "id": 505,
+    "name": "Adaptadores Audio",
+    "parent": 504
+  },
+  {
+    "id": 506,
+    "name": "Adaptadores DVI",
+    "parent": 504
+  },
+  {
+    "id": 507,
+    "name": "Adaptadores HDD",
+    "parent": 504
+  },
+  {
+    "id": 508,
+    "name": "Adaptadores HDMI",
+    "parent": 504
+  },
+  {
+    "id": 509,
+    "name": "Adaptadores Serie",
+    "parent": 504
+  },
+  {
+    "id": 510,
+    "name": "Adaptadores USB",
+    "parent": 504
+  },
+  {
+    "id": 511,
+    "name": "Adaptadores USB-C",
+    "parent": 504
+  },
+  {
+    "id": 512,
+    "name": "Adaptadores VGA",
+    "parent": 504
+  },
+  {
+    "id": 513,
+    "name": "Cabos de Alimentacao",
+    "parent": 504
+  },
+  {
+    "id": 514,
+    "name": "Cabos de Seguranca",
+    "parent": 504
+  },
+  {
+    "id": 515,
+    "name": "Cabos DisplayPort",
+    "parent": 504
+  },
+  {
+    "id": 516,
+    "name": "Cabos DisplayPort-M",
+    "parent": 504
+  },
+  {
+    "id": 517,
+    "name": "Cabos DVI",
+    "parent": 504
+  },
+  {
+    "id": 518,
+    "name": "Cabos Firewire",
+    "parent": 504
+  },
+  {
+    "id": 519,
+    "name": "Cabos HDMI",
+    "parent": 504
+  },
+  {
+    "id": 520,
+    "name": "Cabos Lightning",
+    "parent": 504
+  },
+  {
+    "id": 521,
+    "name": "Cabos PS/2",
+    "parent": 504
+  },
+  {
+    "id": 522,
+    "name": "Cabos Serie",
+    "parent": 504
+  },
+  {
+    "id": 523,
+    "name": "Cabos USB",
+    "parent": 504
+  },
+  {
+    "id": 524,
+    "name": "Cabos USB-C",
+    "parent": 504
+  },
+  {
+    "id": 525,
+    "name": "Cabos USB-Micro",
+    "parent": 504
+  },
+  {
+    "id": 526,
+    "name": "Cabos VGA",
+    "parent": 504
+  },
+  {
+    "id": 527,
+    "name": "Carregador Isqueiro",
+    "parent": 504
+  },
+  {
+    "id": 528,
+    "name": "Carregador USB",
+    "parent": 504
+  },
+  {
+    "id": 529,
+    "name": "Carregador Wireless",
+    "parent": 504
+  },
+  {
+    "id": 530,
+    "name": "Carregadores",
+    "parent": 504
+  },
+  {
+    "id": 531,
+    "name": "Docking Stations",
+    "parent": 504
+  },
+  {
+    "id": 532,
+    "name": "HUBs USB",
+    "parent": 504
+  },
+  {
+    "id": 533,
+    "name": "Componentes",
+    "parent": 479
+  },
+  {
+    "id": 534,
+    "name": "Fontes Alimentacao",
+    "parent": 533
+  },
+  {
+    "id": 535,
+    "name": "Placa PC Card",
+    "parent": 533
+  },
+  {
+    "id": 536,
+    "name": "Placa Video e TV",
+    "parent": 533
+  },
+  {
+    "id": 537,
+    "name": "Placas Som",
+    "parent": 533
+  },
+  {
+    "id": 538,
+    "name": "Computadores",
+    "parent": 479
+  },
+  {
+    "id": 539,
+    "name": "Portateis",
+    "parent": 538
+  },
+  {
+    "id": 540,
+    "name": "Recondicionados",
+    "parent": 538
+  },
+  {
+    "id": 541,
+    "name": "Tablets",
+    "parent": 538
+  },
+  {
+    "id": 542,
+    "name": "Mobile",
+    "parent": 479
+  },
+  {
+    "id": 543,
+    "name": "Acessorios",
+    "parent": 542
+  },
+  {
+    "id": 544,
+    "name": "Auriculares",
+    "parent": 542
+  },
+  {
+    "id": 545,
+    "name": "Capas e Bolsas",
+    "parent": 542
+  },
+  {
+    "id": 546,
+    "name": "Carregador USB",
+    "parent": 542
+  },
+  {
+    "id": 547,
+    "name": "PowerBanks",
+    "parent": 542
+  },
+  {
+    "id": 548,
+    "name": "Streaming",
+    "parent": 542
+  },
+  {
+    "id": 549,
+    "name": "Suportes",
+    "parent": 542
+  },
+  {
+    "id": 550,
+    "name": "Wearables",
+    "parent": 542
+  },
+  {
+    "id": 551,
+    "name": "Perifericos",
+    "parent": 479
+  },
+  {
+    "id": 552,
+    "name": "Apresentadores",
+    "parent": 551
+  },
+  {
+    "id": 553,
+    "name": "Auscultadores",
+    "parent": 551
+  },
+  {
+    "id": 554,
+    "name": "Colunas",
+    "parent": 551
+  },
+  {
+    "id": 555,
+    "name": "Intercomunicadores",
+    "parent": 551
+  },
+  {
+    "id": 556,
+    "name": "Leitor Cartoes USB",
+    "parent": 551
+  },
+  {
+    "id": 557,
+    "name": "Monitores",
+    "parent": 551
+  },
+  {
+    "id": 558,
+    "name": "Monitores TV",
+    "parent": 551
+  },
+  {
+    "id": 559,
+    "name": "Ratos com Fio",
+    "parent": 551
+  },
+  {
+    "id": 560,
+    "name": "Ratos Gaming",
+    "parent": 551
+  },
+  {
+    "id": 561,
+    "name": "Ratos sem Fio",
+    "parent": 551
+  },
+  {
+    "id": 562,
+    "name": "Scanners_Documentais",
+    "parent": 551
+  },
+  {
+    "id": 563,
+    "name": "Teclado e Rato",
+    "parent": 551
+  },
+  {
+    "id": 564,
+    "name": "Teclados",
+    "parent": 551
+  },
+  {
+    "id": 565,
+    "name": "UPS",
+    "parent": 551
+  },
+  {
+    "id": 566,
+    "name": "Videoprojector",
+    "parent": 551
+  },
+  {
+    "id": 567,
+    "name": "WebCams",
+    "parent": 551
+  },
+  {
+    "id": 568,
+    "name": "Redes e Comunicacoes",
+    "parent": 479
+  },
+  {
+    "id": 569,
+    "name": "Acess Point",
+    "parent": 568
+  },
+  {
+    "id": 570,
+    "name": "Acessorios",
+    "parent": 568
+  },
+  {
+    "id": 571,
+    "name": "Adaptadores BT",
+    "parent": 568
+  },
+  {
+    "id": 572,
+    "name": "Adaptadores Ethernet",
+    "parent": 568
+  },
+  {
+    "id": 573,
+    "name": "Adaptadores Wireless",
+    "parent": 568
+  },
+  {
+    "id": 574,
+    "name": "Cabos de Rede",
+    "parent": 568
+  },
+  {
+    "id": 575,
+    "name": "Conectores e Tampas",
+    "parent": 568
+  },
+  {
+    "id": 576,
+    "name": "Extensores de Sinal",
+    "parent": 568
+  },
+  {
+    "id": 577,
+    "name": "Ferramentas",
+    "parent": 568
+  },
+  {
+    "id": 578,
+    "name": "Placas Rede",
+    "parent": 568
+  },
+  {
+    "id": 579,
+    "name": "Powerlines",
+    "parent": 568
+  },
+  {
+    "id": 580,
+    "name": "Router",
+    "parent": 568
+  },
+  {
+    "id": 581,
+    "name": "Switch",
+    "parent": 568
+  },
+  {
+    "id": 582,
+    "name": "Seguranca",
+    "parent": 479
+  },
+  {
+    "id": 583,
+    "name": "Armarios",
+    "parent": 582
+  },
+  {
+    "id": 584,
+    "name": "Sistemas de POS",
+    "parent": 479
+  },
+  {
+    "id": 585,
+    "name": "Contador de Moedas",
+    "parent": 584
+  },
+  {
+    "id": 586,
+    "name": "Contador Notas",
+    "parent": 584
+  },
+  {
+    "id": 587,
+    "name": "Detetores Notas",
+    "parent": 584
+  },
+  {
+    "id": 588,
+    "name": "POS Caixas Auto",
+    "parent": 584
+  },
+  {
+    "id": 589,
+    "name": "POS Displays",
+    "parent": 584
+  },
+  {
+    "id": 590,
+    "name": "POS Gavetas",
+    "parent": 584
+  },
+  {
+    "id": 591,
+    "name": "POS Impressoras",
+    "parent": 584
+  },
+  {
+    "id": 592,
+    "name": "POS Monitores",
+    "parent": 584
+  },
+  {
+    "id": 593,
+    "name": "POS PDAs",
+    "parent": 584
+  },
+  {
+    "id": 594,
+    "name": "POS Scanners",
+    "parent": 584
+  },
+  {
+    "id": 595,
+    "name": "POS Terminais",
+    "parent": 584
+  },
+  {
+    "id": 596,
+    "name": "Smart Home",
+    "parent": 479
+  },
+  {
+    "id": 597,
+    "name": "Camaras",
+    "parent": 596
+  },
+  {
+    "id": 598,
+    "name": "Lampadas",
+    "parent": 596
+  },
+  {
+    "id": 599,
+    "name": "Tomadas Inteligentes",
+    "parent": 596
+  },
+  {
+    "id": 600,
+    "name": "Software",
+    "parent": 479
+  },
+  {
+    "id": 601,
+    "name": "Anti-Virus",
+    "parent": 600
+  },
+  {
+    "id": 602,
+    "name": "Internet Security",
+    "parent": 600
+  },
+  {
+    "id": 603,
+    "name": "Total Security",
+    "parent": 600
+  },
+  {
+    "id": 604,
+    "name": "Limpeza",
+    "parent": 0
+  },
+  {
+    "id": 605,
+    "name": "Ambientadores",
+    "parent": 604
+  },
+  {
+    "id": 606,
+    "name": "Automatico",
+    "parent": 605
+  },
+  {
+    "id": 607,
+    "name": "Automatico Recargas",
+    "parent": 605
+  },
+  {
+    "id": 608,
+    "name": "Carro",
+    "parent": 605
+  },
+  {
+    "id": 609,
+    "name": "Saquetas Perfumadas",
+    "parent": 605
+  },
+  {
+    "id": 610,
+    "name": "Spray Desinfetante",
+    "parent": 605
+  },
+  {
+    "id": 611,
+    "name": "Spray Fragancia",
+    "parent": 605
+  },
+  {
+    "id": 612,
+    "name": "Sticks Perfumados",
+    "parent": 605
+  },
+  {
+    "id": 613,
+    "name": "Caixotes do Lixo",
+    "parent": 604
+  },
+  {
+    "id": 614,
+    "name": "Balde Basculante",
+    "parent": 613
+  },
+  {
+    "id": 615,
+    "name": "Balde Cesto",
+    "parent": 613
+  },
+  {
+    "id": 616,
+    "name": "Balde Papeleira",
+    "parent": 613
+  },
+  {
+    "id": 617,
+    "name": "Balde Pedal 50-100L",
+    "parent": 613
+  },
+  {
+    "id": 618,
+    "name": "Balde Pedal ate 49L",
+    "parent": 613
+  },
+  {
+    "id": 619,
+    "name": "Balde Reciclagem",
+    "parent": 613
+  },
+  {
+    "id": 620,
+    "name": "Balde Sensor",
+    "parent": 613
+  },
+  {
+    "id": 621,
+    "name": "Carro Residuos",
+    "parent": 613
+  },
+  {
+    "id": 622,
+    "name": "Compostor",
+    "parent": 613
+  },
+  {
+    "id": 623,
+    "name": "Contentor 81-200L",
+    "parent": 613
+  },
+  {
+    "id": 624,
+    "name": "Contentor ate 80L",
+    "parent": 613
+  },
+  {
+    "id": 625,
+    "name": "Contentor com Rodas",
+    "parent": 613
+  },
+  {
+    "id": 626,
+    "name": "Plataforma Rolante",
+    "parent": 613
+  },
+  {
+    "id": 627,
+    "name": "Tampa Contentor",
+    "parent": 613
+  },
+  {
+    "id": 628,
+    "name": "Tampa Reciclagem",
+    "parent": 613
+  },
+  {
+    "id": 629,
+    "name": "Detergentes",
+    "parent": 604
+  },
+  {
+    "id": 630,
+    "name": "Automovel",
+    "parent": 629
+  },
+  {
+    "id": 631,
+    "name": "Desengordurante",
+    "parent": 629
+  },
+  {
+    "id": 632,
+    "name": "Desentupidor",
+    "parent": 629
+  },
+  {
+    "id": 633,
+    "name": "Desinfetante",
+    "parent": 629
+  },
+  {
+    "id": 634,
+    "name": "Forno e Inox",
+    "parent": 629
+  },
+  {
+    "id": 635,
+    "name": "Inseticida",
+    "parent": 629
+  },
+  {
+    "id": 636,
+    "name": "Limpeza Especifica",
+    "parent": 629
+  },
+  {
+    "id": 637,
+    "name": "Lixivia",
+    "parent": 629
+  },
+  {
+    "id": 638,
+    "name": "Loica Manual",
+    "parent": 629
+  },
+  {
+    "id": 639,
+    "name": "Loica Maquina",
+    "parent": 629
+  },
+  {
+    "id": 640,
+    "name": "Moveis e Madeiras",
+    "parent": 629
+  },
+  {
+    "id": 641,
+    "name": "Multisuperficies",
+    "parent": 629
+  },
+  {
+    "id": 642,
+    "name": "Pavimentos",
+    "parent": 629
+  },
+  {
+    "id": 643,
+    "name": "Vidros",
+    "parent": 629
+  },
+  {
+    "id": 644,
+    "name": "WC Multisuperficies",
+    "parent": 629
+  },
+  {
+    "id": 645,
+    "name": "WC Sanitarios",
+    "parent": 629
+  },
+  {
+    "id": 646,
+    "name": "Dispensadores",
+    "parent": 604
+  },
+  {
+    "id": 647,
+    "name": "Cobertura Sanitaria",
+    "parent": 646
+  },
+  {
+    "id": 648,
+    "name": "Frascos e Pulverizar",
+    "parent": 646
+  },
+  {
+    "id": 649,
+    "name": "Equipamentos",
+    "parent": 604
+  },
+  {
+    "id": 650,
+    "name": "Acessorios",
+    "parent": 649
+  },
+  {
+    "id": 651,
+    "name": "Aspirador",
+    "parent": 649
+  },
+  {
+    "id": 652,
+    "name": "Balde",
+    "parent": 649
+  },
+  {
+    "id": 653,
+    "name": "Balde Profissional",
+    "parent": 649
+  },
+  {
+    "id": 654,
+    "name": "Cabos",
+    "parent": 649
+  },
+  {
+    "id": 655,
+    "name": "Carro Limpeza",
+    "parent": 649
+  },
+  {
+    "id": 656,
+    "name": "Difusor Desinfetante",
+    "parent": 649
+  },
+  {
+    "id": 657,
+    "name": "Esfregona",
+    "parent": 649
+  },
+  {
+    "id": 658,
+    "name": "Esfregona Recarga",
+    "parent": 649
+  },
+  {
+    "id": 659,
+    "name": "Espanador",
+    "parent": 649
+  },
+  {
+    "id": 660,
+    "name": "Mopa",
+    "parent": 649
+  },
+  {
+    "id": 661,
+    "name": "Mopa Armacao",
+    "parent": 649
+  },
+  {
+    "id": 662,
+    "name": "Mopa Recarga",
+    "parent": 649
+  },
+  {
+    "id": 663,
+    "name": "Mopa Vapor",
+    "parent": 649
+  },
+  {
+    "id": 664,
+    "name": "Pa Lixo",
+    "parent": 649
+  },
+  {
+    "id": 665,
+    "name": "Piacaba",
+    "parent": 649
+  },
+  {
+    "id": 666,
+    "name": "Vassoura",
+    "parent": 649
+  },
+  {
+    "id": 667,
+    "name": "Esponjas e Panos",
+    "parent": 604
+  },
+  {
+    "id": 668,
+    "name": "Chao",
+    "parent": 667
+  },
+  {
+    "id": 669,
+    "name": "Esfregao",
+    "parent": 667
+  },
+  {
+    "id": 670,
+    "name": "Esponja",
+    "parent": 667
+  },
+  {
+    "id": 671,
+    "name": "Flanela",
+    "parent": 667
+  },
+  {
+    "id": 672,
+    "name": "Microfibra",
+    "parent": 667
+  },
+  {
+    "id": 673,
+    "name": "Multiusos",
+    "parent": 667
+  },
+  {
+    "id": 674,
+    "name": "Lavandaria e Textil",
+    "parent": 604
+  },
+  {
+    "id": 675,
+    "name": "Alcatifas e Estofos",
+    "parent": 674
+  },
+  {
+    "id": 676,
+    "name": "Amaciador Roupa",
+    "parent": 674
+  },
+  {
+    "id": 677,
+    "name": "Carro Limpeza",
+    "parent": 674
+  },
+  {
+    "id": 678,
+    "name": "Desinfetante",
+    "parent": 674
+  },
+  {
+    "id": 679,
+    "name": "Desumidificadores",
+    "parent": 674
+  },
+  {
+    "id": 680,
+    "name": "Detergente Roupa",
+    "parent": 674
+  },
+  {
+    "id": 681,
+    "name": "Molas",
+    "parent": 674
+  },
+  {
+    "id": 682,
+    "name": "Sabao",
+    "parent": 674
+  },
+  {
+    "id": 683,
+    "name": "Tira Nodoas",
+    "parent": 674
+  },
+  {
+    "id": 684,
+    "name": "Tira Pelos",
+    "parent": 674
+  },
+  {
+    "id": 685,
+    "name": "Luvas",
+    "parent": 604
+  },
+  {
+    "id": 686,
+    "name": "Latex com Po",
+    "parent": 685
+  },
+  {
+    "id": 687,
+    "name": "Latex sem Po",
+    "parent": 685
+  },
+  {
+    "id": 688,
+    "name": "Menage",
+    "parent": 685
+  },
+  {
+    "id": 689,
+    "name": "Nitrilo",
+    "parent": 685
+  },
+  {
+    "id": 690,
+    "name": "Palhaco",
+    "parent": 685
+  },
+  {
+    "id": 691,
+    "name": "Polymer",
+    "parent": 685
+  },
+  {
+    "id": 692,
+    "name": "Vinil sem Po",
+    "parent": 685
+  },
+  {
+    "id": 693,
+    "name": "Vinil Sem Po",
+    "parent": 685
+  },
+  {
+    "id": 694,
+    "name": "Papel e Consumiveis",
+    "parent": 604
+  },
+  {
+    "id": 695,
+    "name": "Cobertura Sanitaria",
+    "parent": 694
+  },
+  {
+    "id": 696,
+    "name": "Resguardo Animais",
+    "parent": 694
+  },
+  {
+    "id": 697,
+    "name": "Sacos do Lixo",
+    "parent": 604
+  },
+  {
+    "id": 698,
+    "name": "Sacos 100-120L",
+    "parent": 697
+  },
+  {
+    "id": 699,
+    "name": "Sacos 130-200L",
+    "parent": 697
+  },
+  {
+    "id": 700,
+    "name": "Sacos 200-700L",
+    "parent": 697
+  },
+  {
+    "id": 701,
+    "name": "Sacos 30L",
+    "parent": 697
+  },
+  {
+    "id": 702,
+    "name": "Sacos 50L",
+    "parent": 697
+  },
+  {
+    "id": 703,
+    "name": "Sacos Higienicos",
+    "parent": 697
+  },
+  {
+    "id": 704,
+    "name": "Sacos Reutilizaveis",
+    "parent": 697
+  },
+  {
+    "id": 705,
+    "name": "Manutenção",
+    "parent": 0
+  },
+  {
+    "id": 706,
+    "name": "Acessorios",
+    "parent": 705
+  },
+  {
+    "id": 707,
+    "name": "Bicicletas",
+    "parent": 706
+  },
+  {
+    "id": 708,
+    "name": "Construcao",
+    "parent": 706
+  },
+  {
+    "id": 709,
+    "name": "Correias Estivacao",
+    "parent": 706
+  },
+  {
+    "id": 710,
+    "name": "Doseador",
+    "parent": 706
+  },
+  {
+    "id": 711,
+    "name": "Jump Leads",
+    "parent": 706
+  },
+  {
+    "id": 712,
+    "name": "Multiusos",
+    "parent": 706
+  },
+  {
+    "id": 713,
+    "name": "Removedor de Tintas",
+    "parent": 706
+  },
+  {
+    "id": 714,
+    "name": "Reparacao Azulejos",
+    "parent": 706
+  },
+  {
+    "id": 715,
+    "name": "Reparacao Madeiras",
+    "parent": 706
+  },
+  {
+    "id": 716,
+    "name": "Arrumacao",
+    "parent": 705
+  },
+  {
+    "id": 717,
+    "name": "Caixas com Tampa",
+    "parent": 716
+  },
+  {
+    "id": 718,
+    "name": "Caixas Gavetas",
+    "parent": 716
+  },
+  {
+    "id": 719,
+    "name": "Caixas para Calcado",
+    "parent": 716
+  },
+  {
+    "id": 720,
+    "name": "Caixas sem Tampa",
+    "parent": 716
+  },
+  {
+    "id": 721,
+    "name": "Balancas",
+    "parent": 705
+  },
+  {
+    "id": 722,
+    "name": "Balancas Corporais",
+    "parent": 721
+  },
+  {
+    "id": 723,
+    "name": "Balancas Cozinha",
+    "parent": 721
+  },
+  {
+    "id": 724,
+    "name": "Balancas Dinheiro",
+    "parent": 721
+  },
+  {
+    "id": 725,
+    "name": "Balancas Filamentos",
+    "parent": 721
+  },
+  {
+    "id": 726,
+    "name": "Balancas POS",
+    "parent": 721
+  },
+  {
+    "id": 727,
+    "name": "Balancas Postais",
+    "parent": 721
+  },
+  {
+    "id": 728,
+    "name": "Balancas Viagem",
+    "parent": 721
+  },
+  {
+    "id": 729,
+    "name": "Bem Estar",
+    "parent": 705
+  },
+  {
+    "id": 730,
+    "name": "Passadeiras",
+    "parent": 729
+  },
+  {
+    "id": 731,
+    "name": "Plataforma Gym",
+    "parent": 729
+  },
+  {
+    "id": 732,
+    "name": "Viajar",
+    "parent": 729
+  },
+  {
+    "id": 733,
+    "name": "Calcado e Vestuario",
+    "parent": 705
+  },
+  {
+    "id": 734,
+    "name": "Aventais",
+    "parent": 733
+  },
+  {
+    "id": 735,
+    "name": "Batas",
+    "parent": 733
+  },
+  {
+    "id": 736,
+    "name": "Calcado",
+    "parent": 733
+  },
+  {
+    "id": 737,
+    "name": "Calcas",
+    "parent": 733
+  },
+  {
+    "id": 738,
+    "name": "Camisolas e Sweats",
+    "parent": 733
+  },
+  {
+    "id": 739,
+    "name": "Casacos",
+    "parent": 733
+  },
+  {
+    "id": 740,
+    "name": "Chinelos",
+    "parent": 733
+  },
+  {
+    "id": 741,
+    "name": "Fatos de Protecao",
+    "parent": 733
+  },
+  {
+    "id": 742,
+    "name": "Guarda-Chuvas",
+    "parent": 733
+  },
+  {
+    "id": 743,
+    "name": "Impermeaveis",
+    "parent": 733
+  },
+  {
+    "id": 744,
+    "name": "Jalecas",
+    "parent": 733
+  },
+  {
+    "id": 745,
+    "name": "Luvas",
+    "parent": 733
+  },
+  {
+    "id": 746,
+    "name": "Mangas",
+    "parent": 733
+  },
+  {
+    "id": 747,
+    "name": "Penteadores",
+    "parent": 733
+  },
+  {
+    "id": 748,
+    "name": "Polos",
+    "parent": 733
+  },
+  {
+    "id": 749,
+    "name": "Praia",
+    "parent": 733
+  },
+  {
+    "id": 750,
+    "name": "Protecao Auricular",
+    "parent": 733
+  },
+  {
+    "id": 751,
+    "name": "Protecao Calcado",
+    "parent": 733
+  },
+  {
+    "id": 752,
+    "name": "Toucas",
+    "parent": 733
+  },
+  {
+    "id": 753,
+    "name": "T-shirts",
+    "parent": 733
+  },
+  {
+    "id": 754,
+    "name": "Casa e Jardim",
+    "parent": 705
+  },
+  {
+    "id": 755,
+    "name": "Acess. p/Churrasco",
+    "parent": 754
+  },
+  {
+    "id": 756,
+    "name": "Animais de Estimacao",
+    "parent": 754
+  },
+  {
+    "id": 757,
+    "name": "Coberturas",
+    "parent": 754
+  },
+  {
+    "id": 758,
+    "name": "Controle de Pragas",
+    "parent": 754
+  },
+  {
+    "id": 759,
+    "name": "Ferramentas",
+    "parent": 754
+  },
+  {
+    "id": 760,
+    "name": "Isqueiros",
+    "parent": 754
+  },
+  {
+    "id": 761,
+    "name": "Jardim",
+    "parent": 754
+  },
+  {
+    "id": 762,
+    "name": "Relogios e Alarmes",
+    "parent": 754
+  },
+  {
+    "id": 763,
+    "name": "Texteis",
+    "parent": 754
+  },
+  {
+    "id": 764,
+    "name": "Climatizacao",
+    "parent": 705
+  },
+  {
+    "id": 765,
+    "name": "Aquecedores",
+    "parent": 764
+  },
+  {
+    "id": 766,
+    "name": "Desumidificadores",
+    "parent": 764
+  },
+  {
+    "id": 767,
+    "name": "Purificadores de Ar",
+    "parent": 764
+  },
+  {
+    "id": 768,
+    "name": "Ventoinhas",
+    "parent": 764
+  },
+  {
+    "id": 769,
+    "name": "Colas Fitas Adesivos",
+    "parent": 705
+  },
+  {
+    "id": 770,
+    "name": "Anti-Derrapante",
+    "parent": 769
+  },
+  {
+    "id": 771,
+    "name": "Cola e Veda",
+    "parent": 769
+  },
+  {
+    "id": 772,
+    "name": "Colas Bricolage",
+    "parent": 769
+  },
+  {
+    "id": 773,
+    "name": "Colas Spray",
+    "parent": 769
+  },
+  {
+    "id": 774,
+    "name": "Dupla Face",
+    "parent": 769
+  },
+  {
+    "id": 775,
+    "name": "Equipamentos",
+    "parent": 769
+  },
+  {
+    "id": 776,
+    "name": "Fita Velcro",
+    "parent": 769
+  },
+  {
+    "id": 777,
+    "name": "Gancho Adesivo",
+    "parent": 769
+  },
+  {
+    "id": 778,
+    "name": "Isolamento",
+    "parent": 769
+  },
+  {
+    "id": 779,
+    "name": "Pintura",
+    "parent": 769
+  },
+  {
+    "id": 780,
+    "name": "Protecao Superficies",
+    "parent": 769
+  },
+  {
+    "id": 781,
+    "name": "Rede Adesiva",
+    "parent": 769
+  },
+  {
+    "id": 782,
+    "name": "Removedor de Colas",
+    "parent": 769
+  },
+  {
+    "id": 783,
+    "name": "Reparadoras",
+    "parent": 769
+  },
+  {
+    "id": 784,
+    "name": "Silicones",
+    "parent": 769
+  },
+  {
+    "id": 785,
+    "name": "Sinalizacao",
+    "parent": 769
+  },
+  {
+    "id": 786,
+    "name": "Suportes Adesivos",
+    "parent": 769
+  },
+  {
+    "id": 787,
+    "name": "Escadotes e Tamboretes",
+    "parent": 705
+  },
+  {
+    "id": 788,
+    "name": "Escadote",
+    "parent": 787
+  },
+  {
+    "id": 789,
+    "name": "Tamboretes",
+    "parent": 787
+  },
+  {
+    "id": 790,
+    "name": "Ferramentas",
+    "parent": 705
+  },
+  {
+    "id": 791,
+    "name": "Abracadeira",
+    "parent": 790
+  },
+  {
+    "id": 792,
+    "name": "Alicates",
+    "parent": 790
+  },
+  {
+    "id": 793,
+    "name": "Arrumacao",
+    "parent": 790
+  },
+  {
+    "id": 794,
+    "name": "Berbequim e Brocas",
+    "parent": 790
+  },
+  {
+    "id": 795,
+    "name": "Caixa Ferramentas",
+    "parent": 790
+  },
+  {
+    "id": 796,
+    "name": "Chaves Estrela",
+    "parent": 790
+  },
+  {
+    "id": 797,
+    "name": "Chaves Parafusos",
+    "parent": 790
+  },
+  {
+    "id": 798,
+    "name": "Cortantes",
+    "parent": 790
+  },
+  {
+    "id": 799,
+    "name": "Electronica",
+    "parent": 790
+  },
+  {
+    "id": 800,
+    "name": "Ferragens",
+    "parent": 790
+  },
+  {
+    "id": 801,
+    "name": "Ferramentas Impacto",
+    "parent": 790
+  },
+  {
+    "id": 802,
+    "name": "Fita Metrica",
+    "parent": 790
+  },
+  {
+    "id": 803,
+    "name": "Kit Ferramentas",
+    "parent": 790
+  },
+  {
+    "id": 804,
+    "name": "Lentes",
+    "parent": 790
+  },
+  {
+    "id": 805,
+    "name": "Magnetos",
+    "parent": 790
+  },
+  {
+    "id": 806,
+    "name": "Martelos",
+    "parent": 790
+  },
+  {
+    "id": 807,
+    "name": "Mochilas e Malas",
+    "parent": 790
+  },
+  {
+    "id": 808,
+    "name": "Pincas",
+    "parent": 790
+  },
+  {
+    "id": 809,
+    "name": "Pistola de Calor",
+    "parent": 790
+  },
+  {
+    "id": 810,
+    "name": "Pontas Teste",
+    "parent": 790
+  },
+  {
+    "id": 811,
+    "name": "Relojoaria",
+    "parent": 790
+  },
+  {
+    "id": 812,
+    "name": "Soldadura",
+    "parent": 790
+  },
+  {
+    "id": 813,
+    "name": "Tornos",
+    "parent": 790
+  },
+  {
+    "id": 814,
+    "name": "Ventosas",
+    "parent": 790
+  },
+  {
+    "id": 815,
+    "name": "Industrial",
+    "parent": 705
+  },
+  {
+    "id": 816,
+    "name": "Carro Servico",
+    "parent": 815
+  },
+  {
+    "id": 817,
+    "name": "Carro Trabalho",
+    "parent": 815
+  },
+  {
+    "id": 818,
+    "name": "Contentor Basculante",
+    "parent": 815
+  },
+  {
+    "id": 819,
+    "name": "Contentor Exterior",
+    "parent": 815
+  },
+  {
+    "id": 820,
+    "name": "Porta Cargas",
+    "parent": 815
+  },
+  {
+    "id": 821,
+    "name": "Ventiladores",
+    "parent": 815
+  },
+  {
+    "id": 822,
+    "name": "Instrumentos",
+    "parent": 705
+  },
+  {
+    "id": 823,
+    "name": "Bomba de Ar",
+    "parent": 822
+  },
+  {
+    "id": 824,
+    "name": "Bombas Transfega",
+    "parent": 822
+  },
+  {
+    "id": 825,
+    "name": "Contadores",
+    "parent": 822
+  },
+  {
+    "id": 826,
+    "name": "Detectores",
+    "parent": 822
+  },
+  {
+    "id": 827,
+    "name": "Limpeza Ultrasons",
+    "parent": 822
+  },
+  {
+    "id": 828,
+    "name": "Luximetros",
+    "parent": 822
+  },
+  {
+    "id": 829,
+    "name": "Medidores",
+    "parent": 822
+  },
+  {
+    "id": 830,
+    "name": "Meteorologia",
+    "parent": 822
+  },
+  {
+    "id": 831,
+    "name": "Multimetro",
+    "parent": 822
+  },
+  {
+    "id": 832,
+    "name": "Paquimetros",
+    "parent": 822
+  },
+  {
+    "id": 833,
+    "name": "Saude e Desporto",
+    "parent": 822
+  },
+  {
+    "id": 834,
+    "name": "Sonometros",
+    "parent": 822
+  },
+  {
+    "id": 835,
+    "name": "Termometro Ambiente",
+    "parent": 822
+  },
+  {
+    "id": 836,
+    "name": "Termometro Corporal",
+    "parent": 822
+  },
+  {
+    "id": 837,
+    "name": "Testers",
+    "parent": 822
+  },
+  {
+    "id": 838,
+    "name": "Liquido Manutencao",
+    "parent": 705
+  },
+  {
+    "id": 839,
+    "name": "Agua Destilada",
+    "parent": 838
+  },
+  {
+    "id": 840,
+    "name": "Anticongelante",
+    "parent": 838
+  },
+  {
+    "id": 841,
+    "name": "Limpeza",
+    "parent": 838
+  },
+  {
+    "id": 842,
+    "name": "Lubrificante",
+    "parent": 838
+  },
+  {
+    "id": 843,
+    "name": "Ponto de Venda",
+    "parent": 705
+  },
+  {
+    "id": 844,
+    "name": "Campainhas",
+    "parent": 843
+  },
+  {
+    "id": 845,
+    "name": "Dispensador Senhas",
+    "parent": 843
+  },
+  {
+    "id": 846,
+    "name": "Seguranca",
+    "parent": 705
+  },
+  {
+    "id": 847,
+    "name": "Alarmes",
+    "parent": 846
+  },
+  {
+    "id": 848,
+    "name": "Cadeados",
+    "parent": 846
+  },
+  {
+    "id": 849,
+    "name": "Chaveiros",
+    "parent": 846
+  },
+  {
+    "id": 850,
+    "name": "Cofres",
+    "parent": 846
+  },
+  {
+    "id": 851,
+    "name": "Mangas",
+    "parent": 846
+  },
+  {
+    "id": 852,
+    "name": "Mascara-Viseira",
+    "parent": 846
+  },
+  {
+    "id": 853,
+    "name": "Oculos",
+    "parent": 846
+  },
+  {
+    "id": 854,
+    "name": "Porta Chaves",
+    "parent": 846
+  },
+  {
+    "id": 855,
+    "name": "Protetor auricular",
+    "parent": 846
+  },
+  {
+    "id": 856,
+    "name": "Rodoviaria",
+    "parent": 846
+  },
+  {
+    "id": 857,
+    "name": "Sensores",
+    "parent": 846
+  },
+  {
+    "id": 858,
+    "name": "Sinais e Simbolos",
+    "parent": 846
+  },
+  {
+    "id": 859,
+    "name": "Sinalizacao",
+    "parent": 846
+  },
+  {
+    "id": 860,
+    "name": "Tampoes Auditivos",
+    "parent": 846
+  },
+  {
+    "id": 861,
+    "name": "Vestuario",
+    "parent": 846
+  },
+  {
+    "id": 862,
+    "name": "Mobiliario",
+    "parent": 0
+  },
+  {
+    "id": 863,
+    "name": "Armarios",
+    "parent": 862
+  },
+  {
+    "id": 864,
+    "name": "Armarios c/Portas",
+    "parent": 863
+  },
+  {
+    "id": 865,
+    "name": "Estantes",
+    "parent": 863
+  },
+  {
+    "id": 866,
+    "name": "Vestiarios",
+    "parent": 863
+  },
+  {
+    "id": 867,
+    "name": "Cadeiras e Bancos",
+    "parent": 862
+  },
+  {
+    "id": 868,
+    "name": "Acessorios",
+    "parent": 867
+  },
+  {
+    "id": 869,
+    "name": "Bancos Decorativos",
+    "parent": 867
+  },
+  {
+    "id": 870,
+    "name": "Cadeiras Executivo",
+    "parent": 867
+  },
+  {
+    "id": 871,
+    "name": "Cadeiras Operativas",
+    "parent": 867
+  },
+  {
+    "id": 872,
+    "name": "Cadeiras Visitante",
+    "parent": 867
+  },
+  {
+    "id": 873,
+    "name": "Decorativos",
+    "parent": 862
+  },
+  {
+    "id": 874,
+    "name": "Casa",
+    "parent": 873
+  },
+  {
+    "id": 875,
+    "name": "LED",
+    "parent": 873
+  },
+  {
+    "id": 876,
+    "name": "Moldura Magnetica",
+    "parent": 873
+  },
+  {
+    "id": 877,
+    "name": "Quadros decorativos",
+    "parent": 873
+  },
+  {
+    "id": 878,
+    "name": "Dispositivos de Informacao",
+    "parent": 862
+  },
+  {
+    "id": 879,
+    "name": "Paineis Desportivos",
+    "parent": 878
+  },
+  {
+    "id": 880,
+    "name": "Relogios de parede",
+    "parent": 878
+  },
+  {
+    "id": 881,
+    "name": "Divisorias",
+    "parent": 862
+  },
+  {
+    "id": 882,
+    "name": "Divisorias Balcao",
+    "parent": 881
+  },
+  {
+    "id": 883,
+    "name": "Divisorias Chao",
+    "parent": 881
+  },
+  {
+    "id": 884,
+    "name": "Divisorias Mesa",
+    "parent": 881
+  },
+  {
+    "id": 885,
+    "name": "Expositores",
+    "parent": 862
+  },
+  {
+    "id": 886,
+    "name": "Porta Folhetos",
+    "parent": 885
+  },
+  {
+    "id": 887,
+    "name": "Porta Precos",
+    "parent": 885
+  },
+  {
+    "id": 888,
+    "name": "Mesas e Secretarias",
+    "parent": 862
+  },
+  {
+    "id": 889,
+    "name": "Mesas Reunioes",
+    "parent": 888
+  },
+  {
+    "id": 890,
+    "name": "Secretaria",
+    "parent": 888
+  },
+  {
+    "id": 891,
+    "name": "Mobiliario Auxiliar",
+    "parent": 862
+  },
+  {
+    "id": 892,
+    "name": "Ergonomia",
+    "parent": 891
+  },
+  {
+    "id": 893,
+    "name": "Modulos Gavetas",
+    "parent": 891
+  },
+  {
+    "id": 894,
+    "name": "Mobiliario Urbano",
+    "parent": 862
+  },
+  {
+    "id": 895,
+    "name": "Bengaleiro",
+    "parent": 894
+  },
+  {
+    "id": 896,
+    "name": "Cinzeiro Vertical",
+    "parent": 894
+  },
+  {
+    "id": 897,
+    "name": "Guarda Chuvas",
+    "parent": 894
+  },
+  {
+    "id": 898,
+    "name": "Seguranca Infantil",
+    "parent": 862
+  },
+  {
+    "id": 899,
+    "name": "Cadeiras",
+    "parent": 898
+  },
+  {
+    "id": 900,
+    "name": "Mobiliario Escolar",
+    "parent": 898
+  },
+  {
+    "id": 901,
+    "name": "Muda Fraldas",
+    "parent": 898
+  },
+  {
+    "id": 902,
+    "name": "Tapetes",
+    "parent": 862
+  },
+  {
+    "id": 903,
+    "name": "Desinfecao",
+    "parent": 902
+  },
+  {
+    "id": 904,
+    "name": "Entrada Esparguete",
+    "parent": 902
+  },
+  {
+    "id": 905,
+    "name": "Protecao Chao",
+    "parent": 902
+  },
+  {
+    "id": 906,
+    "name": "Vitrines",
+    "parent": 862
+  },
+  {
+    "id": 907,
+    "name": "De Chao",
+    "parent": 906
+  },
+  {
+    "id": 908,
+    "name": "De Parede",
+    "parent": 906
+  },
+  {
+    "id": 909,
+    "name": "Papelaria",
+    "parent": 0
+  },
+  {
+    "id": 910,
+    "name": "Cadernos e Blocos",
+    "parent": 909
+  },
+  {
+    "id": 911,
+    "name": "Agenda Telefonica",
+    "parent": 910
+  },
+  {
+    "id": 912,
+    "name": "Agendas",
+    "parent": 910
+  },
+  {
+    "id": 913,
+    "name": "Bloco Almaco",
+    "parent": 910
+  },
+  {
+    "id": 914,
+    "name": "Bloco Capa Dura",
+    "parent": 910
+  },
+  {
+    "id": 915,
+    "name": "Bloco Colado A4",
+    "parent": 910
+  },
+  {
+    "id": 916,
+    "name": "Bloco Colado A5",
+    "parent": 910
+  },
+  {
+    "id": 917,
+    "name": "Bloco Colado A6",
+    "parent": 910
+  },
+  {
+    "id": 918,
+    "name": "Bloco Colado A7",
+    "parent": 910
+  },
+  {
+    "id": 919,
+    "name": "Bloco Musica",
+    "parent": 910
+  },
+  {
+    "id": 920,
+    "name": "Bloco Pintura",
+    "parent": 910
+  },
+  {
+    "id": 921,
+    "name": "Bloco Recargas",
+    "parent": 910
+  },
+  {
+    "id": 922,
+    "name": "Blocos Post-it",
+    "parent": 910
+  },
+  {
+    "id": 923,
+    "name": "Blocos Pre Impressos",
+    "parent": 910
+  },
+  {
+    "id": 924,
+    "name": "Caderno Agrafado A4",
+    "parent": 910
+  },
+  {
+    "id": 925,
+    "name": "Caderno Agrafado A5",
+    "parent": 910
+  },
+  {
+    "id": 926,
+    "name": "Caderno Agrafado B5",
+    "parent": 910
+  },
+  {
+    "id": 927,
+    "name": "Caderno Desenho A2",
+    "parent": 910
+  },
+  {
+    "id": 928,
+    "name": "Caderno Desenho A3",
+    "parent": 910
+  },
+  {
+    "id": 929,
+    "name": "Caderno Desenho A4",
+    "parent": 910
+  },
+  {
+    "id": 930,
+    "name": "Caderno Desenho A5",
+    "parent": 910
+  },
+  {
+    "id": 931,
+    "name": "Caderno Desenho A6",
+    "parent": 910
+  },
+  {
+    "id": 932,
+    "name": "Caderno Espiral A4",
+    "parent": 910
+  },
+  {
+    "id": 933,
+    "name": "Caderno Espiral A5",
+    "parent": 910
+  },
+  {
+    "id": 934,
+    "name": "Caderno Espiral A6",
+    "parent": 910
+  },
+  {
+    "id": 935,
+    "name": "Caderno Espiral A7",
+    "parent": 910
+  },
+  {
+    "id": 936,
+    "name": "Livro Contabilidade",
+    "parent": 910
+  },
+  {
+    "id": 937,
+    "name": "Livro Registo",
+    "parent": 910
+  },
+  {
+    "id": 938,
+    "name": "Moleskine",
+    "parent": 910
+  },
+  {
+    "id": 939,
+    "name": "Calculadoras",
+    "parent": 909
+  },
+  {
+    "id": 940,
+    "name": "Acessorios",
+    "parent": 939
+  },
+  {
+    "id": 941,
+    "name": "Adaptador",
+    "parent": 939
+  },
+  {
+    "id": 942,
+    "name": "Bolso",
+    "parent": 939
+  },
+  {
+    "id": 943,
+    "name": "Cientifica",
+    "parent": 939
+  },
+  {
+    "id": 944,
+    "name": "Financeiras",
+    "parent": 939
+  },
+  {
+    "id": 945,
+    "name": "Graficas",
+    "parent": 939
+  },
+  {
+    "id": 946,
+    "name": "Secretaria",
+    "parent": 939
+  },
+  {
+    "id": 947,
+    "name": "Secretaria com Rolo",
+    "parent": 939
+  },
+  {
+    "id": 948,
+    "name": "Canetas Lapis Borrachas",
+    "parent": 909
+  },
+  {
+    "id": 949,
+    "name": "Afias",
+    "parent": 948
+  },
+  {
+    "id": 950,
+    "name": "Borrachas",
+    "parent": 948
+  },
+  {
+    "id": 951,
+    "name": "Corretor",
+    "parent": 948
+  },
+  {
+    "id": 952,
+    "name": "Esferograficas",
+    "parent": 948
+  },
+  {
+    "id": 953,
+    "name": "Esferograficas Gel",
+    "parent": 948
+  },
+  {
+    "id": 954,
+    "name": "Giz",
+    "parent": 948
+  },
+  {
+    "id": 955,
+    "name": "Lapis Arts",
+    "parent": 948
+  },
+  {
+    "id": 956,
+    "name": "Lapis Carvao Grafite",
+    "parent": 948
+  },
+  {
+    "id": 957,
+    "name": "Lapis Cera",
+    "parent": 948
+  },
+  {
+    "id": 958,
+    "name": "Lapis Cores",
+    "parent": 948
+  },
+  {
+    "id": 959,
+    "name": "Lapis Dermatografico",
+    "parent": 948
+  },
+  {
+    "id": 960,
+    "name": "Lapis Pastel",
+    "parent": 948
+  },
+  {
+    "id": 961,
+    "name": "Lapiseiras",
+    "parent": 948
+  },
+  {
+    "id": 962,
+    "name": "Marcador Ardosia",
+    "parent": 948
+  },
+  {
+    "id": 963,
+    "name": "Marcador Arte",
+    "parent": 948
+  },
+  {
+    "id": 964,
+    "name": "Marcador Especial",
+    "parent": 948
+  },
+  {
+    "id": 965,
+    "name": "Marcador Feltro",
+    "parent": 948
+  },
+  {
+    "id": 966,
+    "name": "Marcador Fino",
+    "parent": 948
+  },
+  {
+    "id": 967,
+    "name": "Marcador Fluor",
+    "parent": 948
+  },
+  {
+    "id": 968,
+    "name": "Marcador Grosso",
+    "parent": 948
+  },
+  {
+    "id": 969,
+    "name": "Marcador Medio",
+    "parent": 948
+  },
+  {
+    "id": 970,
+    "name": "Marcador Permanente",
+    "parent": 948
+  },
+  {
+    "id": 971,
+    "name": "Marcador Quadros",
+    "parent": 948
+  },
+  {
+    "id": 972,
+    "name": "Marcador Roller",
+    "parent": 948
+  },
+  {
+    "id": 973,
+    "name": "Marcador Tecidos",
+    "parent": 948
+  },
+  {
+    "id": 974,
+    "name": "Minas",
+    "parent": 948
+  },
+  {
+    "id": 975,
+    "name": "Para Esquerdinos",
+    "parent": 948
+  },
+  {
+    "id": 976,
+    "name": "Posca Packs",
+    "parent": 948
+  },
+  {
+    "id": 977,
+    "name": "Posca PC-17K",
+    "parent": 948
+  },
+  {
+    "id": 978,
+    "name": "Posca PC-1M",
+    "parent": 948
+  },
+  {
+    "id": 979,
+    "name": "Posca PC-1MR",
+    "parent": 948
+  },
+  {
+    "id": 980,
+    "name": "Posca PC-3M",
+    "parent": 948
+  },
+  {
+    "id": 981,
+    "name": "Posca PC-5M",
+    "parent": 948
+  },
+  {
+    "id": 982,
+    "name": "Posca PC-7M",
+    "parent": 948
+  },
+  {
+    "id": 983,
+    "name": "Posca PC-8K",
+    "parent": 948
+  },
+  {
+    "id": 984,
+    "name": "Posca PCF-350",
+    "parent": 948
+  },
+  {
+    "id": 985,
+    "name": "Recargas Canetas",
+    "parent": 948
+  },
+  {
+    "id": 986,
+    "name": "Recargas Marcadores",
+    "parent": 948
+  },
+  {
+    "id": 987,
+    "name": "Cartolinas e Cartoes",
+    "parent": 909
+  },
+  {
+    "id": 988,
+    "name": "Cartao Canelado",
+    "parent": 987
+  },
+  {
+    "id": 989,
+    "name": "Cartolina 50x65 185g",
+    "parent": 987
+  },
+  {
+    "id": 990,
+    "name": "Cartolina 50x65 240g",
+    "parent": 987
+  },
+  {
+    "id": 991,
+    "name": "Cartolina 50x65 280g",
+    "parent": 987
+  },
+  {
+    "id": 992,
+    "name": "Cartolinas A3 185g",
+    "parent": 987
+  },
+  {
+    "id": 993,
+    "name": "Cartolinas A3 250g",
+    "parent": 987
+  },
+  {
+    "id": 994,
+    "name": "Cartolinas A4 185g",
+    "parent": 987
+  },
+  {
+    "id": 995,
+    "name": "Cartolinas A4 250g",
+    "parent": 987
+  },
+  {
+    "id": 996,
+    "name": "Cartolinas com Furos",
+    "parent": 987
+  },
+  {
+    "id": 997,
+    "name": "Diversos Tamanhos",
+    "parent": 987
+  },
+  {
+    "id": 998,
+    "name": "Kapa Line",
+    "parent": 987
+  },
+  {
+    "id": 999,
+    "name": "Papel T. Manuais",
+    "parent": 987
+  },
+  {
+    "id": 1000,
+    "name": "Placas Conservacao",
+    "parent": 987
+  },
+  {
+    "id": 1001,
+    "name": "Postais",
+    "parent": 987
+  },
+  {
+    "id": 1002,
+    "name": "Colas e Fitas Adesivas",
+    "parent": 909
+  },
+  {
+    "id": 1003,
+    "name": "Cola Bisnaga",
+    "parent": 1002
+  },
+  {
+    "id": 1004,
+    "name": "Cola Branca",
+    "parent": 1002
+  },
+  {
+    "id": 1005,
+    "name": "Cola Liquida",
+    "parent": 1002
+  },
+  {
+    "id": 1006,
+    "name": "Cola Roller",
+    "parent": 1002
+  },
+  {
+    "id": 1007,
+    "name": "Cola Stick",
+    "parent": 1002
+  },
+  {
+    "id": 1008,
+    "name": "Cola Tecnica",
+    "parent": 1002
+  },
+  {
+    "id": 1009,
+    "name": "Colas Spray",
+    "parent": 1002
+  },
+  {
+    "id": 1010,
+    "name": "Fita Decorativa",
+    "parent": 1002
+  },
+  {
+    "id": 1011,
+    "name": "Fita Dupla Face",
+    "parent": 1002
+  },
+  {
+    "id": 1012,
+    "name": "Fita Seguranca",
+    "parent": 1002
+  },
+  {
+    "id": 1013,
+    "name": "Fitas Mascaramento",
+    "parent": 1002
+  },
+  {
+    "id": 1014,
+    "name": "Fitas Transparentes",
+    "parent": 1002
+  },
+  {
+    "id": 1015,
+    "name": "Fixador 2 Faces",
+    "parent": 1002
+  },
+  {
+    "id": 1016,
+    "name": "Colas Fitas Adesivos",
+    "parent": 909
+  },
+  {
+    "id": 1017,
+    "name": "Sinalizacao",
+    "parent": 1016
+  },
+  {
+    "id": 1018,
+    "name": "Destruidora Papel",
+    "parent": 909
+  },
+  {
+    "id": 1019,
+    "name": "Corte Particulas",
+    "parent": 1018
+  },
+  {
+    "id": 1020,
+    "name": "Corte Tiras",
+    "parent": 1018
+  },
+  {
+    "id": 1021,
+    "name": "Encadernacao e Plastificacao",
+    "parent": 909
+  },
+  {
+    "id": 1022,
+    "name": "Argolas Metalicas",
+    "parent": 1021
+  },
+  {
+    "id": 1023,
+    "name": "Argolas Plastico",
+    "parent": 1021
+  },
+  {
+    "id": 1024,
+    "name": "Baguetes",
+    "parent": 1021
+  },
+  {
+    "id": 1025,
+    "name": "Bolsas Termicas",
+    "parent": 1021
+  },
+  {
+    "id": 1026,
+    "name": "Capas",
+    "parent": 1021
+  },
+  {
+    "id": 1027,
+    "name": "Capas Acetatos",
+    "parent": 1021
+  },
+  {
+    "id": 1028,
+    "name": "Encadernadoras",
+    "parent": 1021
+  },
+  {
+    "id": 1029,
+    "name": "Papel Autocolante",
+    "parent": 1021
+  },
+  {
+    "id": 1030,
+    "name": "Pastas Termicas",
+    "parent": 1021
+  },
+  {
+    "id": 1031,
+    "name": "Plastificadoras",
+    "parent": 1021
+  },
+  {
+    "id": 1032,
+    "name": "Protecao Livros",
+    "parent": 1021
+  },
+  {
+    "id": 1033,
+    "name": "Escolar e Manualidades",
+    "parent": 909
+  },
+  {
+    "id": 1034,
+    "name": "Acessorios Pintura",
+    "parent": 1033
+  },
+  {
+    "id": 1035,
+    "name": "Aguarelas",
+    "parent": 1033
+  },
+  {
+    "id": 1036,
+    "name": "Conjuntos e Kits",
+    "parent": 1033
+  },
+  {
+    "id": 1037,
+    "name": "Dicionario",
+    "parent": 1033
+  },
+  {
+    "id": 1038,
+    "name": "Estojos",
+    "parent": 1033
+  },
+  {
+    "id": 1039,
+    "name": "Flauta",
+    "parent": 1033
+  },
+  {
+    "id": 1040,
+    "name": "Globo Geografico",
+    "parent": 1033
+  },
+  {
+    "id": 1041,
+    "name": "Guaches",
+    "parent": 1033
+  },
+  {
+    "id": 1042,
+    "name": "Items Decorativos",
+    "parent": 1033
+  },
+  {
+    "id": 1043,
+    "name": "Lancheiras Marmitas",
+    "parent": 1033
+  },
+  {
+    "id": 1044,
+    "name": "Modelagem",
+    "parent": 1033
+  },
+  {
+    "id": 1045,
+    "name": "Papel T. Manuais",
+    "parent": 1033
+  },
+  {
+    "id": 1046,
+    "name": "Pinceis",
+    "parent": 1033
+  },
+  {
+    "id": 1047,
+    "name": "Placa Musgami",
+    "parent": 1033
+  },
+  {
+    "id": 1048,
+    "name": "Plasticina e Massas",
+    "parent": 1033
+  },
+  {
+    "id": 1049,
+    "name": "Protecao Livros",
+    "parent": 1033
+  },
+  {
+    "id": 1050,
+    "name": "Sacos e Mochilas",
+    "parent": 1033
+  },
+  {
+    "id": 1051,
+    "name": "Tintas",
+    "parent": 1033
+  },
+  {
+    "id": 1052,
+    "name": "Verniz",
+    "parent": 1033
+  },
+  {
+    "id": 1053,
+    "name": "Vestuario",
+    "parent": 1033
+  },
+  {
+    "id": 1054,
+    "name": "Etiquetas e Envelopes",
+    "parent": 909
+  },
+  {
+    "id": 1055,
+    "name": "Envelope Air-Bag",
+    "parent": 1054
+  },
+  {
+    "id": 1056,
+    "name": "Envelope Criativo",
+    "parent": 1054
+  },
+  {
+    "id": 1057,
+    "name": "Envelope Saco",
+    "parent": 1054
+  },
+  {
+    "id": 1058,
+    "name": "Envelope Uso Diario",
+    "parent": 1054
+  },
+  {
+    "id": 1059,
+    "name": "Envelope Vegetal",
+    "parent": 1054
+  },
+  {
+    "id": 1060,
+    "name": "Envelopes PVC",
+    "parent": 1054
+  },
+  {
+    "id": 1061,
+    "name": "Etiqueta A4 Branca",
+    "parent": 1054
+  },
+  {
+    "id": 1062,
+    "name": "Etiqueta A4 de Cor",
+    "parent": 1054
+  },
+  {
+    "id": 1063,
+    "name": "Etiqueta Alimentar",
+    "parent": 1054
+  },
+  {
+    "id": 1064,
+    "name": "Etiqueta Branca",
+    "parent": 1054
+  },
+  {
+    "id": 1065,
+    "name": "Etiqueta Brother",
+    "parent": 1054
+  },
+  {
+    "id": 1066,
+    "name": "Etiqueta com Fio",
+    "parent": 1054
+  },
+  {
+    "id": 1067,
+    "name": "Etiqueta Continuo",
+    "parent": 1054
+  },
+  {
+    "id": 1068,
+    "name": "Etiqueta de Cor",
+    "parent": 1054
+  },
+  {
+    "id": 1069,
+    "name": "Etiqueta Dymo",
+    "parent": 1054
+  },
+  {
+    "id": 1070,
+    "name": "Etiqueta Especial",
+    "parent": 1054
+  },
+  {
+    "id": 1071,
+    "name": "Etiqueta para CDs",
+    "parent": 1054
+  },
+  {
+    "id": 1072,
+    "name": "Etiqueta Polyester",
+    "parent": 1054
+  },
+  {
+    "id": 1073,
+    "name": "Etiqueta PreImpressa",
+    "parent": 1054
+  },
+  {
+    "id": 1074,
+    "name": "Etiqueta Redonda",
+    "parent": 1054
+  },
+  {
+    "id": 1075,
+    "name": "Etiqueta Removivel",
+    "parent": 1054
+  },
+  {
+    "id": 1076,
+    "name": "Etiqueta Rolo Dymo",
+    "parent": 1054
+  },
+  {
+    "id": 1077,
+    "name": "Etiqueta Rolo Zebra",
+    "parent": 1054
+  },
+  {
+    "id": 1078,
+    "name": "Etiqueta Termica",
+    "parent": 1054
+  },
+  {
+    "id": 1079,
+    "name": "Etiqueta Transparent",
+    "parent": 1054
+  },
+  {
+    "id": 1080,
+    "name": "Etiquetas Diversas",
+    "parent": 1054
+  },
+  {
+    "id": 1081,
+    "name": "Expositores",
+    "parent": 909
+  },
+  {
+    "id": 1082,
+    "name": "Jogos e Lazer",
+    "parent": 1081
+  },
+  {
+    "id": 1083,
+    "name": "Vazios",
+    "parent": 1081
+  },
+  {
+    "id": 1084,
+    "name": "Giotto Be-Be",
+    "parent": 909
+  },
+  {
+    "id": 1085,
+    "name": "Conjuntos",
+    "parent": 1084
+  },
+  {
+    "id": 1086,
+    "name": "Lapis Cera",
+    "parent": 1084
+  },
+  {
+    "id": 1087,
+    "name": "Lapis Cores",
+    "parent": 1084
+  },
+  {
+    "id": 1088,
+    "name": "Pastas para Brincar",
+    "parent": 1084
+  },
+  {
+    "id": 1089,
+    "name": "Pintura a Dedos",
+    "parent": 1084
+  },
+  {
+    "id": 1090,
+    "name": "Identificacao",
+    "parent": 909
+  },
+  {
+    "id": 1091,
+    "name": "Fitas",
+    "parent": 1090
+  },
+  {
+    "id": 1092,
+    "name": "Porta Nomes",
+    "parent": 1090
+  },
+  {
+    "id": 1093,
+    "name": "Jogos e Brincadeiras",
+    "parent": 909
+  },
+  {
+    "id": 1094,
+    "name": "Autocolantes",
+    "parent": 1093
+  },
+  {
+    "id": 1095,
+    "name": "Bebe",
+    "parent": 1093
+  },
+  {
+    "id": 1096,
+    "name": "Blocos e Cubos",
+    "parent": 1093
+  },
+  {
+    "id": 1097,
+    "name": "Cientificos",
+    "parent": 1093
+  },
+  {
+    "id": 1098,
+    "name": "Colorir",
+    "parent": 1093
+  },
+  {
+    "id": 1099,
+    "name": "Conjuntos e Kits",
+    "parent": 1093
+  },
+  {
+    "id": 1100,
+    "name": "Construcao",
+    "parent": 1093
+  },
+  {
+    "id": 1101,
+    "name": "Ecossistema",
+    "parent": 1093
+  },
+  {
+    "id": 1102,
+    "name": "Entretenimento",
+    "parent": 1093
+  },
+  {
+    "id": 1103,
+    "name": "Faz de Conta",
+    "parent": 1093
+  },
+  {
+    "id": 1104,
+    "name": "Festas",
+    "parent": 1093
+  },
+  {
+    "id": 1105,
+    "name": "Kids DIY",
+    "parent": 1093
+  },
+  {
+    "id": 1106,
+    "name": "Magnéticos",
+    "parent": 1093
+  },
+  {
+    "id": 1107,
+    "name": "Massas",
+    "parent": 1093
+  },
+  {
+    "id": 1108,
+    "name": "Memória e Dominó",
+    "parent": 1093
+  },
+  {
+    "id": 1109,
+    "name": "Pinturas Corpo",
+    "parent": 1093
+  },
+  {
+    "id": 1110,
+    "name": "Puzzles",
+    "parent": 1093
+  },
+  {
+    "id": 1111,
+    "name": "Quick Games",
+    "parent": 1093
+  },
+  {
+    "id": 1112,
+    "name": "Tabuleiro e Cartas",
+    "parent": 1093
+  },
+  {
+    "id": 1113,
+    "name": "Papel",
+    "parent": 909
+  },
+  {
+    "id": 1114,
+    "name": "Autocopiativo",
+    "parent": 1113
+  },
+  {
+    "id": 1115,
+    "name": "Cartoes Visita",
+    "parent": 1113
+  },
+  {
+    "id": 1116,
+    "name": "Continuo",
+    "parent": 1113
+  },
+  {
+    "id": 1117,
+    "name": "Copia A3 Branco",
+    "parent": 1113
+  },
+  {
+    "id": 1118,
+    "name": "Copia A4 Branco",
+    "parent": 1113
+  },
+  {
+    "id": 1119,
+    "name": "Copia A4 Cores",
+    "parent": 1113
+  },
+  {
+    "id": 1120,
+    "name": "Copia A4 Reciclado",
+    "parent": 1113
+  },
+  {
+    "id": 1121,
+    "name": "Copia A5 Branco",
+    "parent": 1113
+  },
+  {
+    "id": 1122,
+    "name": "Especial A3",
+    "parent": 1113
+  },
+  {
+    "id": 1123,
+    "name": "Especial A4",
+    "parent": 1113
+  },
+  {
+    "id": 1124,
+    "name": "Fantasia",
+    "parent": 1113
+  },
+  {
+    "id": 1125,
+    "name": "Formato Especial",
+    "parent": 1113
+  },
+  {
+    "id": 1126,
+    "name": "Foto Autocolante",
+    "parent": 1113
+  },
+  {
+    "id": 1127,
+    "name": "Fotografico A3",
+    "parent": 1113
+  },
+  {
+    "id": 1128,
+    "name": "Fotografico A4",
+    "parent": 1113
+  },
+  {
+    "id": 1129,
+    "name": "Fotografico A6",
+    "parent": 1113
+  },
+  {
+    "id": 1130,
+    "name": "Grande Formato",
+    "parent": 1113
+  },
+  {
+    "id": 1131,
+    "name": "Grande Formato Arte",
+    "parent": 1113
+  },
+  {
+    "id": 1132,
+    "name": "Grande Formato Foto",
+    "parent": 1113
+  },
+  {
+    "id": 1133,
+    "name": "Papel Celofan",
+    "parent": 1113
+  },
+  {
+    "id": 1134,
+    "name": "Papel Cenario",
+    "parent": 1113
+  },
+  {
+    "id": 1135,
+    "name": "Papel Crepe",
+    "parent": 1113
+  },
+  {
+    "id": 1136,
+    "name": "Papel Criativo",
+    "parent": 1113
+  },
+  {
+    "id": 1137,
+    "name": "Papel Fluorescente",
+    "parent": 1113
+  },
+  {
+    "id": 1138,
+    "name": "Papel Kraft",
+    "parent": 1113
+  },
+  {
+    "id": 1139,
+    "name": "Papel Lustro",
+    "parent": 1113
+  },
+  {
+    "id": 1140,
+    "name": "Papel Manteigueiro",
+    "parent": 1113
+  },
+  {
+    "id": 1141,
+    "name": "Papel Metalizado",
+    "parent": 1113
+  },
+  {
+    "id": 1142,
+    "name": "Papel Milimetrico",
+    "parent": 1113
+  },
+  {
+    "id": 1143,
+    "name": "Papel Quimico",
+    "parent": 1113
+  },
+  {
+    "id": 1144,
+    "name": "Papel Seda",
+    "parent": 1113
+  },
+  {
+    "id": 1145,
+    "name": "Papel Sulfito",
+    "parent": 1113
+  },
+  {
+    "id": 1146,
+    "name": "Papel Vegetal",
+    "parent": 1113
+  },
+  {
+    "id": 1147,
+    "name": "Papel Veludo",
+    "parent": 1113
+  },
+  {
+    "id": 1148,
+    "name": "Rolo Autocopiativo",
+    "parent": 1113
+  },
+  {
+    "id": 1149,
+    "name": "Rolo Branco",
+    "parent": 1113
+  },
+  {
+    "id": 1150,
+    "name": "Rolo Termico",
+    "parent": 1113
+  },
+  {
+    "id": 1151,
+    "name": "Rolo Termico Fax",
+    "parent": 1113
+  },
+  {
+    "id": 1152,
+    "name": "Termico Brother",
+    "parent": 1113
+  },
+  {
+    "id": 1153,
+    "name": "Transparencias",
+    "parent": 1113
+  },
+  {
+    "id": 1154,
+    "name": "Tshirt Transfer",
+    "parent": 1113
+  },
+  {
+    "id": 1155,
+    "name": "Vinil Adesivo",
+    "parent": 1113
+  },
+  {
+    "id": 1156,
+    "name": "Pastas Arquivo e Dossiers",
+    "parent": 909
+  },
+  {
+    "id": 1157,
+    "name": "Arquivo Definitivo",
+    "parent": 1156
+  },
+  {
+    "id": 1158,
+    "name": "Arquivo Frances",
+    "parent": 1156
+  },
+  {
+    "id": 1159,
+    "name": "Bolsa com Fecho",
+    "parent": 1156
+  },
+  {
+    "id": 1160,
+    "name": "Bolsas e Micas",
+    "parent": 1156
+  },
+  {
+    "id": 1161,
+    "name": "Bolsas Postais",
+    "parent": 1156
+  },
+  {
+    "id": 1162,
+    "name": "Caixas para Pastas",
+    "parent": 1156
+  },
+  {
+    "id": 1163,
+    "name": "Capas Certificados",
+    "parent": 1156
+  },
+  {
+    "id": 1164,
+    "name": "Capas com Bolsa",
+    "parent": 1156
+  },
+  {
+    "id": 1165,
+    "name": "Capas em L",
+    "parent": 1156
+  },
+  {
+    "id": 1166,
+    "name": "Cartao Cor L/E",
+    "parent": 1156
+  },
+  {
+    "id": 1167,
+    "name": "Cartao Cor L/L",
+    "parent": 1156
+  },
+  {
+    "id": 1168,
+    "name": "Cartao Riscas",
+    "parent": 1156
+  },
+  {
+    "id": 1169,
+    "name": "Classificadores",
+    "parent": 1156
+  },
+  {
+    "id": 1170,
+    "name": "Ferragens",
+    "parent": 1156
+  },
+  {
+    "id": 1171,
+    "name": "Formato A5",
+    "parent": 1156
+  },
+  {
+    "id": 1172,
+    "name": "Marmoreadas Preto",
+    "parent": 1156
+  },
+  {
+    "id": 1173,
+    "name": "Modulos Pastas",
+    "parent": 1156
+  },
+  {
+    "id": 1174,
+    "name": "Pasta Cartolina",
+    "parent": 1156
+  },
+  {
+    "id": 1175,
+    "name": "Pasta com Clip",
+    "parent": 1156
+  },
+  {
+    "id": 1176,
+    "name": "Pasta com Elasticos",
+    "parent": 1156
+  },
+  {
+    "id": 1177,
+    "name": "Pasta com Ferragem",
+    "parent": 1156
+  },
+  {
+    "id": 1178,
+    "name": "Pasta com Pega",
+    "parent": 1156
+  },
+  {
+    "id": 1179,
+    "name": "Pasta com Separador",
+    "parent": 1156
+  },
+  {
+    "id": 1180,
+    "name": "Pasta Escolar",
+    "parent": 1156
+  },
+  {
+    "id": 1181,
+    "name": "Pasta para Blocos",
+    "parent": 1156
+  },
+  {
+    "id": 1182,
+    "name": "Pasta Portfolio",
+    "parent": 1156
+  },
+  {
+    "id": 1183,
+    "name": "Pastas Assinaturas",
+    "parent": 1156
+  },
+  {
+    "id": 1184,
+    "name": "Pastas Canguru",
+    "parent": 1156
+  },
+  {
+    "id": 1185,
+    "name": "Pastas Cromolux",
+    "parent": 1156
+  },
+  {
+    "id": 1186,
+    "name": "Plastico Cor L/E",
+    "parent": 1156
+  },
+  {
+    "id": 1187,
+    "name": "Plastico Cor L/L",
+    "parent": 1156
+  },
+  {
+    "id": 1188,
+    "name": "Porta Cartoes Visita",
+    "parent": 1156
+  },
+  {
+    "id": 1189,
+    "name": "Porta Projectos",
+    "parent": 1156
+  },
+  {
+    "id": 1190,
+    "name": "Separador Cartolina",
+    "parent": 1156
+  },
+  {
+    "id": 1191,
+    "name": "Separador Plastico",
+    "parent": 1156
+  },
+  {
+    "id": 1192,
+    "name": "Suspenso",
+    "parent": 1156
+  },
+  {
+    "id": 1193,
+    "name": "Tape Flags",
+    "parent": 1156
+  },
+  {
+    "id": 1194,
+    "name": "Tubos Porta Projetos",
+    "parent": 1156
+  },
+  {
+    "id": 1195,
+    "name": "Prestigio e Presentes",
+    "parent": 909
+  },
+  {
+    "id": 1196,
+    "name": "Artigos Couro",
+    "parent": 1195
+  },
+  {
+    "id": 1197,
+    "name": "Bolsa",
+    "parent": 1195
+  },
+  {
+    "id": 1198,
+    "name": "Canetas Tinta Perm",
+    "parent": 1195
+  },
+  {
+    "id": 1199,
+    "name": "Carteira",
+    "parent": 1195
+  },
+  {
+    "id": 1200,
+    "name": "Cinta casacos",
+    "parent": 1195
+  },
+  {
+    "id": 1201,
+    "name": "Esferografica+Lapis",
+    "parent": 1195
+  },
+  {
+    "id": 1202,
+    "name": "Esferograficas",
+    "parent": 1195
+  },
+  {
+    "id": 1203,
+    "name": "Porta aneis",
+    "parent": 1195
+  },
+  {
+    "id": 1204,
+    "name": "Tinta Canetas",
+    "parent": 1195
+  },
+  {
+    "id": 1205,
+    "name": "Quadros e Apagadores",
+    "parent": 909
+  },
+  {
+    "id": 1206,
+    "name": "Acessorios",
+    "parent": 1205
+  },
+  {
+    "id": 1207,
+    "name": "Apagadores",
+    "parent": 1205
+  },
+  {
+    "id": 1208,
+    "name": "Papel Q. Conferencia",
+    "parent": 1205
+  },
+  {
+    "id": 1209,
+    "name": "Quadros Brancos",
+    "parent": 1205
+  },
+  {
+    "id": 1210,
+    "name": "Quadros Conferencia",
+    "parent": 1205
+  },
+  {
+    "id": 1211,
+    "name": "Quadros Corticite",
+    "parent": 1205
+  },
+  {
+    "id": 1212,
+    "name": "Quadros Feltro",
+    "parent": 1205
+  },
+  {
+    "id": 1213,
+    "name": "Quadros Giz",
+    "parent": 1205
+  },
+  {
+    "id": 1214,
+    "name": "Quadros Vidro",
+    "parent": 1205
+  },
+  {
+    "id": 1215,
+    "name": "Reguas e Compassos",
+    "parent": 909
+  },
+  {
+    "id": 1216,
+    "name": "Compasso",
+    "parent": 1215
+  },
+  {
+    "id": 1217,
+    "name": "Escantilhao",
+    "parent": 1215
+  },
+  {
+    "id": 1218,
+    "name": "Esquadros",
+    "parent": 1215
+  },
+  {
+    "id": 1219,
+    "name": "Reguas",
+    "parent": 1215
+  },
+  {
+    "id": 1220,
+    "name": "Reguas Escala",
+    "parent": 1215
+  },
+  {
+    "id": 1221,
+    "name": "Transferidor",
+    "parent": 1215
+  },
+  {
+    "id": 1222,
+    "name": "Tesouras e Cortantes",
+    "parent": 909
+  },
+  {
+    "id": 1223,
+    "name": "Cortantes",
+    "parent": 1222
+  },
+  {
+    "id": 1224,
+    "name": "Cortantes Formas",
+    "parent": 1222
+  },
+  {
+    "id": 1225,
+    "name": "Guilhotinas",
+    "parent": 1222
+  },
+  {
+    "id": 1226,
+    "name": "Placa de Corte",
+    "parent": 1222
+  },
+  {
+    "id": 1227,
+    "name": "Tesouras",
+    "parent": 1222
+  },
+  {
+    "id": 1228,
+    "name": "Tesouras Esquerdinos",
+    "parent": 1222
+  },
+  {
+    "id": 1229,
+    "name": "Utilitarios de Secretaria",
+    "parent": 909
+  },
+  {
+    "id": 1230,
+    "name": "Abre Cartas",
+    "parent": 1229
+  },
+  {
+    "id": 1231,
+    "name": "Agrafador Alicate",
+    "parent": 1229
+  },
+  {
+    "id": 1232,
+    "name": "Agrafador Electrico",
+    "parent": 1229
+  },
+  {
+    "id": 1233,
+    "name": "Agrafador Industrial",
+    "parent": 1229
+  },
+  {
+    "id": 1234,
+    "name": "Agrafador Pistola",
+    "parent": 1229
+  },
+  {
+    "id": 1235,
+    "name": "Agrafador Uso Diario",
+    "parent": 1229
+  },
+  {
+    "id": 1236,
+    "name": "Agrafos",
+    "parent": 1229
+  },
+  {
+    "id": 1237,
+    "name": "Almofadas Carimbos",
+    "parent": 1229
+  },
+  {
+    "id": 1238,
+    "name": "Apoio de Livros",
+    "parent": 1229
+  },
+  {
+    "id": 1239,
+    "name": "Ataches",
+    "parent": 1229
+  },
+  {
+    "id": 1240,
+    "name": "Bases para Papel",
+    "parent": 1229
+  },
+  {
+    "id": 1241,
+    "name": "Bases Secretaria",
+    "parent": 1229
+  },
+  {
+    "id": 1242,
+    "name": "Carimbos",
+    "parent": 1229
+  },
+  {
+    "id": 1243,
+    "name": "Clips",
+    "parent": 1229
+  },
+  {
+    "id": 1244,
+    "name": "Conjunto Secretaria",
+    "parent": 1229
+  },
+  {
+    "id": 1245,
+    "name": "Datadores",
+    "parent": 1229
+  },
+  {
+    "id": 1246,
+    "name": "Dedeiras",
+    "parent": 1229
+  },
+  {
+    "id": 1247,
+    "name": "Desenrolador Fita",
+    "parent": 1229
+  },
+  {
+    "id": 1248,
+    "name": "Elasticos",
+    "parent": 1229
+  },
+  {
+    "id": 1249,
+    "name": "Esponjeiras",
+    "parent": 1229
+  },
+  {
+    "id": 1250,
+    "name": "Furador 1 Furo",
+    "parent": 1229
+  },
+  {
+    "id": 1251,
+    "name": "Furador 2 Furos",
+    "parent": 1229
+  },
+  {
+    "id": 1252,
+    "name": "Furador 4 Furos",
+    "parent": 1229
+  },
+  {
+    "id": 1253,
+    "name": "Furador Industrial",
+    "parent": 1229
+  },
+  {
+    "id": 1254,
+    "name": "Furador Rebites",
+    "parent": 1229
+  },
+  {
+    "id": 1255,
+    "name": "Kit Secretaria",
+    "parent": 1229
+  },
+  {
+    "id": 1256,
+    "name": "Lacre",
+    "parent": 1229
+  },
+  {
+    "id": 1257,
+    "name": "Magnetos",
+    "parent": 1229
+  },
+  {
+    "id": 1258,
+    "name": "Molas",
+    "parent": 1229
+  },
+  {
+    "id": 1259,
+    "name": "Movel Empilhar",
+    "parent": 1229
+  },
+  {
+    "id": 1260,
+    "name": "Movel Gavetas",
+    "parent": 1229
+  },
+  {
+    "id": 1261,
+    "name": "Numeradores",
+    "parent": 1229
+  },
+  {
+    "id": 1262,
+    "name": "Porta Carimbos",
+    "parent": 1229
+  },
+  {
+    "id": 1263,
+    "name": "Porta Cartas",
+    "parent": 1229
+  },
+  {
+    "id": 1264,
+    "name": "Porta Clips",
+    "parent": 1229
+  },
+  {
+    "id": 1265,
+    "name": "Porta Lapis",
+    "parent": 1229
+  },
+  {
+    "id": 1266,
+    "name": "Porta Revistas",
+    "parent": 1229
+  },
+  {
+    "id": 1267,
+    "name": "Pranchetas",
+    "parent": 1229
+  },
+  {
+    "id": 1268,
+    "name": "Reforcos",
+    "parent": 1229
+  },
+  {
+    "id": 1269,
+    "name": "Saca Agrafos",
+    "parent": 1229
+  },
+  {
+    "id": 1270,
+    "name": "Sinalizadores",
+    "parent": 1229
+  },
+  {
+    "id": 1271,
+    "name": "Tabuleiros",
+    "parent": 1229
+  },
+  {
+    "id": 1272,
+    "name": "Tintas Carimbos",
+    "parent": 1229
+  }
+]
