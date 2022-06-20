@@ -117,7 +117,7 @@ class Goldylocks {
   }
 
   /**
-   * createFamily - Creates/Edits an article in Goldylocks
+   * createOrEditArticle - Creates/Edits an article in Goldylocks
    * @param _article
    * @private
    */
@@ -238,7 +238,6 @@ class Goldylocks {
       for(let i in familiesWithThisParent) {
         familiesWithThisParent[i].parent = this.idIndex.find(e => e.udfID == familiesWithThisParent[i].parent).goldyID
         await this.#parseFamilyWithParent(familiesWithThisParent[i], progressBar)
-        progressBar.increment(1)
       }
 
       progressBar.increment(1)
@@ -257,7 +256,7 @@ class Goldylocks {
    */
   async #parseFamilyWithParent(_family: UniversalDataFormatCategories, _progressBar){
     const familyExistsInGoldy = this.goldyData.families.find(
-      e => (e.familia_pai == _family.parent) && (e.descricao == _family.name)
+      e => (e.familia_pai == _family.parent) && (e.descricao.toUpperCase() == _family.name.toUpperCase())
     )
 
     if(familyExistsInGoldy) {
