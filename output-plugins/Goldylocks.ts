@@ -117,21 +117,35 @@ class Goldylocks {
   }
 
   /**
-   * createFamily - Creates/Edits an article in Goldylocks
+   * createOrEditArticle - Creates/Edits an article in Goldylocks
    * @param _article
    * @private
    */
   async #createOrEditArticle(_article){
     return new Promise<void>(async (resolve, reject) => {
       try {
-        const res = await axios.post("https://devssl.goldylocks.pt/gl/api/guardarartigo/", _article)
+        let barCode = _article.get("cod_barras")
+
+        if(!parseInt(barCode)) {
+          let newBarCode = 0
+          let barCodeAlreadyExists = false
+
+          do {
+            newBarCode = Math.floor(999999999999 - (Math.random() * 899999999999))
+            barCodeAlreadyExists = this.goldyData.articles.some(e => e.bar_code == newBarCode)
+          } while(barCodeAlreadyExists)
+
+          _article.set("cod_barras", newBarCode)
+        }
+
+        const res = await axios.post("https://devssl.goldylocks.pt/gl/api/guardarartigo/?debug=1", _article)
 
         if(res.data == "ok")
           resolve()
-        else
+        else {
           reject("Erro ao guardar artigo")
+        }
       } catch (e) {
-        debugger
         reject(e)
       }
     })
@@ -224,7 +238,6 @@ class Goldylocks {
       for(let i in familiesWithThisParent) {
         familiesWithThisParent[i].parent = this.idIndex.find(e => e.udfID == familiesWithThisParent[i].parent).goldyID
         await this.#parseFamilyWithParent(familiesWithThisParent[i], progressBar)
-        progressBar.increment(1)
       }
 
       progressBar.increment(1)
@@ -243,7 +256,7 @@ class Goldylocks {
    */
   async #parseFamilyWithParent(_family: UniversalDataFormatCategories, _progressBar){
     const familyExistsInGoldy = this.goldyData.families.find(
-      e => (e.familia_pai == _family.parent) && (e.descricao == _family.name)
+      e => (e.familia_pai == _family.parent) && (e.descricao.toUpperCase() == _family.name.toUpperCase())
     )
 
     if(familyExistsInGoldy) {
@@ -309,7 +322,7 @@ class Goldylocks {
 
       await this.#parseArticles()
     } catch (e) {
-      console.error(`${colors.greenBright("[Goldylocks]")} ${e}`)
+      console.error(`${colors.greenBright("\n[Goldylocks]")} ${e}`)
     }
   }
 }
