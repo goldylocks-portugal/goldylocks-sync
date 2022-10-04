@@ -9,8 +9,13 @@
         }
       },
       "output": {
-        "plugin": "Goldylocks",
-        "configuration": {}
+        "plugin": "WooCommerce",
+        "configuration": {
+          "url": "https://energia3000.com/",
+          "consumerKey": "ck_0567114cbfb2108789fc42df79fe8af8bbdbb8cf",
+          "consumerSecret": "cs_5c6c44d9766d657ee89c91ff53be03fe92fc2036",
+          "version": "wc/v3"
+        }
       }
     }
   ]
