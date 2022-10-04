@@ -1,0 +1,137 @@
+[
+  {
+    "msg": "REF inválida ou duplicada.",
+    "error": {
+      "code": "product_invalid_sku",
+      "message": "REF inválida ou duplicada.",
+      "data": {
+        "status": 400,
+        "resource_id": 57962
+      }
+    },
+    "item": {
+      "id_category": 0,
+      "bar_code": 3259920015251,
+      "brand": "DAMMANN FRÈRES",
+      "category": "Acessorios",
+      "description": "Filtro de Chá Descartável para Bule 64un",
+      "description_short": "Filtro de Chá Descartável para Bule 64un",
+      "description_long": "Estes filtros universais para chá são adequados para todos os tipos de chá a granel. De sabor neutro, permitem a infusão de chás de folhas ou chás de ervas. Resistente, o papel não se desfaz mesmo depois de muito tempo embebido em água. Ideal para al préaração do infusor em bule, podendo ser utilizado também em xícara alta.",
+      "id": 6591525,
+      "image": "http://www.netimagens.com/images/produtos/6591525.jpg",
+      "min_sell": 1,
+      "pvp_1": 4.45,
+      "pvp_2": 0,
+      "stock": 10,
+      "weight": 0.06
+    }
+  },
+  {
+    "msg": "REF inválida ou duplicada.",
+    "error": {
+      "code": "product_invalid_sku",
+      "message": "REF inválida ou duplicada.",
+      "data": {
+        "status": 400,
+        "resource_id": 57964
+      }
+    },
+    "item": {
+      "id_category": 0,
+      "bar_code": 3259920015282,
+      "brand": "DAMMANN FRÈRES",
+      "category": "Acessorios",
+      "description": "Filtro de Chá Descartável para Bule 30un",
+      "description_short": "Filtro de Chá Descartável para Bule 30un",
+      "description_long": "",
+      "id": 6591528,
+      "image": "http://www.netimagens.com/images/produtos/6591528.jpg",
+      "min_sell": 1,
+      "pvp_1": 2.23,
+      "pvp_2": 0,
+      "stock": 10,
+      "weight": 0.04
+    }
+  },
+  {
+    "msg": "REF inválida ou duplicada.",
+    "error": {
+      "code": "product_invalid_sku",
+      "message": "REF inválida ou duplicada.",
+      "data": {
+        "status": 400,
+        "resource_id": 57966
+      }
+    },
+    "item": {
+      "id_category": 0,
+      "bar_code": 3259920067596,
+      "brand": "DAMMANN FRÈRES",
+      "category": "Acessorios",
+      "description": "Filtro de Chá em Inox para Bule de Porcelana 0,5L",
+      "description_short": "Filtro de Chá em Inox para Bule de Porcelana 0,5L",
+      "description_long": "Dimensões: Ø 5,5 cm / altura 8 cm",
+      "id": 6597596,
+      "image": "http://www.netimagens.com/images/produtos/6597596.jpg",
+      "min_sell": 1,
+      "pvp_1": 3.09,
+      "pvp_2": 0,
+      "stock": 10,
+      "weight": 0.04
+    }
+  },
+  {
+    "msg": "REF inválida ou duplicada.",
+    "error": {
+      "code": "product_invalid_sku",
+      "message": "REF inválida ou duplicada.",
+      "data": {
+        "status": 400,
+        "resource_id": 57968
+      }
+    },
+    "item": {
+      "id_category": 0,
+      "bar_code": 5600356598374,
+      "brand": "DAMMANN FRÈRES",
+      "category": "Acessorios",
+      "description": "Caixa Vazia com 6 Compartimentos de Chá em Madeira Bordeaux",
+      "description_short": "Caixa Vazia com 6 Compartimentos de Chá em Madeira Bordeaux",
+      "description_long": "Caixa de madeira cor de vinho com placa de latão na tampa e interior em madeira natural.\nInterior organizado em 6 caixas para saquetas de Chás Cristal® embaladas individualmente.",
+      "id": 6598374,
+      "image": "http://www.netimagens.com/images/produtos/6598374.jpg",
+      "min_sell": 1,
+      "pvp_1": 38.5,
+      "pvp_2": 0,
+      "stock": 10,
+      "weight": 0.68
+    }
+  },
+  {
+    "msg": "REF inválida ou duplicada.",
+    "error": {
+      "code": "product_invalid_sku",
+      "message": "REF inválida ou duplicada.",
+      "data": {
+        "status": 400,
+        "resource_id": 57970
+      }
+    },
+    "item": {
+      "id_category": 0,
+      "bar_code": 3259920099023,
+      "brand": "DAMMANN FRÈRES",
+      "category": "Acessorios",
+      "description": "Mini Lata Vazia para 6/8 Saquetas de Chá em Metal",
+      "description_short": "Mini Lata Vazia para 6/8 Saquetas de Chá em Metal",
+      "description_long": "Mini Lata  revestida a cobre para 6/8 sachês\nDimensões: 6 x 6 cm / altura 5 cm",
+      "id": 6599023,
+      "image": "http://www.netimagens.com/images/produtos/6599023_1.JPG",
+      "min_sell": 20,
+      "pvp_1": 2.08,
+      "pvp_2": 0,
+      "stock": 10,
+      "weight": 0.03
+    }
+  }
+]

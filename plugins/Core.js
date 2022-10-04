@@ -56,7 +56,7 @@ class Core {
     processOutput(pluginConfiguration, data) {
         return __awaiter(this, void 0, void 0, function* () {
             const Plugin = yield Promise.resolve().then(() => require(`../output-plugins/${pluginConfiguration.plugin}`));
-            const plugin = new Plugin[pluginConfiguration.plugin](pluginConfiguration.configuration);
+            const plugin = new Plugin[pluginConfiguration.plugin](pluginConfiguration.configuration, data);
             return yield plugin.execute();
         });
     }
